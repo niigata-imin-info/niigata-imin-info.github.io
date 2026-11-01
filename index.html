@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="description" content="新潟県と県内の市町村の議会で、外国人の受け入れについて誰が何を言ったかを、会議録の原文つきでまとめた資料の目次です。">
+<title>新潟県の移民政策反対情報</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap">
+<style>
+/* 一段組み：上に地域の選択、その下に統計カード、トピックの絞り込み、資料の一覧 */
+:root{
+  --bg:#f5f7f6; --surface:#ffffff; --fg:#1d2a2c; --muted:#5b6a6c; --line:#d7dfdd;
+  --accent:#1f6b6a; --accent-soft:#e1efed; --seen:#8a6d1f; --seen-soft:#f6eed6;
+  --serif:"BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  --sans:"BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121a1b; --surface:#1a2526; --fg:#e4ecea; --muted:#9aaaa8; --line:#2c3a3b;
+  --accent:#6fc3bf; --accent-soft:#1f3433; --seen:#e0c070; --seen-soft:#3a3220; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121a1b; --surface:#1a2526; --fg:#e4ecea; --muted:#9aaaa8; --line:#2c3a3b;
+  --accent:#6fc3bf; --accent-soft:#1f3433; --seen:#e0c070; --seen-soft:#3a3220; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:15px;line-height:1.7}
+.wrap{max-width:860px;margin:0 auto;padding-block:24px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:22px}
+h1{font-family:var(--serif);font-size:1.7rem;line-height:1.35;margin:0;text-wrap:balance}
+h2{font-family:var(--serif);font-size:1.15rem;margin:0}
+.lead{color:var(--muted);margin:4px 0 0}
+.draft{font-size:.8rem;letter-spacing:.06em;color:var(--seen);background:var(--seen-soft);display:inline-block;padding:2px 10px;border-radius:4px}
+.picker{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+select{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--fg);min-width:0;max-width:100%}
+label{font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:inherit;font-size:.88rem;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:4px 12px;border-radius:999px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.chip:focus-visible,select:focus-visible,.seen:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.stats{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 18px;display:grid;gap:10px}
+.stats .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.stat .k{font-size:.78rem;color:var(--muted);letter-spacing:.04em}
+.stat .v{font-size:1.25rem;font-weight:700;font-variant-numeric:tabular-nums}
+.stat .s{font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.src{font-size:.75rem;color:var(--muted)}
+.bar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:baseline}
+.count{font-size:.88rem;color:var(--muted)}
+ul.items{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.item{display:grid;grid-template-columns:1fr auto;gap:6px 14px;padding:12px 2px;border-bottom:1px solid var(--line)}
+.item>div{min-width:0}
+.item .t{font-weight:700}
+.item a{color:var(--accent)}
+.meta{font-size:.8rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 10px}
+.tag{background:var(--accent-soft);color:var(--accent);padding:0 8px;border-radius:4px}
+.wait{color:var(--muted);font-size:.85rem}
+.seen{font:inherit;font-size:.82rem;border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:6px;padding:4px 10px;cursor:pointer;white-space:nowrap;align-self:start}
+.seen[aria-pressed="true"]{background:var(--seen-soft);border-color:var(--seen);color:var(--seen)}
+.item.isseen .t{color:var(--muted)}
+.empty{color:var(--muted);padding:16px 0}
+footer{font-size:.78rem;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+</style>
+<style>body{margin:0}</style>
+</head>
+<body>
+<div class="wrap" lang="ja">
+  <header>
+    <span class="draft">準備中のページです</span>
+    <h1>新潟県の移民政策反対情報</h1>
+    <p class="lead">新潟県と県内の市町村の議会・委員会・審議会で、外国人の受け入れについて誰が何を言ったかを、会議録の原文つきでまとめた資料の目次です。地域を選ぶと、その地域の資料と人口が出ます。</p>
+  </header>
+  <div class="picker">
+    <label for="area">地域</label>
+    <select id="area"></select>
+  </div>
+  <section class="stats" id="stats" aria-label="人口"></section>
+  <div class="chips" id="topics" role="group" aria-label="トピック"></div>
+  <section>
+    <div class="bar"><h2 id="listTitle">資料</h2><span class="count" id="count"></span></div>
+    <ul class="items" id="items"></ul>
+  </section>
+  <footer>「見た」の印は、この端末のブラウザだけに残ります。人口：総務省「住民基本台帳に基づく人口、人口動態及び世帯数」（各年1月1日）。</footer>
+</div>
+<script>
+const POP = [{"name": "新潟県", "code": "15", "totH27": "2,337,485", "totR8": "2,083,103", "totChg": "-10.9%", "jpChg": "-11.5%", "fgH27": "13,173", "fgR8": "26,262", "fgChg": "99.4%", "fgShH27": "0.6%", "fgShR8": "1.3%", "wShR8": "4.5%", "wJpChg": "-28.3%"}, {"name": "新潟市", "code": "151009", "totH27": "804,413", "totR8": "755,462", "totChg": "-6.1%", "jpChg": "-6.5%", "fgH27": "4,685", "fgR8": "8,017", "fgChg": "71.1%", "fgShH27": "0.6%", "fgShR8": "1.1%", "wShR8": "3.1%", "wJpChg": "-22.9%"}, {"name": "長岡市", "code": "152021", "totH27": "278,923", "totR8": "252,265", "totChg": "-9.6%", "jpChg": "-10.0%", "fgH27": "2,022", "fgR8": "3,135", "fgChg": "55.0%", "fgShH27": "0.7%", "fgShR8": "1.2%", "wShR8": "3.9%", "wJpChg": "-26.2%"}, {"name": "三条市", "code": "152048", "totH27": "101,775", "totR8": "89,826", "totChg": "-11.7%", "jpChg": "-12.3%", "fgH27": "417", "fgR8": "929", "fgChg": "122.8%", "fgShH27": "0.4%", "fgShR8": "1.0%", "wShR8": "2.3%", "wJpChg": "-30.1%"}, {"name": "柏崎市", "code": "152056", "totH27": "88,282", "totR8": "74,836", "totChg": "-15.2%", "jpChg": "-15.7%", "fgH27": "690", "fgR8": "975", "fgChg": "41.3%", "fgShH27": "0.8%", "fgShR8": "1.3%", "wShR8": "3.1%", "wJpChg": "-32.8%"}, {"name": "新発田市", "code": "152064", "totH27": "101,037", "totR8": "90,615", "totChg": "-10.3%", "jpChg": "-10.9%", "fgH27": "499", "fgR8": "1,066", "fgChg": "113.6%", "fgShH27": "0.5%", "fgShR8": "1.2%", "wShR8": "5.6%", "wJpChg": "-28.8%"}, {"name": "小千谷市", "code": "152081", "totH27": "37,620", "totR8": "32,044", "totChg": "-14.8%", "jpChg": "-15.7%", "fgH27": "165", "fgR8": "485", "fgChg": "193.9%", "fgShH27": "0.4%", "fgShR8": "1.5%", "wShR8": "7.5%", "wJpChg": "-36.2%"}, {"name": "加茂市", "code": "152099", "totH27": "29,216", "totR8": "23,595", "totChg": "-19.2%", "jpChg": "-19.4%", "fgH27": "86", "fgR8": "130", "fgChg": "51.2%", "fgShH27": "0.3%", "fgShR8": "0.6%", "wShR8": "2.0%", "wJpChg": "-41.9%"}, {"name": "十日町市", "code": "152102", "totH27": "57,164", "totR8": "45,992", "totChg": "-19.5%", "jpChg": "-19.8%", "fgH27": "323", "fgR8": "410", "fgChg": "26.9%", "fgShH27": "0.6%", "fgShR8": "0.9%", "wShR8": "3.3%", "wJpChg": "-40.0%"}, {"name": "見附市", "code": "152111", "totH27": "41,767", "totR8": "37,459", "totChg": "-10.3%", "jpChg": "-10.6%", "fgH27": "158", "fgR8": "262", "fgChg": "65.8%", "fgShH27": "0.4%", "fgShR8": "0.7%", "wShR8": "4.1%", "wJpChg": "-31.6%"}, {"name": "村上市", "code": "152129", "totH27": "64,617", "totR8": "52,228", "totChg": "-19.2%", "jpChg": "-19.7%", "fgH27": "249", "fgR8": "533", "fgChg": "114.1%", "fgShH27": "0.4%", "fgShR8": "1.0%", "wShR8": "7.6%", "wJpChg": "-39.6%"}, {"name": "燕市", "code": "152137", "totH27": "82,248", "totR8": "75,260", "totChg": "-8.5%", "jpChg": "-9.1%", "fgH27": "390", "fgR8": "853", "fgChg": "118.7%", "fgShH27": "0.5%", "fgShR8": "1.1%", "wShR8": "3.0%", "wJpChg": "-24.4%"}, {"name": "糸魚川市", "code": "152161", "totH27": "45,843", "totR8": "37,062", "totChg": "-19.2%", "jpChg": "-20.0%", "fgH27": "303", "fgR8": "622", "fgChg": "105.3%", "fgShH27": "0.7%", "fgShR8": "1.7%", "wShR8": "10.6%", "wJpChg": "-39.7%"}, {"name": "妙高市", "code": "152170", "totH27": "34,577", "totR8": "29,025", "totChg": "-16.1%", "jpChg": "-17.9%", "fgH27": "190", "fgR8": "804", "fgChg": "323.2%", "fgShH27": "0.5%", "fgShR8": "2.8%", "wShR8": "12.5%", "wJpChg": "-34.4%"}, {"name": "五泉市", "code": "152188", "totH27": "53,456", "totR8": "44,706", "totChg": "-16.4%", "jpChg": "-17.4%", "fgH27": "156", "fgR8": "666", "fgChg": "326.9%", "fgShH27": "0.3%", "fgShR8": "1.5%", "wShR8": "10.5%", "wJpChg": "-38.8%"}, {"name": "上越市", "code": "152226", "totH27": "200,179", "totR8": "177,922", "totChg": "-11.1%", "jpChg": "-12.0%", "fgH27": "1,007", "fgR8": "2,577", "fgChg": "155.9%", "fgShH27": "0.5%", "fgShR8": "1.4%", "wShR8": "3.9%", "wJpChg": "-28.0%"}, {"name": "阿賀野市", "code": "152234", "totH27": "44,756", "totR8": "38,454", "totChg": "-14.1%", "jpChg": "-14.7%", "fgH27": "184", "fgR8": "434", "fgChg": "135.9%", "fgShH27": "0.4%", "fgShR8": "1.1%", "wShR8": "5.0%", "wJpChg": "-35.1%"}, {"name": "佐渡市", "code": "152242", "totH27": "59,606", "totR8": "46,760", "totChg": "-21.6%", "jpChg": "-21.8%", "fgH27": "219", "fgR8": "296", "fgChg": "35.2%", "fgShH27": "0.4%", "fgShR8": "0.6%", "wShR8": "2.1%", "wJpChg": "-37.2%"}, {"name": "魚沼市", "code": "152251", "totH27": "38,914", "totR8": "31,813", "totChg": "-18.2%", "jpChg": "-18.8%", "fgH27": "182", "fgR8": "362", "fgChg": "98.9%", "fgShH27": "0.5%", "fgShR8": "1.1%", "wShR8": "5.0%", "wJpChg": "-37.1%"}, {"name": "南魚沼市", "code": "152269", "totH27": "59,636", "totR8": "51,603", "totChg": "-13.5%", "jpChg": "-15.0%", "fgH27": "753", "fgR8": "1,549", "fgChg": "105.7%", "fgShH27": "1.3%", "fgShR8": "3.0%", "wShR8": "15.3%", "wJpChg": "-37.0%"}, {"name": "胎内市", "code": "152277", "totH27": "30,827", "totR8": "26,251", "totChg": "-14.8%", "jpChg": "-15.9%", "fgH27": "79", "fgR8": "381", "fgChg": "382.3%", "fgShH27": "0.3%", "fgShR8": "1.5%", "wShR8": "4.0%", "wJpChg": "-34.4%"}, {"name": "聖籠町", "code": "153079", "totH27": "14,310", "totR8": "14,018", "totChg": "-2.0%", "jpChg": "-4.0%", "fgH27": "75", "fgR8": "352", "fgChg": "369.3%", "fgShH27": "0.5%", "fgShR8": "2.5%", "wShR8": "7.4%", "wJpChg": "-18.8%"}, {"name": "弥彦村", "code": "153427", "totH27": "8,493", "totR8": "7,401", "totChg": "-12.9%", "jpChg": "-13.3%", "fgH27": "18", "fgR8": "56", "fgChg": "211.1%", "fgShH27": "0.2%", "fgShR8": "0.8%", "wShR8": "2.9%", "wJpChg": "-37.2%"}, {"name": "田上町", "code": "153613", "totH27": "12,502", "totR8": "10,398", "totChg": "-16.8%", "jpChg": "-17.0%", "fgH27": "39", "fgR8": "52", "fgChg": "33.3%", "fgShH27": "0.3%", "fgShR8": "0.5%", "wShR8": "2.7%", "wJpChg": "-39.1%"}, {"name": "阿賀町", "code": "153851", "totH27": "12,516", "totR8": "8,719", "totChg": "-30.3%", "jpChg": "-30.5%", "fgH27": "38", "fgR8": "50", "fgChg": "31.6%", "fgShH27": "0.3%", "fgShR8": "0.6%", "wShR8": "-", "wJpChg": "-49.1%"}, {"name": "出雲崎町", "code": "154059", "totH27": "4,740", "totR8": "3,766", "totChg": "-20.5%", "jpChg": "-20.8%", "fgH27": "11", "fgR8": "20", "fgChg": "81.8%", "fgShH27": "0.2%", "fgShR8": "0.5%", "wShR8": "-", "wJpChg": "-44.2%"}, {"name": "湯沢町", "code": "154610", "totH27": "8,272", "totR8": "8,304", "totChg": "0.4%", "jpChg": "-9.5%", "fgH27": "105", "fgR8": "916", "fgChg": "772.4%", "fgShH27": "1.3%", "fgShR8": "11.0%", "wShR8": "47.0%", "wJpChg": "-34.5%"}, {"name": "津南町", "code": "154822", "totH27": "10,461", "totR8": "8,241", "totChg": "-21.2%", "jpChg": "-22.1%", "fgH27": "91", "fgR8": "166", "fgChg": "82.4%", "fgShH27": "0.9%", "fgShR8": "2.0%", "wShR8": "11.5%", "wJpChg": "-37.0%"}, {"name": "刈羽村", "code": "155047", "totH27": "4,791", "totR8": "4,220", "totChg": "-11.9%", "jpChg": "-14.4%", "fgH27": "11", "fgR8": "129", "fgChg": "1072.7%", "fgShH27": "0.2%", "fgShR8": "3.1%", "wShR8": "2.4%", "wJpChg": "-38.2%"}, {"name": "関川村", "code": "155811", "totH27": "6,186", "totR8": "4,551", "totChg": "-26.4%", "jpChg": "-26.7%", "fgH27": "26", "fgR8": "33", "fgChg": "26.9%", "fgShH27": "0.4%", "fgShR8": "0.7%", "wShR8": "-", "wJpChg": "-46.5%"}, {"name": "粟島浦村", "code": "155861", "totH27": "358", "totR8": "307", "totChg": "-14.2%", "jpChg": "-14.3%", "fgH27": "2", "fgR8": "2", "fgChg": "0.0%", "fgShH27": "0.6%", "fgShR8": "0.7%", "wShR8": "-", "wJpChg": "-25.0%"}];
+const TOPICS = ["土地","宗教・モスク・墓地","給食・食","介護・働く人","学校・子ども","選挙・議員","予算・補助金","人口・統計"];
+// status: "open"=公開済みリンクあり / "share"=要共有 / "wait"=公開版を準備中
+const ITEMS = [
+ {id:"pref-kaigo",area:"15",t:"県の介護人材の予算（修学資金・介護テクノロジーの補助）",topics:["介護・働く人","予算・補助金"],date:"2026-10-24",status:"wait"},
+ {id:"pref-india",area:"15",t:"日印友好交流促進知事ネットワークとインドでの介護人材の面接会",topics:["介護・働く人"],date:"2026-10-29",status:"wait"},
+ {id:"pref-china",area:"15",t:"県内の中国・韓国籍の在留資格",topics:["人口・統計"],date:"",status:"wait"},
+ {id:"pref-land",area:"15",t:"県内の外国人・外国資本の土地取得の一覧",topics:["土地"],date:"",status:"wait"},
+ {id:"tsubame-sen",area:"152137",t:"燕市議選 候補者の外国人政策の発言",topics:["選挙・議員"],date:"2026-10",status:"open",url:"https://claude.ai/artifact/MVMu7SeonWaxMesRKzbQfj"},
+ {id:"tsubame-zou",area:"152137",t:"燕市の社会増83人と外国人の転入",topics:["人口・統計"],date:"2026-10-27",status:"wait"},
+ {id:"mitsuke-sen",area:"152111",t:"見附市議選 候補者と会議録の発言",topics:["選挙・議員"],date:"2026-10",status:"share",url:"https://claude.ai/artifact/YaAFf4bGTQAJU7rSJgbko6"},
+ {id:"mitsuke-bochi",area:"152111",t:"エラヒ議員と市の墓地をめぐるやりとり",topics:["宗教・モスク・墓地","選挙・議員"],date:"",status:"wait"},
+ {id:"mu-land",area:"152269",t:"南魚沼市 外国人・外資の土地取得 市の答弁の移り変わり",topics:["土地"],date:"",status:"wait"},
+ {id:"mu-water",area:"152269",t:"南魚沼市 水源と土地",topics:["土地"],date:"",status:"wait"},
+ {id:"mu-sosei",area:"152269",t:"創生推進会議 委員3人の外資・土地についての発言",topics:["土地"],date:"2026-10-27",status:"wait"},
+ {id:"mu-halal",area:"152269",t:"ハラル給食の大変さ（話された条件）",topics:["給食・食","宗教・モスク・墓地"],date:"2026-10-28",status:"wait"},
+ {id:"mu-center",area:"152269",t:"給食センターのハラル対応の経緯",topics:["給食・食"],date:"",status:"wait"},
+ {id:"mu-yamato",area:"152269",t:"大和地区（浦佐小）の留学生の子どもと学校・保育",topics:["学校・子ども"],date:"2026-10-29",status:"wait"},
+ {id:"mu-women",area:"152269",t:"20〜39歳女性の減少と外国籍女性（総務部長の答弁）",topics:["人口・統計"],date:"2026-10-24",status:"wait"},
+ {id:"joetsu-remake",area:"152226",t:"上越市 住民の不安・土地・JICA基金（3月投稿のリメイク）",topics:["土地","予算・補助金"],date:"2026-10-23",status:"wait"},
+ {id:"joetsu-dc",area:"152226",t:"上越・妙高のデータセンター計画 会議録の発言",topics:["土地"],date:"2026-10-27",status:"wait"},
+ {id:"seiro-mosque",area:"153079",t:"新潟東港のパキスタン人とモスクの成り立ち・墓地問題の年表",topics:["宗教・モスク・墓地"],date:"",status:"wait"},
+ {id:"seiro-kokuseki",area:"153079",t:"聖籠町と新潟市北区の国籍別・在留資格別の人数",topics:["人口・統計"],date:"2025-12",status:"wait"},
+ {id:"yuzawa-norita",area:"154610",t:"湯沢町 旧ノリタ跡地",topics:["土地"],date:"2026-10-28",status:"wait"},
+ {id:"yuzawa-giin",area:"154610",t:"湯沢町議会 議員ごとの外国人関係の発言（現職12人・元議員18人、多文化共生推進／慎重）",topics:["選挙・議員"],date:"2026-10-31",status:"wait"},
+ {id:"yuzawa-chocho",area:"154610",t:"湯沢町長の答弁（外国人関係）",topics:["選挙・議員"],date:"2026-10-31",status:"wait"},
+ {id:"itoigawa-nochi",area:"152161",t:"糸魚川市農業委員会 外国籍の農地取得の申請",topics:["土地"],date:"",status:"wait"},
+ {id:"sanjo-kaigo",area:"152048",t:"三条市 介護人材確保対策検討会と外国人材の補助金",topics:["介護・働く人","予算・補助金"],date:"",status:"wait"},
+ {id:"niigata-kokusai",area:"151009",t:"新潟市国際課長「積極的に受け入れるのではなくて」",topics:["選挙・議員"],date:"",status:"wait"}
+];
+let area="15", topic=null, seen={};
+try{seen=JSON.parse(localStorage.getItem("seen")||"{}")}catch(e){seen={}}
+function save(){try{localStorage.setItem("seen",JSON.stringify(seen))}catch(e){}}
+const sel=document.getElementById("area");
+POP.forEach(p=>{const o=document.createElement("option");o.value=p.code;
+  const n=ITEMS.filter(i=>i.area===p.code).length;
+  o.textContent=p.name+(p.code==="15"?"（全体）":"")+(n?"　"+n+"件":"");sel.appendChild(o)});
+const tp=document.getElementById("topics");
+["すべて",...TOPICS].forEach(t=>{const b=document.createElement("button");b.className="chip";b.textContent=t;
+  b.onclick=()=>{topic=t==="すべて"?null:t;render()};tp.appendChild(b)});
+sel.onchange=()=>{area=sel.value;location.hash="a"+area;render()};
+function fromHash(){const q=new URLSearchParams(location.search).get("area");if(q&&POP.some(p=>p.code===q))area=q;const m=location.hash.match(/^#a(\d+)$/);if(m&&POP.some(p=>p.code===m[1]))area=m[1]}
+function stat(k,v,s){return `<div class="stat"><div class="k">${k}</div><div class="v">${v}</div><div class="s">${s}</div></div>`}
+function render(){
+  sel.value=area;
+  [...tp.children].forEach(b=>b.setAttribute("aria-pressed",String((topic||"すべて")===b.textContent)));
+  const p=POP.find(x=>x.code===area);
+  document.getElementById("stats").innerHTML=`<h2>${p.name}の人口</h2><div class="grid">`+
+    stat("総人口（令和8年）",p.totR8+"人",`平成27年から ${p.totChg}（日本人 ${p.jpChg}）`)+
+    stat("外国人（令和8年）",p.fgR8+"人",`平成27年 ${p.fgH27}人から ${p.fgChg}`)+
+    stat("外国人の割合",p.fgShR8,`平成27年 ${p.fgShH27}`)+
+    stat("20〜39歳女性に占める外国人",p.wShR8==="-"?"非公表":p.wShR8,`日本人の20〜39歳女性 ${p.wJpChg}`)+
+    `</div><div class="src">総務省 住民基本台帳（平成27年1月1日・令和8年1月1日）。小さい町村は外国人の年齢別が非公表。</div>`;
+  const list=ITEMS.filter(i=>(area==="15"||i.area===area)&&(!topic||i.topics.includes(topic)));
+  document.getElementById("listTitle").textContent=(area==="15"?"県内すべての資料":p.name+"の資料")+(topic?"｜"+topic:"");
+  const n=list.filter(i=>seen[i.id]).length;
+  document.getElementById("count").textContent=list.length?`${list.length}件中 ${n}件 見た`:"";
+  const ul=document.getElementById("items");ul.innerHTML="";
+  if(!list.length){ul.innerHTML='<li class="empty">この地域・トピックの資料はまだありません。</li>';return}
+  list.forEach(i=>{
+    const a=POP.find(x=>x.code===i.area).name;
+    const li=document.createElement("li");li.className="item"+(seen[i.id]?" isseen":"");
+    const title=i.status==="wait"?`<span class="t">${i.t}</span> <span class="wait">（公開版を準備中）</span>`:`<a class="t" href="${i.url}" target="_blank" rel="noopener">${i.t}</a>`+(i.status==="share"?' <span class="wait">（共有の設定待ち）</span>':"");
+    li.innerHTML=`<div>${title}<div class="meta"><span>${a}</span>${i.topics.map(t=>`<span class="tag">${t}</span>`).join("")}${i.date?`<span>${i.date}</span>`:""}</div></div>`;
+    const b=document.createElement("button");b.className="seen";b.setAttribute("aria-pressed",String(!!seen[i.id]));
+    b.textContent=seen[i.id]?"✓ 見た":"見た";
+    b.onclick=()=>{if(seen[i.id])delete seen[i.id];else seen[i.id]=Date.now();save();render()};
+    li.appendChild(b);ul.appendChild(li);
+  });
+}
+fromHash();window.addEventListener("hashchange",()=>{fromHash();render()});render();
+</script>
+
+</body>
+</html>
