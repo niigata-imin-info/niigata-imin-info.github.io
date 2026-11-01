@@ -58,6 +58,7 @@ ul.items{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:1px so
 footer{font-size:.78rem;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
 </style>
 <style>body{margin:0}</style>
+<script data-goatcounter="https://niigata-imin-info.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 <div class="wrap" lang="ja">
@@ -119,7 +120,8 @@ POP.forEach(p=>{const o=document.createElement("option");o.value=p.code;
 const tp=document.getElementById("topics");
 ["すべて",...TOPICS].forEach(t=>{const b=document.createElement("button");b.className="chip";b.textContent=t;
   b.onclick=()=>{topic=t==="すべて"?null:t;render()};tp.appendChild(b)});
-sel.onchange=()=>{area=sel.value;location.hash="a"+area;render()};
+function gcCount(path,title){try{if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:path,title:title,event:true})}catch(e){}}
+sel.onchange=()=>{area=sel.value;location.hash="a"+area;render();const p=POP.find(x=>x.code===area);gcCount("area-"+area,p?p.name:area)};
 function fromHash(){const q=new URLSearchParams(location.search).get("area");if(q&&POP.some(p=>p.code===q))area=q;const m=location.hash.match(/^#a(\d+)$/);if(m&&POP.some(p=>p.code===m[1]))area=m[1]}
 function stat(k,v,s){return `<div class="stat"><div class="k">${k}</div><div class="v">${v}</div><div class="s">${s}</div></div>`}
 function render(){
@@ -141,7 +143,7 @@ function render(){
   list.forEach(i=>{
     const a=POP.find(x=>x.code===i.area).name;
     const li=document.createElement("li");li.className="item"+(seen[i.id]?" isseen":"");
-    const title=i.status==="wait"?`<span class="t">${i.t}</span> <span class="wait">（公開版を準備中）</span>`:`<a class="t" href="${i.url}" target="_blank" rel="noopener">${i.t}</a>`+(i.status==="share"?' <span class="wait">（共有の設定待ち）</span>':"");
+    const title=i.status==="wait"?`<span class="t">${i.t}</span> <span class="wait">（公開版を準備中）</span>`:`<a class="t" href="${i.url}" target="_blank" rel="noopener" data-goatcounter-click="item-${i.id}" data-goatcounter-title="${i.t}">${i.t}</a>`+(i.status==="share"?' <span class="wait">（共有の設定待ち）</span>':"");
     li.innerHTML=`<div>${title}<div class="meta"><span>${a}</span>${i.topics.map(t=>`<span class="tag">${t}</span>`).join("")}${i.date?`<span>${i.date}</span>`:""}</div></div>`;
     const b=document.createElement("button");b.className="seen";b.setAttribute("aria-pressed",String(!!seen[i.id]));
     b.textContent=seen[i.id]?"✓ 見た":"見た";
