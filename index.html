@@ -55,6 +55,11 @@ ul.items{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:1px so
 .seen[aria-pressed="true"]{background:var(--seen-soft);border-color:var(--seen);color:var(--seen)}
 .item.isseen .t{color:var(--muted)}
 .empty{color:var(--muted);padding:16px 0}
+.news{display:grid;gap:8px}
+ul.nlist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.nlist li{padding:9px 2px;border-bottom:1px solid var(--line);display:grid;gap:2px;min-width:0}
+.nlist a{color:var(--accent);font-weight:700;overflow-wrap:anywhere}
+.more{font-size:.88rem;color:var(--accent)}
 footer{font-size:.78rem;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
 </style>
 <style>body{margin:0}</style>
@@ -72,6 +77,10 @@ footer{font-size:.78rem;color:var(--muted);border-top:1px solid var(--line);padd
     <select id="area"></select>
   </div>
   <section class="stats" id="stats" aria-label="人口"></section>
+  <section class="news" aria-label="新着">
+    <div class="bar"><h2 id="newsTitle">新着</h2><a class="more" id="newsMore" href="news.html">新着をすべて見る</a></div>
+    <ul class="nlist" id="news"><li class="empty">読み込み中…</li></ul>
+  </section>
   <div class="chips" id="topics" role="group" aria-label="トピック"></div>
   <section>
     <div class="bar"><h2 id="listTitle">資料</h2><span class="count" id="count"></span></div>
@@ -151,6 +160,25 @@ function render(){
     li.appendChild(b);ul.appendChild(li);
   });
 }
+
+let NEWS=null;
+function newsItems(d){return Array.isArray(d)?d:(d&&Array.isArray(d.items)?d.items:[])}
+function safeUrl(u){try{const x=new URL(u);return /^https?:$/.test(x.protocol)?x.href:null}catch(e){return null}}
+function renderNews(){
+  const ul=document.getElementById("news");ul.textContent="";
+  const p=POP.find(x=>x.code===area);
+  document.getElementById("newsTitle").textContent=area==="15"?"新着（県内すべて）":p.name+"の新着";
+  document.getElementById("newsMore").href="news.html"+(area==="15"?"":"?area="+area);
+  if(NEWS===null){const li=document.createElement("li");li.className="empty";li.textContent="新着は準備中です。";ul.appendChild(li);return}
+  const list=NEWS.filter(n=>area==="15"||String(n.area||"")===area).sort((a,b)=>String(b.date||b.found||"").localeCompare(String(a.date||a.found||""))).slice(0,10);
+  if(!list.length){const li=document.createElement("li");li.className="empty";li.textContent="この地域の新着はまだありません。";ul.appendChild(li);return}
+  list.forEach(n=>{const li=document.createElement("li");const u=safeUrl(n.link);
+    const a=document.createElement(u?"a":"span");a.textContent=n.title||"";if(u){a.href=u;a.target="_blank";a.rel="noopener";a.dataset.goatcounterClick="news-"+(n.area||"x")}
+    const m=document.createElement("div");m.className="meta";[n.date||n.found,n.source,n.group].filter(Boolean).forEach(s=>{const sp=document.createElement("span");sp.textContent=s;m.appendChild(sp)});
+    li.append(a,m);ul.appendChild(li)});
+}
+fetch("data/news.json",{cache:"no-cache"}).then(r=>r.ok?r.json():null).then(d=>{NEWS=d?newsItems(d):null;renderNews()}).catch(()=>{NEWS=null;renderNews()});
+const _render=render;render=function(){_render();renderNews()};
 fromHash();window.addEventListener("hashchange",()=>{fromHash();render()});render();
 </script>
 

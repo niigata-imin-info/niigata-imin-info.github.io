@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>新着一覧｜新潟県の移民政策反対情報</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap">
+<style>
+/* 一段組み：上に地域の選択、その下に統計カード、トピックの絞り込み、資料の一覧 */
+:root{
+  --bg:#f5f7f6; --surface:#ffffff; --fg:#1d2a2c; --muted:#5b6a6c; --line:#d7dfdd;
+  --accent:#1f6b6a; --accent-soft:#e1efed; --seen:#8a6d1f; --seen-soft:#f6eed6;
+  --serif:"BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  --sans:"BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121a1b; --surface:#1a2526; --fg:#e4ecea; --muted:#9aaaa8; --line:#2c3a3b;
+  --accent:#6fc3bf; --accent-soft:#1f3433; --seen:#e0c070; --seen-soft:#3a3220; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121a1b; --surface:#1a2526; --fg:#e4ecea; --muted:#9aaaa8; --line:#2c3a3b;
+  --accent:#6fc3bf; --accent-soft:#1f3433; --seen:#e0c070; --seen-soft:#3a3220; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:15px;line-height:1.7}
+.wrap{max-width:860px;margin:0 auto;padding-block:24px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:22px}
+h1{font-family:var(--serif);font-size:1.7rem;line-height:1.35;margin:0;text-wrap:balance}
+h2{font-family:var(--serif);font-size:1.15rem;margin:0}
+.lead{color:var(--muted);margin:4px 0 0}
+.draft{font-size:.8rem;letter-spacing:.06em;color:var(--seen);background:var(--seen-soft);display:inline-block;padding:2px 10px;border-radius:4px}
+.picker{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+select{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--fg);min-width:0;max-width:100%}
+label{font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:inherit;font-size:.88rem;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:4px 12px;border-radius:999px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.chip:focus-visible,select:focus-visible,.seen:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.stats{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 18px;display:grid;gap:10px}
+.stats .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.stat .k{font-size:.78rem;color:var(--muted);letter-spacing:.04em}
+.stat .v{font-size:1.25rem;font-weight:700;font-variant-numeric:tabular-nums}
+.stat .s{font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.src{font-size:.75rem;color:var(--muted)}
+.bar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:baseline}
+.count{font-size:.88rem;color:var(--muted)}
+ul.items{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.item{display:grid;grid-template-columns:1fr auto;gap:6px 14px;padding:12px 2px;border-bottom:1px solid var(--line)}
+.item>div{min-width:0}
+.item .t{font-weight:700}
+.item a{color:var(--accent)}
+.meta{font-size:.8rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 10px}
+.tag{background:var(--accent-soft);color:var(--accent);padding:0 8px;border-radius:4px}
+.wait{color:var(--muted);font-size:.85rem}
+.seen{font:inherit;font-size:.82rem;border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:6px;padding:4px 10px;cursor:pointer;white-space:nowrap;align-self:start}
+.seen[aria-pressed="true"]{background:var(--seen-soft);border-color:var(--seen);color:var(--seen)}
+.item.isseen .t{color:var(--muted)}
+.empty{color:var(--muted);padding:16px 0}
+.news{display:grid;gap:8px}
+ul.nlist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.nlist li{padding:9px 2px;border-bottom:1px solid var(--line);display:grid;gap:2px;min-width:0}
+.nlist a{color:var(--accent);font-weight:700;overflow-wrap:anywhere}
+.more{font-size:.88rem;color:var(--accent)}
+footer{font-size:.78rem;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+
+.empty{color:var(--muted);padding:16px 0}
+ul.nlist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.nlist li{padding:9px 2px;border-bottom:1px solid var(--line);display:grid;gap:2px;min-width:0}
+.nlist a{color:var(--accent);font-weight:700;overflow-wrap:anywhere}
+input[type=search]{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--fg);min-width:0;flex:1 1 200px}
+body{margin:0}
+</style>
+<script data-goatcounter="https://niigata-imin-info.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+<div class="wrap" lang="ja">
+  <header>
+    <a class="more" href="./">← 新潟県の移民政策反対情報</a>
+    <h1>新着一覧</h1>
+    <p class="lead">県・市町村の発表とニュースから、外国人に関わる見出しを毎日集めています。見出しと出どころへのリンクだけを載せています。中身は必ずリンク先で確かめてください。</p>
+  </header>
+  <div class="picker">
+    <label for="area">地域</label><select id="area"></select>
+    <label for="q">言葉で探す</label><input type="search" id="q" placeholder="例：技能実習、土地、ベトナム">
+  </div>
+  <div class="chips" id="groups" role="group" aria-label="種類"></div>
+  <section>
+    <div class="bar"><h2 id="title">新着</h2><span class="count" id="count"></span></div>
+    <ul class="nlist" id="news"><li class="empty">読み込み中…</li></ul>
+  </section>
+  <footer>出どころ：新潟県・県内市町村のホームページ、各報道機関の記事。</footer>
+</div>
+<script>
+const AREAS=[["15", "新潟県"], ["151009", "新潟市"], ["152021", "長岡市"], ["152048", "三条市"], ["152056", "柏崎市"], ["152064", "新発田市"], ["152081", "小千谷市"], ["152099", "加茂市"], ["152102", "十日町市"], ["152111", "見附市"], ["152129", "村上市"], ["152137", "燕市"], ["152161", "糸魚川市"], ["152170", "妙高市"], ["152188", "五泉市"], ["152226", "上越市"], ["152234", "阿賀野市"], ["152242", "佐渡市"], ["152251", "魚沼市"], ["152269", "南魚沼市"], ["152277", "胎内市"], ["153079", "聖籠町"], ["153427", "弥彦村"], ["153613", "田上町"], ["153851", "阿賀町"], ["154059", "出雲崎町"], ["154610", "湯沢町"], ["154822", "津南町"], ["155047", "刈羽村"], ["155811", "関川村"], ["155861", "粟島浦村"]];
+const NAME=Object.fromEntries(AREAS);
+let NEWS=[],area=new URLSearchParams(location.search).get("area")||"15",group=null;
+if(!NAME[area])area="15";
+const sel=document.getElementById("area"),q=document.getElementById("q");
+AREAS.forEach(([c,n])=>{const o=document.createElement("option");o.value=c;o.textContent=n+(c==="15"?"（すべて）":"");sel.appendChild(o)});
+sel.value=area;sel.onchange=()=>{area=sel.value;render()};q.oninput=()=>render();
+function safeUrl(u){try{const x=new URL(u);return /^https?:$/.test(x.protocol)?x.href:null}catch(e){return null}}
+function render(){
+  const gs=[...new Set(NEWS.map(n=>n.group).filter(Boolean))];const gc=document.getElementById("groups");gc.textContent="";
+  ["すべて",...gs].forEach(g=>{const b=document.createElement("button");b.className="chip";b.textContent=g;b.setAttribute("aria-pressed",String((group||"すべて")===g));b.onclick=()=>{group=g==="すべて"?null:g;render()};gc.appendChild(b)});
+  const w=q.value.trim();
+  const list=NEWS.filter(n=>(area==="15"||String(n.area||"")===area)&&(!group||n.group===group)&&(!w||[n.title,n.source,(n.words||[]).join?n.words.join(" "):n.words].join(" ").includes(w)))
+    .sort((a,b)=>String(b.date||b.found||"").localeCompare(String(a.date||a.found||"")));
+  document.getElementById("title").textContent=(NAME[area]||"")+"の新着";
+  document.getElementById("count").textContent=list.length+"件";
+  const ul=document.getElementById("news");ul.textContent="";
+  if(!list.length){const li=document.createElement("li");li.className="empty";li.textContent=NEWS.length?"当てはまる新着はありません。":"新着は準備中です。";ul.appendChild(li);return}
+  list.slice(0,500).forEach(n=>{const li=document.createElement("li");const u=safeUrl(n.link);
+    const a=document.createElement(u?"a":"span");a.textContent=n.title||"";if(u){a.href=u;a.target="_blank";a.rel="noopener";a.dataset.goatcounterClick="news-"+(n.area||"x")}
+    const m=document.createElement("div");m.className="meta";[n.date||n.found,n.source,n.group].filter(Boolean).forEach(s=>{const sp=document.createElement("span");sp.textContent=s;m.appendChild(sp)});
+    li.append(a,m);ul.appendChild(li)});
+}
+fetch("data/news.json",{cache:"no-cache"}).then(r=>r.ok?r.json():null).then(d=>{NEWS=Array.isArray(d)?d:(d&&Array.isArray(d.items)?d.items:[]);render()}).catch(()=>render());
+</script>
+</body>
+</html>
