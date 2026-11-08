@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>清塚武敏議員 国際大学補助金</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap">
+<style>
+/* 選挙公報のような一覧 → 候補者カード。紙の質感の中性色と、投票所の案内板の深緑 */
+:root{
+  --bg:#f6f6f2; --paper:#ffffff; --ink:#1d2421; --muted:#5d6762; --line:#d9ddd6;
+  --accent:#1f5e4b; --accent-soft:#e3eee9;
+  --go:#2b6a8f; --go-soft:#e2edf4; --care:#9a5a12; --care-soft:#f6ecdd; --mix:#6b5e86; --mix-soft:#ece8f3; --none:#7a807c; --none-soft:#ecedeb;
+  --serif:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  --sans:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.75;padding-inline:16px;padding-block:28px 56px}
+.wrap{max-width:860px;margin:0 auto;display:grid;gap:36px}
+h1,h2,h3{font-family:var(--serif);text-wrap:balance;line-height:1.35;margin:0}
+h1{font-size:clamp(24px,5vw,34px)}
+h2{font-size:21px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
+h3{font-size:18px}
+p{margin:0}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--accent);font-weight:700}
+header{display:grid;gap:12px}
+.city{font-family:var(--serif);font-weight:700;font-size:clamp(40px,11vw,64px);line-height:1.1;color:var(--accent);display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px}
+.city .pref{font-size:.3em;color:var(--muted);font-weight:700}
+.city .sub{font-size:.4em;color:var(--ink,inherit)}
+.lead{color:var(--muted);max-width:62ch}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted)}
+.facts b{color:var(--ink);font-variant-numeric:tabular-nums}
+section{display:grid;gap:16px}
+.note{background:var(--accent-soft);border-radius:6px;padding:14px 16px;display:grid;gap:6px;font-size:14px}
+.note ul{margin:0;padding-left:1.2em}
+.legend{display:flex;flex-wrap:wrap;gap:8px}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.t-go{background:var(--go-soft);color:var(--go)} .t-care{background:var(--care-soft);color:var(--care)}
+.t-mix{background:var(--mix-soft);color:var(--mix)} .t-none{background:var(--none-soft);color:var(--none)}
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.04em;background:var(--bg)}
+tr:last-child td{border-bottom:0}
+td.name{font-weight:700;white-space:nowrap}
+td.pt{font-size:13.5px;min-width:15em}
+td:nth-child(2){white-space:nowrap}
+td.d{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.group{display:grid;gap:12px}
+.group>h3{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:10px;min-width:0}
+.card-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.card-head .nm{font-family:var(--serif);font-size:19px;font-weight:700}
+.card-head .meta{font-size:13px;color:var(--muted)}
+.rec{display:grid;gap:6px;padding-top:10px;border-top:1px dashed var(--line)}
+.rec:first-of-type{border-top:0;padding-top:0}
+.when{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.sum{font-size:14px}
+blockquote{margin:0;padding:6px 0 6px 14px;border-left:3px solid var(--line);font-size:14.5px}
+blockquote::before{content:"原文　";font-size:11px;color:var(--muted);letter-spacing:.08em}
+.src{font-size:12.5px}
+.plain{display:grid;gap:8px}
+.plain li{margin-bottom:4px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.mini{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 14px;font-size:14px;min-width:0}
+.mini b{display:block}
+footer{font-size:13px;color:var(--muted);display:grid;gap:6px;border-top:1px solid var(--line);padding-top:16px}
+
+.card-head .tags{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.nori{font-size:13.5px;color:var(--muted)}
+.nori b{color:var(--ink)}
+.rec{gap:2px;padding-top:8px}
+.card h4{font-size:14px;margin:6px 0 0;color:var(--accent)}
+.memo{font-size:13px;color:var(--muted)}
+.toc{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px}
+.back{font-size:14px}
+.ocr{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-left:6px}
+
+table{min-width:0!important}
+th,td{padding:8px 8px!important}
+td.name{white-space:normal!important;word-break:keep-all}
+.pty{display:block;font-size:12px;font-weight:400;color:var(--muted)}
+.pd{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+td.dirc{min-width:6.6em;white-space:normal!important}
+td.dirc .tag{display:block;width:fit-content;max-width:100%;border-radius:6px;line-height:1.45;padding:3px 7px}
+td.dirc .tag{white-space:normal;font-size:11.5px;padding:2px 7px;margin-bottom:4px}
+td.pt{min-width:9em!important}
+</style><style>details.howto>summary{cursor:pointer;list-style:none}details.howto>summary::-webkit-details-marker{display:none}details.howto>summary::before{content:"＋ ";color:var(--accent);font-weight:700}details.howto[open]>summary::before{content:"－ "}details.howto[open]{gap:6px}td.name a.jump{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}</style><style>details.old{border-top:1px dashed var(--line);padding-top:8px}details.old>summary{cursor:pointer;font-size:13px;color:var(--muted);list-style:none}details.old>summary::-webkit-details-marker{display:none}details.old>summary::before{content:"＋ ";color:var(--accent)}details.old[open]>summary::before{content:"－ "}details.old[open]{display:grid;gap:6px}.latest{font-size:12px;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:0 6px}</style><style>.who{font-size:12px;font-weight:700;letter-spacing:.04em;margin-top:6px}.who.giin{color:var(--go)}.who.shi{color:var(--care)}.exp{font-size:14px;color:var(--muted)}.rec{border-top:1px dashed var(--line);padding-top:12px}</style></head><body>
+<div class="wrap">
+<header><p class="eyebrow"><a href="minamiuonuma.html">南魚沼市議会 議員の発言記録</a> ＞ 1人ずつのまとめ</p>
+<h1>清塚武敏議員 ― 国際大学への補助金に賛成討論をし、介護の外国人材の受け入れ状況を確かめた</h1>
+<p class="lead">南魚沼市議会の現職で、令和5年11月からは議長として議事を進めています（議長になってからは、質問としての発言は少なくなっています）。外国関係でいちばんはっきりした発言は、令和5年2月、ふるさと納税から国際大学に出す補助金への黒岩揺光議員の反対討論に対して行った賛成討論です。令和8年4月の社会厚生委員会では、介護施設の人手不足について外国籍人材の受け入れ実績を尋ね、施設側は「雪と住環境」のため南魚沼市に来たいという外国籍の人が今のところいないと答えています。一方、平成28年には、外国のIT企業を呼ぶグローバルITパークについて、雇用が外国人に偏らないかという不安も述べていました。</p>
+<p class="facts"><span>分類（読み）：<b>多文化共生推進</b></span><span>人手不足：<b>発言なし</b></span></p></header>
+<section><h2>基本情報</h2><div class="note"><ul>
+<li>会議録の発言は平成25年からあります。令和5年11月7日以降は議長として発言しています。</li>
+<li>外国人の受け入れや雇用そのものについて、進める・慎重とはっきり述べた発言は見つかりません。推進に分けたのは、国際大学への補助金の賛成討論が中心です。</li>
+<li>分類は会議録の記載に基づく目安で、本人の考え全体を表すものではありません。</li></ul></div></section>
+<section><h2>中心の発言1　国際大学への補助金に賛成討論（令和5年2月27日）</h2>
+<div class="rec"><div class="when">R5.2.27　補正予算への賛成討論 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/4/5/1/6/9/_/R5.2.27.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">清塚議員</div><blockquote>先ほど、反対議員が国際大学支援補助金について反対討論をされておりました。この件は昨年も同じく討論に参加したというように私は記憶しております。まずはこの大学支援補助金でありますが、南魚沼市の支援サイトから国際大学の応援と交流推進コースというのが決められております。そこで寄附者はそこに寄附をしているのを、補助金として90％出している。そして10％を南魚沼市の国際交流化支援事業に充てられている。それは去年から反対者は学習されてきているとは思うので、またここで同じことをしているので、少し首をかしげるというところであります。</blockquote>
+<div class="who giin">清塚議員</div><blockquote>そういう中で、この国際大学だけではないのですが、北里は、この南魚沼市の発展には本当に欠かせないものと私は感じております。先ほど反対者は何もしていないとか、何かを示せと言われておりますが、国際大学の学長がこれから、ＭＵＳＵＢＩ－ＢＡでの定期的な講演を進めていくというところもあります。そして反対者は根拠もあるのか、ないのか分かりませんが、教授の給与が64万円から74万円になった。本当にそういう根拠があってあなたが言われているのかと非常に疑問に思ったところであります。</blockquote>
+<p class="exp">「反対議員」は黒岩揺光議員です（黒岩議員のまとめ参照）。討論なので市の答弁はありません。</p>
+</div>
+</section>
+<section><h2>中心の発言2　介護施設の外国籍人材（令和8年4月22日 社会厚生委員会）</h2>
+<div class="rec"><div class="when">R8.4.22　社会厚生委員会（介護施設の運営状況の説明への質疑） <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/1/7/7/8/_/R8.4.22%E4%BC%9A%E8%AD%B0%E9%8C%B2.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">清塚議員</div><blockquote>今後の運営上の課題の中で、やはり人材不足の話をしていたが、例えば苗場福祉会グループの中で、外国籍人材の受入れの実績があれば、教えてもらいたい。</blockquote>
+<div class="who shi">施設長（健康倶楽部つどい）</div><blockquote>苗場福祉会として外国籍人材の登用は既に行っている。関東地域であれば、埼玉県、群馬県で行っているし、県内では、新潟市、小千谷市、十日町市、津南町、苗場福祉会が事業を行っているほぼ全てのエリアで受入れを行っている。近くであれば湯沢町も行っている。当施設も外国籍人材を確保したいと手を挙げているが、やはり雪と住環境というところで、南魚沼市に来たいという外国籍の人が今のところおらず、なかなか受入れが進んでいない状況がある。</blockquote>
+<div class="who giin">清塚議員</div><blockquote>グループの中で既に受入れをしているということで、外国籍人材の国籍などは主にどこを受入れているのか。</blockquote>
+<div class="who shi">施設長（健康倶楽部つどい）</div><blockquote>聞いているところになるが、マレーシア、ネパールなどである。グループとして介護職員の実務研修をベトナムのハノイで開校しており、介護人材を育成して、こちらで勤めてもらうという取組もしている。</blockquote>
+<p class="exp">答えたのは市の職員ではなく、説明に来た介護施設の施設長です。</p>
+</div>
+</section>
+<section><h2>令和元年より前の発言（参考）</h2>
+<div class="rec"><div class="when">H28.3.15　予算の質疑（グローバルITパーク） <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/8/5/2/_/H28.3.15.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">清塚議員</div><blockquote>やはりちょっとインド・スリランカということになると、何か私たちの目線から見てしまうと、どうしても雇用が外国人とかに特定されてしまうのかなという不安もちょっとありますが、ぜひ、南魚沼市の地元の若い人たちが入れる環境になるのかなという点があります。</blockquote>
+<div class="who shi">産業振興部長</div><blockquote>外国人が主体になって雇用が、という部分ですけれども、これは業態的に実際にどうなるのかという部分は、ふたをあけてみないとわからない部分もございます。</blockquote>
+</div>
+</section>
+<section><h2>ほかの議員との比べ方（読み）</h2><div class="note"><ul>
+<li>国際大学への補助金では、寺口議員と並んで賛成の側に立ち、反対した黒岩議員に「少し首をかしげる」「本当にそういう根拠があってあなたが言われているのか」と反論しました。</li>
+<li>外国人の受け入れそのものについての発言は少なく、平成28年にはグローバルITパークで雇用が外国人に偏る「不安」も述べています。推進派の中では、外国人について積極的に発言してきた議員ではありません。</li>
+</ul></div></section>
+<section><h2>調べた範囲</h2><ul class="plain">
+<li>南魚沼市議会の本会議・委員会の会議録（手元の写し）から、清塚議員の発言のうち外国・外国人・国際大学・インバウンド・共生・各国名などを含む31か所と、すぐ後の答弁を全文で確認しました。議長としての議事進行の発言は除いています。</li>
+<li>委員会の記録は令和7年4月以降だけです。</li>
+<li>引用は会議録の文言どおりです。「（略）」は同じ発言の途中を省いたところです。会議録は取得時点の写しです。</li>
+<li>2026年11月8日作成</li></ul></section>
+<footer>
+  <div>出典：南魚沼市議会の会議録・委員会の議事録、市の審議会などの記録（南魚沼市公式サイトのPDF）。</div>
+  <div>新潟県の移民政策反対情報</div>
+</footer>
+</div>
+<script data-goatcounter="https://niigata-imin-info.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body></html>
