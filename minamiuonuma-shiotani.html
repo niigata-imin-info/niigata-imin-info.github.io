@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>塩谷寿雄議員 国際大学・参政権・外国人の人材</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap">
+<style>
+/* 選挙公報のような一覧 → 候補者カード。紙の質感の中性色と、投票所の案内板の深緑 */
+:root{
+  --bg:#f6f6f2; --paper:#ffffff; --ink:#1d2421; --muted:#5d6762; --line:#d9ddd6;
+  --accent:#1f5e4b; --accent-soft:#e3eee9;
+  --go:#2b6a8f; --go-soft:#e2edf4; --care:#9a5a12; --care-soft:#f6ecdd; --mix:#6b5e86; --mix-soft:#ece8f3; --none:#7a807c; --none-soft:#ecedeb;
+  --serif:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  --sans:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.75;padding-inline:16px;padding-block:28px 56px}
+.wrap{max-width:860px;margin:0 auto;display:grid;gap:36px}
+h1,h2,h3{font-family:var(--serif);text-wrap:balance;line-height:1.35;margin:0}
+h1{font-size:clamp(24px,5vw,34px)}
+h2{font-size:21px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
+h3{font-size:18px}
+p{margin:0}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--accent);font-weight:700}
+header{display:grid;gap:12px}
+.city{font-family:var(--serif);font-weight:700;font-size:clamp(40px,11vw,64px);line-height:1.1;color:var(--accent);display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px}
+.city .pref{font-size:.3em;color:var(--muted);font-weight:700}
+.city .sub{font-size:.4em;color:var(--ink,inherit)}
+.lead{color:var(--muted);max-width:62ch}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted)}
+.facts b{color:var(--ink);font-variant-numeric:tabular-nums}
+section{display:grid;gap:16px}
+.note{background:var(--accent-soft);border-radius:6px;padding:14px 16px;display:grid;gap:6px;font-size:14px}
+.note ul{margin:0;padding-left:1.2em}
+.legend{display:flex;flex-wrap:wrap;gap:8px}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.t-go{background:var(--go-soft);color:var(--go)} .t-care{background:var(--care-soft);color:var(--care)}
+.t-mix{background:var(--mix-soft);color:var(--mix)} .t-none{background:var(--none-soft);color:var(--none)}
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.04em;background:var(--bg)}
+tr:last-child td{border-bottom:0}
+td.name{font-weight:700;white-space:nowrap}
+td.pt{font-size:13.5px;min-width:15em}
+td:nth-child(2){white-space:nowrap}
+td.d{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.group{display:grid;gap:12px}
+.group>h3{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:10px;min-width:0}
+.card-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.card-head .nm{font-family:var(--serif);font-size:19px;font-weight:700}
+.card-head .meta{font-size:13px;color:var(--muted)}
+.rec{display:grid;gap:6px;padding-top:10px;border-top:1px dashed var(--line)}
+.rec:first-of-type{border-top:0;padding-top:0}
+.when{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.sum{font-size:14px}
+blockquote{margin:0;padding:6px 0 6px 14px;border-left:3px solid var(--line);font-size:14.5px}
+blockquote::before{content:"原文　";font-size:11px;color:var(--muted);letter-spacing:.08em}
+.src{font-size:12.5px}
+.plain{display:grid;gap:8px}
+.plain li{margin-bottom:4px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.mini{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 14px;font-size:14px;min-width:0}
+.mini b{display:block}
+footer{font-size:13px;color:var(--muted);display:grid;gap:6px;border-top:1px solid var(--line);padding-top:16px}
+
+.card-head .tags{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.nori{font-size:13.5px;color:var(--muted)}
+.nori b{color:var(--ink)}
+.rec{gap:2px;padding-top:8px}
+.card h4{font-size:14px;margin:6px 0 0;color:var(--accent)}
+.memo{font-size:13px;color:var(--muted)}
+.toc{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px}
+.back{font-size:14px}
+.ocr{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-left:6px}
+
+table{min-width:0!important}
+th,td{padding:8px 8px!important}
+td.name{white-space:normal!important;word-break:keep-all}
+.pty{display:block;font-size:12px;font-weight:400;color:var(--muted)}
+.pd{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+td.dirc{min-width:6.6em;white-space:normal!important}
+td.dirc .tag{display:block;width:fit-content;max-width:100%;border-radius:6px;line-height:1.45;padding:3px 7px}
+td.dirc .tag{white-space:normal;font-size:11.5px;padding:2px 7px;margin-bottom:4px}
+td.pt{min-width:9em!important}
+</style><style>details.howto>summary{cursor:pointer;list-style:none}details.howto>summary::-webkit-details-marker{display:none}details.howto>summary::before{content:"＋ ";color:var(--accent);font-weight:700}details.howto[open]>summary::before{content:"－ "}details.howto[open]{gap:6px}td.name a.jump{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}</style><style>details.old{border-top:1px dashed var(--line);padding-top:8px}details.old>summary{cursor:pointer;font-size:13px;color:var(--muted);list-style:none}details.old>summary::-webkit-details-marker{display:none}details.old>summary::before{content:"＋ ";color:var(--accent)}details.old[open]>summary::before{content:"－ "}details.old[open]{display:grid;gap:6px}.latest{font-size:12px;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:0 6px}</style><style>.who{font-size:12px;font-weight:700;letter-spacing:.04em;margin-top:6px}.who.giin{color:var(--go)}.who.shi{color:var(--care)}.exp{font-size:14px;color:var(--muted)}.rec{border-top:1px dashed var(--line);padding-top:12px}</style></head><body>
+<div class="wrap">
+<header><p class="eyebrow"><a href="minamiuonuma.html">南魚沼市議会 議員の発言記録</a> ＞ 1人ずつのまとめ</p>
+<h1>塩谷寿雄議員 ― 国際大学を生かした英語教育や外国人の人材を求める一方、外国人の地方参政権に慎重な意見書を出し、外国籍の子どもの学校の分け方も確かめた</h1>
+<p class="lead">南魚沼市議会の現職で、平成22年から会議録に発言がある議員です。国際大学を生かした英語教育、アジアからのインバウンド（外国人観光客）、介護などで「海外の力が必要になる時代」と、外国とのつながりを広げる発言が多くあります。一方で、平成22年には永住外国人に地方参政権を与えることに慎重な意見書を提出し、「参政権を求めるならば、順序としてまず帰化を申請し」と説明しました。令和8年1月の委員会では、国際大学の学生の子どもを学校に分散させるか集約するかを質問し、市は外国籍の子どもが「あまりに増え過ぎてしまうと」日本語を覚えなくても学校生活が完結してしまうと答えています。</p>
+<p class="facts"><span>分類（読み）：<b>多文化共生推進（慎重な質問も）</b></span><span>人手不足：<b>令和元年以降は発言なし</b>（H29・H30に「海外の力が必要」）</span></p></header>
+<section><h2>基本情報</h2><div class="note"><ul>
+<li>会議録の発言は平成22年からあります。障がい福祉・共生社会、観光、国際大学の質問が多い議員です。令和4年には議長を務めていました。</li>
+<li>外国人の人材や参政権についてのはっきりした発言は、重く見る区切り（令和元年以降）より前のものです。令和元年以降は、国際大学・インバウンド・外国籍の子どもの学校についての質問が中心です。</li>
+<li>分類は会議録の記載に基づく目安で、本人の考え全体を表すものではありません。</li></ul></div></section>
+<section><h2>中心の発言1　国際大学の学生の子どもの学校と英語教育（令和8年 総務文教委員会）</h2>
+<div class="rec"><div class="when">R8.1.16　総務文教委員会 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/6/8/6/9/_/R8.01.16%20%E7%B7%8F%E5%8B%99%E6%96%87%E6%95%99%E5%A7%94%E5%93%A1%E4%BC%9A%E3%80%80%E8%AD%B0%E4%BA%8B%E9%8C%B2.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">塩谷議員</div><blockquote>英語教育であるが、黒岩委員も言ったように国際大学があるので、この地域ではすぐれた英語教育ができると思っている。国際大学で各小中学校に行けるようなチームをつくってもらって、カリキュラムに組み込むこともよいのではないか。今、国際大学の学生の子供が増えて、大和地域の小学校に分散していくという話があったし、次の調査事件である学区再編にも関連するかもしれないが、分散させるメリットとしては説明があったように子供たちの触れ合いということであるが、行政的なメリットから考えるとそういった子供が分散したほうがよいのか、集約したほうがよいのか、どう捉えているか。</blockquote>
+<div class="who shi">教育部長</div><blockquote>国際大学の学生の子供の入学先の集約化についてである。これまでは、浦佐小学校に皆が入れればよいということで取り組んできたが、浦佐小学校のスタッフの問題、児童の中の外国籍の子供の割合があまりに増え過ぎた場合の弊害の問題が出てきた。例えば、今まで外国籍の子供が少ないときは、外国籍の子供を日本人の子供が手助けし合って、みんなで盛り上げていくようなところがあった。しかし、外国籍の子供があまりに増え過ぎてしまうと、日本語を覚えなくても外国籍の子供たちだけでグループができてしまい、その中で学校生活などが完結してしまうので、日本人の子供や日本語に関わらなくても何とか学校生活ができてしまうといったことが出てきてしまう。小学校のキャパシティの問題、外国籍の子供の割合の問題を考えると、やはり分散せざるを得なかったり、分散することがよいという今の状況である。</blockquote>
+<div class="who giin">塩谷議員</div><blockquote>国際大学と協力して、英語に特化した取組を行うなど、ほかの地域とは違う魅力を発信していくべきだと思っているが、その点はどう考えているか。</blockquote>
+<div class="who shi">教育部長</div><blockquote>国際大学の存在を市の魅力として生かしていくべきと承知している。</blockquote>
+</div>
+<div class="rec"><div class="when">R8.6.10　総務文教委員会 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/6/2/5/3/_/R8.06.10%20%E7%B7%8F%E5%8B%99%E6%96%87%E6%95%99%E5%A7%94%E5%93%A1%E4%BC%9A%E3%80%80%E8%AD%B0%E4%BA%8B%E9%8C%B2.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">塩谷議員</div><blockquote>国際大学の学生の子供は、どれくらいを占めているか。</blockquote>
+<div class="who shi">学校教育課長</div><blockquote>国際大学の学生の子供は、現在、浦佐小学校だけではなく、三用小学校、赤石小学校、大崎小学校まで拡充して受入れを行っている状況である。正確な数字は手元にないが60人くらいである。</blockquote>
+</div>
+</section>
+<section><h2>中心の発言2　永住外国人の地方参政権に慎重な意見書を提出（平成22年3月19日）</h2>
+<div class="rec"><div class="when">H22.3.19　永住外国人に地方参政権を付与することに関する意見書の提出者としての説明 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/2/9/8/3/_/9544_12801_misc.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">塩谷議員</div><blockquote>なぜ今、急に外国人参政権の問題が提起されているのか誠に不可解なことであり、理解しがたいものであります。そもそも参政権を求めるならば、順序としてまず帰化を申請し、日本国民となって参政権を得るべきものだと考えます。</blockquote>
+<div class="who giin">塩谷議員</div><blockquote>韓国でも在韓日本人に対する法案が多分あがったと思うのですけれども、それに対しては否決を韓国ではされているわけですよね。（略）我が国でも間違いなく、先ほど申し上げているとおり、日本人固有。日本人ならできるやはり参政権だと思っていますので、という思いです。</blockquote>
+<p class="exp">この意見書には桑原圭美議員らが賛成討論、中沢一博議員らが反対討論をして、賛成多数で可決されました。重く見る区切り（令和元年以降）より前の発言ですが、外国人について考えがいちばんはっきり出ている発言なので中心に載せています。</p>
+</div>
+</section>
+<section><h2>中心の発言3　介護などの人手不足に「海外の力」（平成29年・平成30年）</h2>
+<div class="rec"><div class="when">H29.9.19　決算の質疑 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/7/4/6/_/H29.9.19.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">塩谷議員</div><blockquote>資料の16ページを見ると、非常に中国、フィリピンという方々が、我々の市に来ています。かなり工場で勤めているということはわかるのですけれども、非常にうちの市として、介護の現場というものが人材不足になっています。当然、言葉の壁というものはあると思うのですけれども、こういう決算書を見て本当に、中国とフィリピンの方がいっぱい来ているのだなということがわかるので、そういう壁を越えて人材育成をして、今うちの市に足らない人材をつくっていくような考えをした方がいいと思うのですけれども、その点いかがお思いか、お聞かせいただきたいと思います。</blockquote>
+<div class="who shi">地方創生特命部長</div><blockquote>企業の皆さんからも減少する生産年齢人口の対応としまして、労働力のものとして海外の方々の活用もということで、既に市内にも実績があるということがこういうところで数字として上がってきているのではないかなと思います。今後さらにこれを１つの流れとして仕組みをつくっていく。そんなことも視野に入れながら検討は進めさせていただいております。</blockquote>
+</div>
+<div class="rec"><div class="when">H30.3.9　予算の質疑 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/8/4/_/H30.3.9.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">塩谷議員</div><blockquote>中小企業が多い中で、委員会だか本会議で言ったかと思いますが、やはり、もう海外の力が必要になる時代になってくると思います。介護も踏まえた上でですね。</blockquote>
+</div>
+</section>
+<section><h2>ほかの発言</h2>
+<div class="rec"><div class="when">H31.3.11　予算の質疑 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/1/1/_/H31.3.11.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">塩谷議員</div><blockquote>今、一番来ているのはアジア圏で、中国から800万人が日本に来ていて、次は台湾で650万人以上来ているのですけれども。そういうことを考えればやはりアジア圏のインバウンド対策というのは、ではどうなのかということだと思います。（略）お金をかけないのであれば、市内にも中国人の方もいらっしゃいますし、台湾人の方もいらっしゃるので、そういう方を中心にいろいろなことを</blockquote>
+<div class="who shi">商工観光課長</div><blockquote>新潟県が平成30年、今回、平成31年からですか、観光局を独立させるに当たって、県のほうもインバウンドについてのターゲット層というのを変更させました。その中で、東南アジア、中国圏だったものを、県のほうも北米、それからオーストラリア、豪ですね、こちらのほうに一応、方向転換をしているという中があるのが１点。</blockquote>
+</div>
+<div class="rec"><div class="when">H31.3.12　予算の質疑（消防） <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/1/2/_/H31.3.12.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">塩谷議員</div><blockquote>平成31年度は次の対応としてこういう外国の言葉、インバウンド対応ということでやられるのですけれども、そういうことで、どんな検討をなされて平成31年度をされているのか。</blockquote>
+<div class="who shi">消防長</div><blockquote>今回新たに予算措置した部分は、指令室、119番が入ってきたときに、その方が外国人で外国語しか話せないという場合の対応の予算措置でございます。</blockquote>
+</div>
+<div class="rec"><div class="when">H30.3.12　予算の質疑 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/8/5/_/H30.3.12.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">塩谷議員</div><blockquote>生活保護の助成でございますけれども、この中に外国人という人が何人いるのか教えていただきたいと思いますし</blockquote>
+<div class="who shi">福祉課長</div><blockquote>外国人の人数につきましては、現在詳細な人数を把握しておりませんので、後ほど回答させていただきたいと思います。</blockquote>
+<div class="who shi">福祉課長</div><blockquote>先ほどの生活保護を受給されている外国籍のニーズということでございますけれども、これは単身で３人いらっしゃいます。</blockquote>
+</div>
+<div class="rec"><div class="when">H27.6.15　一般質問「空き家対策について」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/3/0/4/_/28554_64099_misc.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">塩谷議員</div><blockquote>そしてまたいろいろな空き家の中で海外の方が買われていて、なかなか特定できないというような場所になってくるので、なるべくそこまでにならないような早い段階で手を打つべきだと私は考えますけれども、市長の考えを問います。</blockquote>
+<div class="who shi">市長</div><blockquote>空き家対策についておっしゃるようにそうならないうちに手が打てるのが、確か一番だと思っています。</blockquote>
+</div>
+</section>
+<section><h2>ほかの議員との比べ方（読み）</h2><div class="note"><ul>
+<li>推進派に分けた議員の中で、外国人の地方参政権に慎重な意見書を自分で提出したのは塩谷議員だけです（今回まとめた範囲）。同じ意見書に中沢一博議員は反対討論をしています。</li>
+<li>国際大学を生かした英語教育は黒岩議員と同じ方向の提案です。一方で、国際大学の学生の子どもを分散させるか集約するかを行政の立場から尋ね、生活保護の外国人の人数を確かめるなど、受け入れの負担を数字で確かめる質問もしています。</li>
+</ul></div></section>
+<section><h2>調べた範囲</h2><ul class="plain">
+<li>南魚沼市議会の本会議・委員会の会議録（手元の写し）から、塩谷議員の発言のうち外国・外国人・国際大学・インバウンド・共生・各国名などを含む38か所と、すぐ後の答弁を全文で確認しました。障がい福祉の「共生社会」の質問は外国人の話ではないので載せていません。</li>
+<li>委員会の記録は令和7年4月以降だけです。</li>
+<li>引用は会議録の文言どおりです。「（略）」は同じ発言の途中を省いたところです。会議録は取得時点の写しです。</li>
+<li>2026年11月8日作成</li></ul></section>
+<footer>
+  <div>出典：南魚沼市議会の会議録・委員会の議事録、市の審議会などの記録（南魚沼市公式サイトのPDF）。</div>
+  <div>新潟県の移民政策反対情報</div>
+</footer>
+</div>
+<script data-goatcounter="https://niigata-imin-info.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body></html>
