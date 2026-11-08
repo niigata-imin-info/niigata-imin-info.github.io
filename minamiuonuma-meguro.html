@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>目黒哲也議員 外国人労働者と観光</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap">
+<style>
+/* 選挙公報のような一覧 → 候補者カード。紙の質感の中性色と、投票所の案内板の深緑 */
+:root{
+  --bg:#f6f6f2; --paper:#ffffff; --ink:#1d2421; --muted:#5d6762; --line:#d9ddd6;
+  --accent:#1f5e4b; --accent-soft:#e3eee9;
+  --go:#2b6a8f; --go-soft:#e2edf4; --care:#9a5a12; --care-soft:#f6ecdd; --mix:#6b5e86; --mix-soft:#ece8f3; --none:#7a807c; --none-soft:#ecedeb;
+  --serif:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  --sans:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.75;padding-inline:16px;padding-block:28px 56px}
+.wrap{max-width:860px;margin:0 auto;display:grid;gap:36px}
+h1,h2,h3{font-family:var(--serif);text-wrap:balance;line-height:1.35;margin:0}
+h1{font-size:clamp(24px,5vw,34px)}
+h2{font-size:21px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
+h3{font-size:18px}
+p{margin:0}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--accent);font-weight:700}
+header{display:grid;gap:12px}
+.city{font-family:var(--serif);font-weight:700;font-size:clamp(40px,11vw,64px);line-height:1.1;color:var(--accent);display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px}
+.city .pref{font-size:.3em;color:var(--muted);font-weight:700}
+.city .sub{font-size:.4em;color:var(--ink,inherit)}
+.lead{color:var(--muted);max-width:62ch}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted)}
+.facts b{color:var(--ink);font-variant-numeric:tabular-nums}
+section{display:grid;gap:16px}
+.note{background:var(--accent-soft);border-radius:6px;padding:14px 16px;display:grid;gap:6px;font-size:14px}
+.note ul{margin:0;padding-left:1.2em}
+.legend{display:flex;flex-wrap:wrap;gap:8px}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.t-go{background:var(--go-soft);color:var(--go)} .t-care{background:var(--care-soft);color:var(--care)}
+.t-mix{background:var(--mix-soft);color:var(--mix)} .t-none{background:var(--none-soft);color:var(--none)}
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.04em;background:var(--bg)}
+tr:last-child td{border-bottom:0}
+td.name{font-weight:700;white-space:nowrap}
+td.pt{font-size:13.5px;min-width:15em}
+td:nth-child(2){white-space:nowrap}
+td.d{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.group{display:grid;gap:12px}
+.group>h3{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:10px;min-width:0}
+.card-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.card-head .nm{font-family:var(--serif);font-size:19px;font-weight:700}
+.card-head .meta{font-size:13px;color:var(--muted)}
+.rec{display:grid;gap:6px;padding-top:10px;border-top:1px dashed var(--line)}
+.rec:first-of-type{border-top:0;padding-top:0}
+.when{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.sum{font-size:14px}
+blockquote{margin:0;padding:6px 0 6px 14px;border-left:3px solid var(--line);font-size:14.5px}
+blockquote::before{content:"原文　";font-size:11px;color:var(--muted);letter-spacing:.08em}
+.src{font-size:12.5px}
+.plain{display:grid;gap:8px}
+.plain li{margin-bottom:4px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.mini{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 14px;font-size:14px;min-width:0}
+.mini b{display:block}
+footer{font-size:13px;color:var(--muted);display:grid;gap:6px;border-top:1px solid var(--line);padding-top:16px}
+
+.card-head .tags{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.nori{font-size:13.5px;color:var(--muted)}
+.nori b{color:var(--ink)}
+.rec{gap:2px;padding-top:8px}
+.card h4{font-size:14px;margin:6px 0 0;color:var(--accent)}
+.memo{font-size:13px;color:var(--muted)}
+.toc{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px}
+.back{font-size:14px}
+.ocr{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-left:6px}
+
+table{min-width:0!important}
+th,td{padding:8px 8px!important}
+td.name{white-space:normal!important;word-break:keep-all}
+.pty{display:block;font-size:12px;font-weight:400;color:var(--muted)}
+.pd{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+td.dirc{min-width:6.6em;white-space:normal!important}
+td.dirc .tag{display:block;width:fit-content;max-width:100%;border-radius:6px;line-height:1.45;padding:3px 7px}
+td.dirc .tag{white-space:normal;font-size:11.5px;padding:2px 7px;margin-bottom:4px}
+td.pt{min-width:9em!important}
+</style><style>details.howto>summary{cursor:pointer;list-style:none}details.howto>summary::-webkit-details-marker{display:none}details.howto>summary::before{content:"＋ ";color:var(--accent);font-weight:700}details.howto[open]>summary::before{content:"－ "}details.howto[open]{gap:6px}td.name a.jump{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}</style><style>details.old{border-top:1px dashed var(--line);padding-top:8px}details.old>summary{cursor:pointer;font-size:13px;color:var(--muted);list-style:none}details.old>summary::-webkit-details-marker{display:none}details.old>summary::before{content:"＋ ";color:var(--accent)}details.old[open]>summary::before{content:"－ "}details.old[open]{display:grid;gap:6px}.latest{font-size:12px;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:0 6px}</style><style>.who{font-size:12px;font-weight:700;letter-spacing:.04em;margin-top:6px}.who.giin{color:var(--go)}.who.shi{color:var(--care)}.exp{font-size:14px;color:var(--muted)}.rec{border-top:1px dashed var(--line);padding-top:12px}</style></head><body>
+<div class="wrap">
+<header><p class="eyebrow"><a href="minamiuonuma.html">南魚沼市議会 議員の発言記録</a> ＞ 1人ずつのまとめ</p>
+<h1>目黒哲也議員 ― 特定技能が始まる直前に外国人労働者の受け入れ支援を求め、その後はインバウンド（外国人観光客）の呼び込みが中心</h1>
+<p class="lead">南魚沼市議会の現職です。外国人の受け入れについてのはっきりした発言は、特定技能が始まる翌月の平成31年3月6日の一般質問です。人手不足で「何とか外国人の手を借りたいという事業所も数多くある」として、手続きや受け入れ後の不安を減らすため市の説明や研修を求めました。市長は外国人を「労働力と言ってしまうと」ではなく「一緒に住んでいく人たちをつくっていく」と答えています。令和元年以降の外国関係の発言は、台湾・香港からの観光客を湯沢町から呼び込むなど、インバウンドの観光戦略がほとんどです。</p>
+<p class="facts"><span>分類（読み）：<b>多文化共生推進</b></span><span>人手不足：<b>令和元年以降は発言なし</b>（H31.3.6に外国人労働者の受け入れ支援）</span></p></header>
+<section><h2>基本情報</h2><div class="note"><ul>
+<li>会議録の発言は平成29年からあります。観光（インバウンド）・デジタル化・国際大学との連携の質問が多い議員です。</li>
+<li>平成31年3月6日の質問の中で「私も含めて南魚沼市の多くの事業所もそうなのですが」と述べており、事業所の立場からの発言です。</li>
+<li>重く見る区切り（令和元年以降）の少し前の発言ですが、外国人労働者についてのいちばんはっきりした発言なので中心に載せています。</li>
+<li>分類は会議録の記載に基づく目安で、本人の考え全体を表すものではありません。</li></ul></div></section>
+<section><h2>中心の発言1　外国人労働者の受け入れ（平成31年3月6日 一般質問「産業振興と雇用の創出について」）</h2>
+<div class="rec"><div class="when">H31.3.6　一般質問「産業振興と雇用の創出について」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/0/8/_/H31.3.6.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">目黒議員</div><blockquote>このたびの一般質問は、この地域の産業の深刻な人手不足と、来月から施行される入管・難民法による外国人労働者の受け入れについてでございます。</blockquote>
+<div class="who giin">目黒議員</div><blockquote>これにより外国人労働者の受け入れが急速に拡大することが予測されます。しかしながら首都圏に集中し、果たして地方に外国人労働者が来るのか。また、当市の事業者においても、期待とともに受け入れに対する不安とが入り混じっているのが現状でございます。</blockquote>
+<div class="who shi">市長</div><blockquote>南魚沼市は県内においては人口に対する外国人の比率というのが、実は非常に高い市であります。（略）法律のトラブル、住宅確保などの生活面の、本当に全般の対応をさらに充実していかなければ、それらの皆さんを受け入れられる地域とはなり得ないというふうに思っているところであります。</blockquote>
+<div class="who giin">目黒議員</div><blockquote>一番受け入れ側の企業側からすると、やはり外国人のいわゆる住民票や保険の手続きで、町役場に同行して一緒にする手続きの労力が非常に大変で、これからまた増えてくるとなると、非常にそこのところが心配されると聞いておりました。また、やはり外国人の方が来たときの社員寮とか、食事の部分ですね。社員食堂等々の整備が非常に課題であると聞いております。</blockquote>
+<div class="who giin">目黒議員</div><blockquote>私も含めて南魚沼市の多くの事業所もそうなのですが（略）人材不足というところで何とか外国人の手を借りたいという事業所も数多くあるのですが、そういった期待もあるのですが、そういった手続き等々、あるいは受け入れた後のことなどさまざまな不安が多くて、なかなか動きだせないというところが現状かと思います。できれば行政なのか、あるいは商工会なのか、そういった部分を１回わかりやすく説明、あるいは研修とかそういった部分をしていただければありがたいと思っております。</blockquote>
+<div class="who shi">市長</div><blockquote>全体として、やはり外国人の皆さんに働いてもらうということは、何ていうのですかね、労働力と言ってしまうと、何か昔の本当に働き手の、そういう印象が強いではないですか。そうではなくて、我々の仲間をというか、ここに住む、一緒に住んでいく人たちをつくっていくということなので（略）あとはちょっとその外国人人材の、助けてもらおうという施策については、我々はちょっと遅れているという感がありますので、ちょっといろいろな意味でスピード感を持ってやっていきたいというふうに思っています</blockquote>
+<p class="exp">議員は同じ質問で、長岡市がベトナム人労働者のために通訳の配置などの予算を組んだ例も紹介しています。</p>
+</div>
+</section>
+<section><h2>中心の発言2　インバウンド（外国人観光客）の呼び込み（令和5年〜令和7年）</h2>
+<div class="rec"><div class="when">R5.9.11　一般質問「観光Ｖ字回復戦略について」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/4/8/8/7/3/_/R5.9.11.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">目黒議員</div><blockquote>そういったリピーター性が高い台湾、香港を取り込みたいという中で、すぐに取っかかりができるというと、湯沢町がウインターシーズンに夕食難民が出るくらい押し寄せている状況であります。その外国人宿泊者を南魚沼市へ食事、夕食を取れる二次交通を整備して、強化して進めていったら、このインバウンドの取っかかりとしてはいいのではないかと思うのですが</blockquote>
+<div class="who shi">市長</div><blockquote>昨シーズンの当市内の外国人スキー場利用客数が約４万1,000人、県内全体の利用者数の28万6,000人の14％に過ぎません。これは少し私は残念な気持ちです。</blockquote>
+</div>
+<div class="rec"><div class="when">R7.3.10　一般質問 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/7/4/8/9/2/_/%E4%BB%A4%E5%92%8C7%E5%B9%B43%E6%9C%8810%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">目黒議員</div><blockquote>国全体の観光を見ても、過去最高の訪日外国人観光旅行者数、そして過去最高の旅行消費額となっております。今こそ従来の観光施策を改めて見直しを行うとともに、地域課題を解決するためにデジタル化の推進が急務であると考えます。</blockquote>
+<div class="who shi">市長</div><blockquote>働き手・担い手不足への対応というのは今後も重要な課題だと考えておりますが、デジタル化やＤＸ化の推進、外国人材の活用なども視野に入れながら、施策展開を進めていきたいと考えております。六日町温泉のエリアだけにこだわらずの全体的な観光の話をしますと、やはり人手の問題は世界的にも大きな課題で、働き手、労働力としての外国人の活用というのもあります。</blockquote>
+</div>
+</section>
+<section><h2>ほかの発言</h2>
+<div class="rec"><div class="when">R1.12.9　一般質問「防災対策について」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/4/7/_/R1.12.9.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">目黒議員</div><blockquote>もう一つ心配だったのが、外国人の方が住んでいる地区です。こちらが日本語を理解していればいいのですが、ラジオで聞いてもメールを見てもわからない状態で、こちらも説明しても伝わらない部分があるのです。そういった外国人に対して今後どういうふうに体制を整えていくかというのを聞かせていただければと思います。</blockquote>
+<div class="who shi">市長</div><blockquote>あと、避難所は全部日本語で書いてありますから。それらも含めて課題として受け止めたいと思っております。これから対応を考えてまいります。</blockquote>
+</div>
+</section>
+<section><h2>ほかの議員との比べ方（読み）</h2><div class="note"><ul>
+<li>市長は目黒議員への答弁で「桑原議員、そして吉田議員への答弁の中でも申し上げましたが」と述べており、平成31年3月の同じ議会で3人が外国人労働者を取り上げています。</li>
+<li>目黒議員は令和元年以降、外国人労働者についてははっきり発言しておらず、外国関係はインバウンドの観光が中心です。令和7年3月には、議員の観光の質問に対して市長のほうから「働き手、労働力としての外国人の活用というのもあります」と述べています。</li>
+</ul></div></section>
+<section><h2>調べた範囲</h2><ul class="plain">
+<li>南魚沼市議会の本会議・委員会の会議録（手元の写し）から、目黒議員の発言のうち外国・外国人・国際大学・インバウンド・共生・各国名などを含む43か所と、すぐ後の答弁を全文で確認しました。インバウンドの観光の質問は代表的なものだけを載せています。</li>
+<li>委員会の記録は令和7年4月以降だけです。</li>
+<li>引用は会議録の文言どおりです。「（略）」は同じ発言の途中を省いたところです。会議録は取得時点の写しです。</li>
+<li>2026年11月8日作成</li></ul></section>
+<footer>
+  <div>出典：南魚沼市議会の会議録・委員会の議事録、市の審議会などの記録（南魚沼市公式サイトのPDF）。</div>
+  <div>新潟県の移民政策反対情報</div>
+</footer>
+</div>
+<script data-goatcounter="https://niigata-imin-info.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body></html>
