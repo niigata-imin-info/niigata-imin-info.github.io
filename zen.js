@@ -60,6 +60,10 @@
     var pools=[us.filter(function(u){return u.d===date}),us];
     for(var p=0;p<pools.length;p++)for(var k=0;k<keys.length;k++)for(var j=0;j<pools[p].length;j++)
       if(pools[p][j]._n.indexOf(keys[k])>=0)return pools[p][j];
+    // 市の答えの引用は、議員の発言のすぐ後の答弁の中を探す
+    for(var p2=0;p2<pools.length;p2++)for(var k2=0;k2<keys.length;k2++)for(var j2=0;j2<pools[p2].length;j2++){
+      var u=pools[p2][j2];if(!u._r)u._r=(u.rp||[]).map(function(r){return norm(r[1])}).join("|");
+      if(u._r.indexOf(keys[k2])>=0)return u}
     return null;
   }
 
@@ -92,12 +96,12 @@
         body.innerHTML='<p class="zen-note">この引用の全文は、まだ用意できていません。'+(src?'<a href="'+esc(src.href)+'" target="_blank" rel="noopener">会議録</a>で確かめてください。':'')+'</p>';return}
       ttl.textContent=(e.s||"")+"の発言（全文）";
       sub.textContent=[e.d,e.m].filter(Boolean).join("　");
-      var mk=marked(e.f,quote),hasMark=mk.indexOf("<mark>")>=0;
+      var mk=marked(e.f,quote),hasMark=mk.indexOf("<mark>")>=0||(e.rp||[]).some(function(r){return marked(r[1],quote).indexOf("<mark>")>=0});
       var h='<p class="zen-note">'+(hasMark?'黄色の所が、このページで引用した部分です。':'引用した部分に色を付けられませんでした（文字の読み取りの違いのため）。本文の中から探してください。')+'文は会議録のままです。</p>';
       if(e.ocr) h+='<p class="zen-note">この会議録はPDFの文字が化けていたため、画像から文字を読み取りました（OCR）。全文には読み違いが残っている場合があります。引用した部分は画像で確かめてあります。</p>';
       h+='<div class="zen-txt">'+mk+'</div>';
       if(e.rp&&e.rp.length){h+='<h4>すぐ後の答弁</h4>';
-        e.rp.forEach(function(r){h+='<div class="zen-reply"><div class="zen-who">'+esc(r[0])+'</div><div class="zen-txt">'+esc(r[1])+'</div></div>'})}
+        e.rp.forEach(function(r){var mr=marked(r[1],quote);h+='<div class="zen-reply"><div class="zen-who">'+esc(r[0])+'</div><div class="zen-txt">'+mr+'</div></div>'})}
       else h+='<p class="zen-note">この発言のすぐ後に答弁はありません（答弁の側の発言や、討論・委員会の発言など）。</p>';
       var url=e.url||(src&&src.href);
       if(url) h+='<p class="zen-note">出典：<a href="'+esc(url)+'" target="_blank" rel="noopener">会議録（'+esc(e.m||"市のサイト")+'）</a></p>';
