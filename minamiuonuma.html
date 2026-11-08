@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>南魚沼市議会 議員の発言記録</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap">
+<style>
+/* 選挙公報のような一覧 → 候補者カード。紙の質感の中性色と、投票所の案内板の深緑 */
+:root{
+  --bg:#f6f6f2; --paper:#ffffff; --ink:#1d2421; --muted:#5d6762; --line:#d9ddd6;
+  --accent:#1f5e4b; --accent-soft:#e3eee9;
+  --go:#2b6a8f; --go-soft:#e2edf4; --care:#9a5a12; --care-soft:#f6ecdd; --mix:#6b5e86; --mix-soft:#ece8f3; --none:#7a807c; --none-soft:#ecedeb;
+  --serif:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  --sans:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.75;padding-inline:16px;padding-block:28px 56px}
+.wrap{max-width:860px;margin:0 auto;display:grid;gap:36px}
+h1,h2,h3{font-family:var(--serif);text-wrap:balance;line-height:1.35;margin:0}
+h1{font-size:clamp(24px,5vw,34px)}
+h2{font-size:21px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
+h3{font-size:18px}
+p{margin:0}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--accent);font-weight:700}
+header{display:grid;gap:12px}
+.city{font-family:var(--serif);font-weight:700;font-size:clamp(40px,11vw,64px);line-height:1.1;color:var(--accent);display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px}
+.city .pref{font-size:.3em;color:var(--muted);font-weight:700}
+.city .sub{font-size:.4em;color:var(--ink,inherit)}
+.lead{color:var(--muted);max-width:62ch}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted)}
+.facts b{color:var(--ink);font-variant-numeric:tabular-nums}
+section{display:grid;gap:16px}
+.note{background:var(--accent-soft);border-radius:6px;padding:14px 16px;display:grid;gap:6px;font-size:14px}
+.note ul{margin:0;padding-left:1.2em}
+.legend{display:flex;flex-wrap:wrap;gap:8px}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.t-go{background:var(--go-soft);color:var(--go)} .t-care{background:var(--care-soft);color:var(--care)}
+.t-mix{background:var(--mix-soft);color:var(--mix)} .t-none{background:var(--none-soft);color:var(--none)}
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.04em;background:var(--bg)}
+tr:last-child td{border-bottom:0}
+td.name{font-weight:700;white-space:nowrap}
+td.pt{font-size:13.5px;min-width:15em}
+td:nth-child(2){white-space:nowrap}
+td.d{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.group{display:grid;gap:12px}
+.group>h3{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:10px;min-width:0}
+.card-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.card-head .nm{font-family:var(--serif);font-size:19px;font-weight:700}
+.card-head .meta{font-size:13px;color:var(--muted)}
+.rec{display:grid;gap:6px;padding-top:10px;border-top:1px dashed var(--line)}
+.rec:first-of-type{border-top:0;padding-top:0}
+.when{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.sum{font-size:14px}
+blockquote{margin:0;padding:6px 0 6px 14px;border-left:3px solid var(--line);font-size:14.5px}
+blockquote::before{content:"原文　";font-size:11px;color:var(--muted);letter-spacing:.08em}
+.src{font-size:12.5px}
+.plain{display:grid;gap:8px}
+.plain li{margin-bottom:4px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.mini{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 14px;font-size:14px;min-width:0}
+.mini b{display:block}
+footer{font-size:13px;color:var(--muted);display:grid;gap:6px;border-top:1px solid var(--line);padding-top:16px}
+
+.card-head .tags{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.nori{font-size:13.5px;color:var(--muted)}
+.nori b{color:var(--ink)}
+.rec{gap:2px;padding-top:8px}
+.card h4{font-size:14px;margin:6px 0 0;color:var(--accent)}
+.memo{font-size:13px;color:var(--muted)}
+.toc{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px}
+.back{font-size:14px}
+.ocr{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-left:6px}
+
+table{min-width:0!important}
+th,td{padding:8px 8px!important}
+td.name{white-space:normal!important;word-break:keep-all}
+.pty{display:block;font-size:12px;font-weight:400;color:var(--muted)}
+.pd{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+td.dirc{min-width:6.6em;white-space:normal!important}
+td.dirc .tag{display:block;width:fit-content;max-width:100%;border-radius:6px;line-height:1.45;padding:3px 7px}
+td.dirc .tag{white-space:normal;font-size:11.5px;padding:2px 7px;margin-bottom:4px}
+td.pt{min-width:9em!important}
+</style></head><body>
+<div class="wrap">
+<a class="back" href="./?area=152269">← 新潟県の移民政策反対情報（目次）へ</a>
+<header>
+  <div class="city"><span class="pref">新潟県</span>南魚沼市<span class="sub">市議会</span></div>
+  <div class="eyebrow">平成23年〜令和8年6月の会議録から</div>
+  <h1>南魚沼市議会の議員は、外国人の受け入れ・外資・土地について何を言ってきたか</h1>
+  <p class="lead">現職22人と元議員の発言を、人ごとに並べました。市長・執行部の答弁は別の欄です。心配の発言と前向きな発言は、どちらも載せています。</p>
+  <div class="facts"><span>現職 <b>22</b>人</span><span>元議員 <b>10</b>人</span><span>調べた会議録 <b>本会議670件・委員会38件・審議会など385件</b></span></div>
+  <nav class="toc"><a href="#sum">一覧</a><a href="#cur">現職</a><a href="#old">元議員</a><a href="#exec">市長・執行部</a><a href="#how">調べ方</a></nav>
+</header>
+
+<section>
+  <div class="note">
+    <b>この記録の読み方</b>
+    <ul>
+      <li>「原文」と書いた部分は会議録のままの引用です。（中略）は途中を省いたところ、（　）の中は補足です。</li>
+      <li>日付は発言した日です（例：R7.6.16＝令和7年6月16日）。「会議録」から、市が公開しているPDFを開けます。</li>
+      <li>「委員会」とある行は委員会の議事録です。要点を書いた記録で、本会議のような一言一句の記録ではありません。「審議会など」とある行は、市の審議会・教育委員会などの記録です。</li>
+      <li>分類は、原文を並べたあとの読みです。最近（おおむね令和5年以降）の発言を重く見て分けています。必ず原文で確かめてください。</li>
+    </ul>
+  </div>
+  <div class="legend">
+    <span class="tag t-go">多文化共生推進</span>
+    <span class="tag t-care">慎重</span>
+    <span class="tag t-none">発言が少ない</span>
+  </div>
+  <ul class="plain">
+    <li>「多文化共生推進」は、心配を言っていても受け入れ・共生を進める側に立つ人です。「慎重」は、受け入れの抑制や外資の土地取得の規制など、止める・絞る側の発言が中心の人です。</li>
+    
+  </ul>
+</section>
+
+<section id="sum">
+  <h2>一覧</h2>
+  <div class="tablebox"><table><thead><tr><th>議員</th><th>分類（読み）</th><th>主な根拠</th></tr></thead><tbody><tr><td class="name">寺口友彦<span class="pty">現職</span></td><td class="dirc"><span class="tag t-go">多文化共生推進</span></td><td class="pt">R7.3.12 農業法人への外国人材受入れ、H30.3.6 ランドオペレーター誘致</td></tr><tr><td class="name">黒岩揺光<span class="pty">現職</span></td><td class="dirc"><span class="tag t-go">多文化共生推進</span></td><td class="pt">R5.9.20 技能実習生・留学生のインターン、R6.9.12 外国籍住民1,337人（国際大学補助金には疑問）</td></tr><tr><td class="name">中沢一博<span class="pty">現職</span></td><td class="dirc"><span class="tag t-go">多文化共生推進（観光）</span></td><td class="pt">R1.9.11 外国語の案内・窓口</td></tr><tr><td class="name">目黒哲也<span class="pty">現職</span></td><td class="dirc"><span class="tag t-go">多文化共生推進</span></td><td class="pt">H31.3.6 外国人労働者の受け入れ支援</td></tr><tr><td class="name">桑原圭美<span class="pty">現職</span></td><td class="dirc"><span class="tag t-go">多文化共生推進</span></td><td class="pt">H31.3.5「共生化」、R4.12.14 外国人を雇用すべき（H25.3 土地取得、R7.9 不納欠損も質問）</td></tr><tr><td class="name">塩谷寿雄<span class="pty">現職</span></td><td class="dirc"><span class="tag t-go">多文化共生推進（慎重な質問も）</span></td><td class="pt">H30.3.9「海外の力が必要」、H27.6.15 空き家を海外の人が購入</td></tr><tr><td class="name">大平剛<span class="pty">現職</span></td><td class="dirc"><span class="tag t-go">多文化共生推進</span></td><td class="pt">R7.9.10 外国籍住民のごみ分別と多言語広報</td></tr><tr><td class="name">牧野晶<span class="pty">現職</span></td><td class="dirc"><span class="tag t-care">慎重</span></td><td class="pt">R7.1.15 給付金の外国籍・留学生への支給を質問</td></tr><tr><td class="name">田中せつ子<span class="pty">現職</span></td><td class="dirc"><span class="tag t-go">多文化共生推進</span></td><td class="pt">R1.9.10 外国人の子どもの受け入れ体制</td></tr><tr><td class="name">清塚武敏<span class="pty">現職</span></td><td class="dirc"><span class="tag t-go">多文化共生推進</span></td><td class="pt">R5.2.27 国際大学補助金に賛成討論</td></tr><tr><td class="name">梅沢道男<span class="pty">現職</span></td><td class="dirc"><span class="tag t-go">多文化共生推進</span></td><td class="pt">R6.12.18・R8.3.9 ハラル給食の準備</td></tr><tr><td class="name">神保貴雄<span class="pty">現職</span></td><td class="dirc"><span class="tag t-go">多文化共生推進</span></td><td class="pt">R8.6.15 日本語指導が必要な児童生徒33人→61人</td></tr><tr><td class="name">野口勉悠<span class="pty">現職</span></td><td class="dirc"><span class="tag t-go">多文化共生推進</span></td><td class="pt">R8.6.15 外国籍の地域おこし協力隊</td></tr><tr><td class="name">阿部一郎<span class="pty">現職</span></td><td class="dirc"><span class="tag t-none">発言が少ない</span></td><td class="pt">R8.1.16 ラマダン中の給食</td></tr><tr><td class="name">小澤実・今井久美・中沢道夫・川辺きのい・山田勝・笠原大輔・上村寿美子・塩川裕紀（議長）<span class="pty">現職</span></td><td class="dirc"><span class="tag t-none">発言が少ない</span></td><td class="pt">今井久美は以前（H23・H26）外資・外国人労働に慎重</td></tr><tr><td class="name">永井拓三<span class="pty">元議員</span></td><td class="dirc"><span class="tag t-care">慎重（以前は推進。R7.6 外資の乱開発・水源近くの土地取得）</span></td><td class="pt">H29.6.14 ムスリム受け入れ、R7.6.10 外国人の不動産取得</td></tr><tr><td class="name">吉田光利<span class="pty">元議員</span></td><td class="dirc"><span class="tag t-go">多文化共生推進</span></td><td class="pt">R3.3.8 技能実習・特定技能の受入支援</td></tr><tr><td class="name">鈴木一<span class="pty">元議員</span></td><td class="dirc"><span class="tag t-care">慎重</span></td><td class="pt">H23.6.13〜R5.12.12 外資による水源地の買収</td></tr><tr><td class="name">黒滝松男<span class="pty">元議員</span></td><td class="dirc"><span class="tag t-care">慎重（外資の森林）／観光は推進</span></td><td class="pt">H26.6.16「外資による森林買収に歯止めを」</td></tr><tr><td class="name">中沢俊一<span class="pty">元議員</span></td><td class="dirc"><span class="tag t-go">多文化共生推進</span></td><td class="pt">H27.3.10「外国資本でもいいではないですか」</td></tr><tr><td class="name">佐藤剛・岡村雅夫・関常幸・腰越晃ほか<span class="pty">元議員</span></td><td class="dirc"><span class="tag t-none">発言が少ない</span></td><td class="pt">H26.5.27 外国人の医療費の未収（佐藤剛）</td></tr></tbody></table></div><ul class="plain"><li>現職22人のうち、外国人の受け入れ・共生を進める側の発言がはっきりある議員が多く、「慎重」と読めるのは牧野晶議員だけでした。外国資本の土地・水源への慎重論は、鈴木一・黒滝松男・永井拓三（R7.6）の各元議員と、以前の今井久美・桑原圭美議員の質問に見られます。</li><li>慎重な発言の多くは「外国人を排除するわけではない」という前置きつきです（大平剛 R7.9.10、永井拓三 R7.6.10）。</li></ul>
+</section>
+
+<section id="cur">
+  <h2>現職（令和8年6月時点）</h2>
+  <div class="group">
+<article class="card" id="m-寺口友彦"><div class="card-head"><span class="nm">寺口友彦</span><span class="meta">現職</span><span class="tags"><span class="tag t-go">多文化共生推進</span></span></div><p class="sum">平成23年から令和8年まで、外国関係の発言がいちばん多い議員です。国際大学の卒業生ネットワーク、グローバルITパーク、外国人観光客（ランドオペレーターを外国から誘致）を一貫して進める立場です。R7.3には「大規模農業法人への外国人材の受入れに市が積極的に関わる」よう求めました。</p>
+<p class="sum">一方、R6.12には人手不足を「外国から人材を連れてくればいい」ではなくAI・ロボットで補うべきと述べ、R7.9には増えた外国人が「労働で来ている」のかを質問しています。</p>
+<h4>前向きな発言</h4>
+<div class="rec"><div class="when">H30.3.6 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/8/2/_/H30.3.6.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>そこで２、外国人宿泊者数増加に向けたランドオペレーターを外国から誘致する考えはないか伺う。</blockquote></div>
+<div class="rec"><div class="when">R2.6.9 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/0/9/0/_/R2.6.9.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>ですので、そういうような長岡技術科学大学や国際大学、スリランカ、インドとのＩＴ人材ということのネットワークを生かして、そういう方面に進むということに、もっと大きく前進しなければならない。</blockquote></div>
+<div class="rec"><div class="when">R7.3.12 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/7/4/8/9/4/_/%E4%BB%A4%E5%92%8C7%E5%B9%B43%E6%9C%8812%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>そこで、大規模農業法人への外国人材の受入れに市が積極的に関わる考えはないかを伺うものであります。</blockquote></div>
+<div class="rec"><div class="when">R7.3.12 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/7/4/8/9/4/_/%E4%BB%A4%E5%92%8C7%E5%B9%B43%E6%9C%8812%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>アドバイザーというような形で外国人であってもいいですし、外国で商売をしている会社であってもいいですけれども、そういった方たちも入れながらやっていくということが必要かと思っています。</blockquote></div>
+<div class="rec"><div class="when">R8.3.11 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/5/4/1/1/_/%E4%BB%A4%E5%92%8C8%E5%B9%B43%E6%9C%8811%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>そこで、日本国内にいる外国人や国際大学卒業生のネットワークを活用したメディカルツアーでゆきぐに健友館ＡＩの利益創出を考えるべきではないか伺うものであります。</blockquote></div>
+<h4>確認・その他の発言</h4>
+<div class="rec"><div class="when">R6.12.17 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/6/8/1/5/2/_/%E4%BB%A4%E5%92%8C6%E5%B9%B412%E6%9C%8817%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2%EF%BC%88%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F%EF%BC%89.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>そうしたときに、では誰がその労働力を補うのだというときに、外国から人材を連れてくればいいという、そう言う方もいらっしゃいますけれども、私は市が取り組み始めているやはり人工知能、生成ＡＩとロボット、この導入だと思うのです。</blockquote></div>
+<div class="rec"><div class="when">R7.9.11 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/8/4/3/9/1/_/%E4%BB%A4%E5%92%8C7%E5%B9%B49%E6%9C%8811%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E6%B1%BA%E7%AE%97%E5%AF%A9%E8%AD%B0).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>資料22ページにございますが、人口減とすると922人の減でありますけれども、外国人が55人増えているということでありました。ベトナムとそれからミャンマー、インドネシア、台湾というところから来ていただいているということでありますけれども、こういう方たちは労働で来ているということなのかどうなのかということの内容がもし分かればお聞かせ願いたい。</blockquote></div>
+<div class="rec"><div class="when">R7.9.11 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/8/4/3/9/1/_/%E4%BB%A4%E5%92%8C7%E5%B9%B49%E6%9C%8811%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E6%B1%BA%E7%AE%97%E5%AF%A9%E8%AD%B0).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>外国からの人材を獲得するということで民間もかなり頑張っている部分もありますけれども、新聞報道にあるような事件、事故等があったとは聞いてはおりません。</blockquote></div></article>
+<article class="card" id="m-黒岩揺光"><div class="card-head"><span class="nm">黒岩揺光</span><span class="meta">現職</span><span class="tags"><span class="tag t-go">多文化共生推進</span></span></div><p class="sum">「国際地方都市」を掲げ、外国人の防災訓練、外国語対応、技能実習生や国際大学の学生を市役所のインターンにすることなどを繰り返し提案しています。R6.9には外国籍住民が1,337人と過去最高になったことを数字で示しました。</p>
+<p class="sum">ただし国際大学支援補助金（ふるさと納税の国際大学応援コース）には、市への還元が見えないとしてR4.2〜R8.6に何度も反対・疑問を述べています（補助金そのものには「反対というわけではない」とも）。R5.9には中国総領事の離任レセプションへの議員旅費を問題にしました。</p>
+<h4>前向きな発言</h4>
+<div class="rec"><div class="when">R4.9.14 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/3/3/1/7/1/_/R4.9.14.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>そこで外国人、日本人、一緒に防災対策組んで、南魚沼市に来れば、海外に行かなくても国際体験できるのですよ。</blockquote></div>
+<div class="rec"><div class="when">R5.9.20 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/4/8/8/7/9/_/R5.9.20.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>今だと、外国人技能実習生でミャンマーとかインドネシアとかフィリピン、そういった方たちがたくさん来ているのですけれども、国際大学にもそういう方がたくさんいますので、そういう方たちをインターンとして市役所に雇って、そういう人たちの受入体制をどんどん整えていきましょう。</blockquote></div>
+<div class="rec"><div class="when">R6.3.18 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/5/7/8/7/2/_/%E4%BB%A4%E5%92%8C6%E5%B9%B43%E6%9C%8818%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2%EF%BC%88%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E5%BD%93%E5%88%9D%E4%BA%88%E7%AE%97%E5%AF%A9%E8%AD%B0%EF%BC%89%EF%BC%88856KB%EF%BC%89.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>市内のいろいろなところから人材不足という声が聞かれている中、外国語対応を検討しない理由が何かあれば教えてください。</blockquote></div>
+<div class="rec"><div class="when">R8.6.17 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/6/6/8/8/_/%E4%BB%A4%E5%92%8C8%E5%B9%B46%E6%9C%8817%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>ただ、他の自治体では自治体が主体となって大学を巻き込んで、高校を巻き込んで、市からビジョンを示して、どういった協力を得られるかというものを示した上で、おっしゃった多文化共生みたいなものをつくっていくという方法もあると思うのですけれども、国際大学が主体ではなく、市が主体となって、こういったものを今後動かしていくような考えがあるかどうかだけ、最後お願いできますか。</blockquote></div>
+<h4>数字の指摘（外国籍住民の急増）</h4>
+<div class="rec"><div class="when">R6.9.12 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/7/8/8/7/2/_/R6.9.12.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>令和５年度末、市内の外国籍住民は1,337人と過去最高になり、インドネシア人だけで一年で80人も増えました、ほぼ倍増です。（中略）これだけ外国人の方が増えているにもかかわらず、人口減少は全くとどまることを知らず、昨年度一年間で739人の人口減となりました。</blockquote></div>
+<h4>国際大学支援補助金・旅費への疑問</h4>
+<div class="rec"><div class="when">R4.2.28 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/3/8/3/5/_/R4.2.28.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>これは国際大学の支援コースが始まってから、２億円以上、３億円近くが国際大学に入っておりますが、国際大学の事業報告書を見ても、このお金をどうやって南魚沼市に還元したかという部分は全く書かれていない。</blockquote></div>
+<div class="rec"><div class="when">R5.9.14 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/4/8/8/7/6/_/R5.9.14.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>この４名が中国総領事の離任レセプションに出席することがどういったふうに市民に還元されるのか、市にとってどういうふうなプラスになるのかをお伝えください。</blockquote></div>
+<div class="rec"><div class="when">R8.6.8 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/6/6/8/5/_/%E4%BB%A4%E5%92%8C8%E5%B9%B46%E6%9C%888%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E5%B8%82%E9%95%B7%E6%89%80%E4%BF%A1%E8%A1%A8%E6%98%8E%E3%83%BB%E8%AD%B0%E6%A1%88%E5%AF%A9%E8%AD%B0).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>３点目の国際大学支援補助金は、先ほど総務部長は在り続けることが大事だということですけれども、国際大学は今現在、学生数は過去最多を記録しておりまして、学生生徒等の納付金収入、つまり学費の収入は５年前、７億円だったのが今13億円まで膨らんでおります。</blockquote></div>
+<div class="rec"><div class="when">R8.6.8 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/6/6/8/5/_/%E4%BB%A4%E5%92%8C8%E5%B9%B46%E6%9C%888%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E5%B8%82%E9%95%B7%E6%89%80%E4%BF%A1%E8%A1%A8%E6%98%8E%E3%83%BB%E8%AD%B0%E6%A1%88%E5%AF%A9%E8%AD%B0).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>国際大学支援補助金4,000万円、国際大学は六本木に事務所もありますし、今現在学生数は過去最多になっていますので、補助金すること自体に私は反対というわけではないのだけれども、もう少し市内の人たちの生活がよくなるような連携を取っていただいた上での補助金だと私は思っているので、今総務部長が、これについては国際大学が決める、国際大学の役割と言ったのですけれども、市の補助金だから市が決めるべきだと私は思います。</blockquote></div></article>
+<article class="card" id="m-中沢一博"><div class="card-head"><span class="nm">中沢一博</span><span class="meta">現職</span><span class="tags"><span class="tag t-go">多文化共生推進（主に観光）</span></span></div><p class="sum">外国人観光客の受け入れ（外国語の案内・窓口、Wi-Fi、キャッシュレス）を早くから求めてきました。R7.3には外国籍の児童生徒が多いことを踏まえた支援員の体制を質問しています。外国人や外資への慎重な発言は見当たりません。</p>
+<h4>前向きな発言</h4>
+<div class="rec"><div class="when">H26.3.19 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/2/5/5/_/22759_45296_misc.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>ここでちょっとお聞かせいただきたいと思いますけれども、当市はご承知のとおり県下一番外国人が多ございます。</blockquote></div>
+<div class="rec"><div class="when">R1.9.11 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/2/5/_/2019.9.11.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>２点目は、外国語の対応可能な案内と窓口の設置という、これは案内、先ほど言ったように、今、国際交流員の方が来たから、本当にこれは期待したいと思っておりますけれども、お一人でありますので、なかなか大変ですよね。</blockquote></div>
+<div class="rec"><div class="when">R7.3.18 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/7/4/8/9/8/_/%E4%BB%A4%E5%92%8C7%E5%B9%B43%E6%9C%8818%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E5%BD%93%E5%88%9D%E4%BA%88%E7%AE%97%E5%AF%A9%E8%AD%B0).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>外国人が当市は多いわけでございますので、今、３人の支援員の方を付けているわけで、それで大丈夫であればそれで結構ですけれども、国自体もそういう音声教材という捉え方、そして日本人でも障害のある方で、なかなか紙媒体で駄目な方には、そういう方針も今出ておりますので、それに対する考え方等がもしあったら、お伺いさせていただきたいと思います。</blockquote></div>
+<div class="rec"><div class="when">R8.3.10 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/5/4/1/0/_/%E4%BB%A4%E5%92%8C8%E5%B9%B43%E6%9C%8810%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>インバウンド客の消費額は増大しておりますが、その恩恵が一部の大型施設にとどまらず、地域全体に波及させるための策は何かということであります。</blockquote></div></article>
+<article class="card" id="m-目黒哲也"><div class="card-head"><span class="nm">目黒哲也</span><span class="meta">現職</span><span class="tags"><span class="tag t-go">多文化共生推進</span></span></div><p class="sum">H31.3の一般質問で外国人労働者の受け入れを取り上げ、長岡市のベトナム人支援を例に、受け入れ企業の手続きの負担を市が支えるよう求めました。外国人が住む地区の防災、インバウンドの二次交通も提案しています。</p>
+<h4>前向きな発言</h4>
+<div class="rec"><div class="when">H31.3.6 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/0/8/_/H31.3.6.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>ただ、人材不足というところで何とか外国人の手を借りたいという事業所も数多くあるのですが、そういった期待もあるのですが、そういった手続き等々、あるいは受け入れた後のことなどさまざまな不安が多くて、なかなか動きだせないというところが現状かと思います。</blockquote></div>
+<div class="rec"><div class="when">H31.3.6 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/0/8/_/H31.3.6.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>２つ目が外国人の子供の教育というところ、この２つが大きな課題でございましたが、その部分に関して長岡市はベトナム語通訳者を、その生活相談に来た方々に国際交流センターに全部配置して、長岡技大の留学生が月２回通訳を担当するという整備をするそうでございます。</blockquote></div>
+<div class="rec"><div class="when">R1.12.9 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/4/7/_/R1.12.9.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>そういった外国人に対して今後どういうふうに体制を整えていくかというのを聞かせていただければと思います。</blockquote></div>
+<div class="rec"><div class="when">R5.9.11 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/4/8/8/7/3/_/R5.9.11.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>その外国人宿泊者を南魚沼市へ食事、夕食を取れる二次交通を整備して、強化して進めていったら、このインバウンドの取っかかりとしてはいいのではないかと思うのですが、市長としての見解をお伺いします。</blockquote></div>
+<div class="rec"><div class="when">R8.3.10 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/5/4/1/0/_/%E4%BB%A4%E5%92%8C8%E5%B9%B43%E6%9C%8810%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>防災士の養成と活動の推進について先ほど学校での講座もやっていますということだったのですが、防災士というのは年齢、あるいは性別、国籍にかかわらず誰でも取得が可能で、特別な受験資格も必要ないですし、研修内容、講習が成人向けというところもあるのですが、また日本語の受講ということで、そういった部分のハードルはありますが、多いのが中学生以上で、防災士の資格にチャレンジする方々も最近非常に増えてきておりまして、ちなみに2024年には、全国最年少７歳の男の子が防災士に合格したということもあります。</blockquote></div></article>
+<article class="card" id="m-桑原圭美"><div class="card-head"><span class="nm">桑原圭美</span><span class="meta">現職</span><span class="tags"><span class="tag t-go">多文化共生推進（外国人の土地取得・未納の質問もあり）</span></span></div><p class="sum">H31.3とR4.12に、介護などで外国人を積極的に雇うべきだと述べ、「共生化」を進めるよう求めました。一方でH25.3には「外国人による土地の取得」への対策を質問し、R7.9の委員会では介護保険料の不納欠損に占める外国人の割合を尋ねています（市は「把握していない」）。</p>
+<h4>前向きな発言</h4>
+<div class="rec"><div class="when">H31.3.5 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/0/7/_/H31.3.5.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>そこで、先ほども答弁がありましたが、課題として外国人との共生化というのが挙げられたのですけれども、この増え続ける外国人との共生化というのは、具体的にどのように進めていくのか、今の時点でお考えがあればお聞きしたいと思います。</blockquote></div>
+<div class="rec"><div class="when">H31.3.5 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/0/7/_/H31.3.5.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>やはりこの福祉の部門で外国人を採用するというのが、安い労働力をこの部門に使うという考えではもう既になくなっているという視点を我々は持って、共生化を進めていくべきだというふうに思っていますので、そこら辺のその政策を煮詰めて、いいものにしていっていただければというふうに思っています。</blockquote></div>
+<div class="rec"><div class="when">R4.12.14 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/3/6/3/7/4/_/2022.12.14.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>いろいろルールが変わってきていまして、施設の外国人は日本人より１人少なければいいというふうに今なっていますので、積極的に――難しい面もありますけれども、外国人を雇用するべきかというふうに思いますが、そこら辺の外国人雇用に関する考えをお聞きしたいと思います。</blockquote></div>
+<div class="rec"><div class="when">R7.9.9 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/8/7/2/9/8/_/%E4%BB%A4%E5%92%8C7%E5%B9%B49%E6%9C%889%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>特に浦佐地区の小学校で外国人が増えているというような実態があるのですが、外国人に対する配慮が必要になってくると思われます。</blockquote></div>
+<h4>慎重・確認の発言</h4>
+<div class="rec"><div class="when">H25.3.18 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/2/2/6/_/18377_33829_misc.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>我が市では外国人による土地の取得に対してどういった対策をとっているのか、講じるのかというところで、ちょっとお聞きしたいなと思っておりますので、お願いいたします。</blockquote></div>
+<div class="rec"><div class="when">R7.9.3 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/8/8/7/8/1/_/R7.9.3%E7%A4%BE%E5%8E%9A.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>（委員会）「外国人の割合が分かれば教えてもらいたい。」</blockquote></div></article>
+<article class="card" id="m-塩谷寿雄"><div class="card-head"><span class="nm">塩谷寿雄</span><span class="meta">現職</span><span class="tags"><span class="tag t-go">多文化共生推進（慎重な質問もあり。最近は少ない）</span></span></div><p class="sum">H29〜H31に、市内の中国・フィリピンなどの人材を生かすこと、「海外の力が必要になる時代」と述べ、インバウンド対策を求めました。一方、H27.6には空き家を「海外の方が買われて」持ち主が特定できなくなる心配を、H30.3には生活保護を受ける外国人の人数を質問しています。R8.1の委員会では、国際大学の学生の子どもを分散させることの行政的な利点を尋ねました。</p>
+<h4>前向きな発言</h4>
+<div class="rec"><div class="when">H29.9.19 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/7/4/6/_/H29.9.19.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>当然、言葉の壁というものはあると思うのですけれども、こういう決算書を見て本当に、中国とフィリピンの方がいっぱい来ているのだなということがわかるので、そういう壁を越えて人材育成をして、今うちの市に足らない人材をつくっていくような考えをした方がいいと思うのですけれども、その点いかがお思いか、お聞かせいただきたいと思います。</blockquote></div>
+<div class="rec"><div class="when">H30.3.9 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/8/4/_/H30.3.9.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>本当に法人のことですけれども、中小企業が多い中で、委員会だか本会議で言ったかと思いますが、やはり、もう海外の力が必要になる時代になってくると思います。</blockquote></div>
+<div class="rec"><div class="when">H31.3.11 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/1/1/_/H31.3.11.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>お金をかけないのであれば、市内にも中国人の方もいらっしゃいますし、台湾人の方もいらっしゃるので、そういう方を中心にいろいろなことをやるべきではないかなと。</blockquote></div>
+<h4>慎重・確認の発言</h4>
+<div class="rec"><div class="when">H27.6.15 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/3/0/4/_/28554_64099_misc.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>そしてまたいろいろな空き家の中で海外の方が買われていて、なかなか特定できないというような場所になってくるので、なるべくそこまでにならないような早い段階で手を打つべきだと私は考えますけれども、市長の考えを問います。</blockquote></div>
+<div class="rec"><div class="when">H30.3.12 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/8/5/_/H30.3.12.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>生活保護の助成でございますけれども、この中に外国人という人が何人いるのか教えていただきたいと思いますし、あとすごく医療費が大きいです。</blockquote></div>
+<div class="rec"><div class="when">R8.1.16 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/6/8/6/9/_/R8.01.16%20%E7%B7%8F%E5%8B%99%E6%96%87%E6%95%99%E5%A7%94%E5%93%A1%E4%BC%9A%E3%80%80%E8%AD%B0%E4%BA%8B%E9%8C%B2.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>（委員会）「今、国際大学の学生の子供が増えて、大和地域の小学校に分散していくという話があったし、次の調査事件である学区再編にも関連するかもしれないが、分散させるメリットとしては説明があったように子供たちの触れ合いということであるが、行政的なメリットから考えるとそういった子供が分散したほうがよいのか、集約したほうがよいのか、どう捉えているか。」</blockquote></div></article>
+<article class="card" id="m-大平剛"><div class="card-head"><span class="nm">大平剛</span><span class="meta">現職</span><span class="tags"><span class="tag t-go">多文化共生推進</span></span></div><p class="sum">H31.3から、外国人観光客・外国人労働者の防災（言葉、風習の違い）を取り上げてきました。R7.9の一般質問では、外国籍住民が多い地区でごみの分別の相談が多いことを取り上げ、「外国籍の住民が悪いと言っているわけではなくて」と断ったうえで、ベトナム語・インドネシア語などでの広報を求めました。</p>
+<h4>前向きな発言（多言語での対応）</h4>
+<div class="rec"><div class="when">H31.3.6 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/0/8/_/H31.3.6.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>また、避難した際に風習の違いとかが、やはりそういうときになるとちょっと衝突してしまうとか、そういうことだって当然あり得るわけなので、今後そういったところも含めて、例えばですけれども外国人労働者さんが勤めている会社の方に、こういう避難計画とかそういうところにも入っていただくとか、また先ほど観光客の皆さんということもありましたけれども、例えば旅館の組合さんとかそういうところにもやはり声をかけて、広く諸団体と協力して訓練を行っていくというのが重要だと思うのですが、その点に関してもう一度、答弁をいただきたいと思います。</blockquote></div>
+<div class="rec"><div class="when">R7.9.10 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/8/4/3/9/0/_/%E4%BB%A4%E5%92%8C7%E5%B9%B49%E6%9C%8810%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>そして、これはまだ残念ながらというか、私が確認したら外国語対応にはなっていないような感じがしたので、さっきも言いましたけれども英語と、うちの市に大勢ベトナム人の方がいらっしゃるのでベトナム語とか、インドネシア語とか、例えばうちの市でいえば国際大学があるわけです。</blockquote></div>
+<h4>住民の困りごと（ごみの分別）</h4>
+<div class="rec"><div class="when">R7.9.10 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/8/4/3/9/0/_/%E4%BB%A4%E5%92%8C7%E5%B9%B49%E6%9C%8810%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>私も相談受けたところの数から見ると、ちょっと外国籍の住民の方が多いところ。私は外国籍の住民が悪いと言っているわけではなくて、市長が言っているようにルールが周知されていないのか、分かりづらいのかと思うところもあるので、そこら辺の外国籍の住民の方に対する広報の仕方というものを、今どうなっているかという現状をお知らせ願いたいと思います。</blockquote></div></article>
+<article class="card" id="m-牧野晶"><div class="card-head"><span class="nm">牧野晶</span><span class="meta">現職</span><span class="tags"><span class="tag t-care">慎重</span></span></div><p class="sum">R7.1の臨時会で、住民税非課税世帯への給付金が外国籍の人（例として中国からの留学生）にも支払われるのかを質問しました（市は「住民であれば同様の対応」と答弁）。H25.12には特定秘密保護法の議論でスパイ防止法の必要に触れています。外国人の受け入れを進める発言は見当たりません。</p>
+<h4>慎重・確認の発言</h4>
+<div class="rec"><div class="when">H25.12.20 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/2/4/7/_/21209_40878_misc.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>諸外国に対し漏らすとか、それが基本なわけですし、スパイ防止法があればとか、私は必要だとも思う。</blockquote></div>
+<div class="rec"><div class="when">R7.1.15 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/6/9/9/5/9/_/R7%E5%B9%B4%E7%AC%AC%EF%BC%91%E5%9B%9E%E8%87%A8%E6%99%82%E4%BC%9AR7.1.15.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>11ページの住民税非課税世帯等臨時特別給付金事業２億円のところですけれども、6,300世帯が対象というふうに、私の認識が間違いでなかったらそう言ったのですけれども、その中で外国籍の方も支給になるのですか。少し前の、半年くらいとか前のウェブサイトを見ていたら、３分の１のえらい金額を外国籍の――例えば中国からの留学生に払ったりとかというのがあったのですけれども、南魚沼市でも外国籍の方たちにも払っているのか。</blockquote></div>
+<div class="rec"><div class="when">R7.3.14 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/7/4/8/9/6/_/%E4%BB%A4%E5%92%8C7%E5%B9%B43%E6%9C%8814%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E5%BD%93%E5%88%9D%E4%BA%88%E7%AE%97%E5%AF%A9%E8%AD%B0).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>そのまま小学校も行かないような子供っていたりするのですかねというのを、そういう子供がいたらどういう対応をしているのかなとちょっと疑問に思ったし、例えば外国籍の方で、そういう方がいたらどうなるのかなと、そういう点も込めて聞いてみたいなと思ったので。</blockquote></div></article>
+<article class="card" id="m-田中せつ子"><div class="card-head"><span class="nm">田中せつ子</span><span class="meta">現職</span><span class="tags"><span class="tag t-go">多文化共生推進</span></span></div><p class="sum">R1.9の一般質問で、家族を伴う外国人実習生が増えると見込み、保育施設や学校の外国人の子どもの受け入れ体制を市内全体で整えるよう求めました。R8.3には分散受け入れで日本語支援員が足りるかを確認し、R8.4の委員会（委員長）では介護施設が外国籍人材に頼る場合の費用を課題に挙げています。</p>
+<h4>前向きな発言</h4>
+<div class="rec"><div class="when">R1.9.10 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/2/4/_/2019.9.10.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>現在は浦佐地区の保育施設や学校に集中しているようですが、外国人の子供たちの受け入れ体制は市内全体の保育施設や学校現場で進んでいるのかどうか、準備が進んでいるのかどうかを伺います。</blockquote></div>
+<div class="rec"><div class="when">R1.9.10 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/2/4/_/2019.9.10.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>ですので、議論をしているということだけでなく、実際にいつもすぐ近くに外国人の子供がいる、そして日本人の子供も外国人の子供も同じようにそうやって遊んだり育っていく中で、違いを認め合う人権というものが育ってくるのではないかというふうに思います。</blockquote></div>
+<div class="rec"><div class="when">R8.3.17 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/5/4/1/5/_/%E4%BB%A4%E5%92%8C8%E5%B9%B43%E6%9C%8817%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E4%BA%88%E7%AE%97%E5%AF%A9%E8%AD%B0).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>外国籍のお子さんをそれぞれの学校に今回分散して、もう２月の半ばから入っていたので、支援員の方をきちんと入れて対応するのが、とても現場は大変だったというふうに聞いているのですけれども、この４月からの来年度については、その辺は日本語支援員がきちんと充足しているのかどうか。</blockquote></div>
+<div class="rec"><div class="when">R8.4.22 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/1/7/7/8/_/R8.4.22%E4%BC%9A%E8%AD%B0%E9%8C%B2.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>（委員会・委員長）「また、職員の確保に苦慮していることに関して、やはり人員基準が明確に求められるサービスなので職員確保が不可欠だが、求人を行ってもなかなか応募がない中で、今後人材確保策として特定技能実習生などの外国籍人材の受入れを検討する必要も出てきていると強く感じている。その場合の外国籍人材の育成や住環境整備にかかるコストを施設が負担しなければいけないなどへの対応も課題になってきている。」</blockquote></div></article>
+<article class="card" id="m-清塚武敏"><div class="card-head"><span class="nm">清塚武敏</span><span class="meta">現職</span><span class="tags"><span class="tag t-go">多文化共生推進</span></span></div><p class="sum">R5.2に国際大学支援補助金への反対討論に対して賛成の立場で討論し、国際大学は市の発展に「欠かせない」と述べました。H28.3にはグローバルITパークで雇用が外国人に偏る「不安」も口にしています。R8.4の委員会では介護施設の外国籍人材の受け入れ実績を質問しました。</p>
+<h4>前向きな発言</h4>
+<div class="rec"><div class="when">R5.2.27 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/4/5/1/6/9/_/R5.2.27.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>そういう中で、この国際大学だけではないのですが、北里は、この南魚沼市の発展には本当に欠かせないものと私は感じております。</blockquote></div>
+<div class="rec"><div class="when">R8.4.22 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/1/7/7/8/_/R8.4.22%E4%BC%9A%E8%AD%B0%E9%8C%B2.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>（委員会）「②今後の運営上の課題の中で、やはり人材不足の話をしていたが、例えば苗場福祉会グループの中で、外国籍人材の受入れの実績があれば、教えてもらいたい。」</blockquote></div>
+<h4>慎重・懸念の発言</h4>
+<div class="rec"><div class="when">H28.3.15 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/8/5/2/_/H28.3.15.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>あともう１点ですが、やはりちょっとインド・スリランカということになると、何か私たちの目線から見てしまうと、どうしても雇用が外国人とかに特定されてしまうのかなという不安もちょっとありますが、ぜひ、南魚沼市の地元の若い人たちが入れる環境になるのかなという点があります。</blockquote></div></article>
+<article class="card" id="m-梅沢道男"><div class="card-head"><span class="nm">梅沢道男</span><span class="meta">現職</span><span class="tags"><span class="tag t-go">多文化共生推進（ハラル給食の準備を確認）</span></span></div><p class="sum">R6.12とR8.3の一般質問で、新しい統合学校給食センターのハラル食対応の準備を確認しました。「どこまでできるのか」と難しさも述べていますが、進めることを前提に体制（栄養教諭の配置など）を求める立場です。R8.3.9のこの質問への答弁で、市長がハラル対応による「バッシング」に触れました（市長・執行部の欄）。</p>
+<h4>ハラル給食についての発言</h4>
+<div class="rec"><div class="when">R6.12.18 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/6/8/1/5/3/_/%E4%BB%A4%E5%92%8C6%E5%B9%B412%E6%9C%8818%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2%EF%BC%88%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F%EF%BC%89.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>それでもう一つは、ハラルの対応についても今教育長がおっしゃったように、本当に幅が広くて、本当にきちんと対応していくなどということになれば、食材だけではなくて調味料から何からどうするということで、とてもどこまでできるのかと私も思います。</blockquote></div>
+<div class="rec"><div class="when">R8.3.9 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/5/4/0/9/_/%E4%BB%A4%E5%92%8C8%E5%B9%B43%E6%9C%889%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>新給食センターでは個別食対応のラインも新設されてハラル食の給食にも対応するため、実際に外国籍の子供たちが多い学校の校長先生方と協議を進めているということでしたが、現場との調整や移行準備等は順調に進んでいるのか、現状について伺います。</blockquote></div>
+<div class="rec"><div class="when">R8.3.9 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/5/4/0/9/_/%E4%BB%A4%E5%92%8C8%E5%B9%B43%E6%9C%889%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>特に教育問題でも、南魚沼市の場合は例えば英語教育ですとか外国語教育の中で国際大学を拠点とした交流ですとか、そういった特色ある教育を進めているわけですので、個別食もそうですし、またそういう外国籍の方も――細かい部分、100％全部なんて対応できるわけはないので、検討しながら進めていただくということでよろしいと思うのですけれども、なるべくその人たちが南魚沼市はいろいろ対応してくれてよいところだと子供たちも思ったり、親御さんも思って母国へ帰られる、そういうふうな対応ができれば一番よいのだろうと思います。</blockquote></div></article>
+<article class="card" id="m-神保貴雄"><div class="card-head"><span class="nm">神保貴雄</span><span class="meta">現職・令和7年初当選</span><span class="tags"><span class="tag t-go">多文化共生推進</span></span></div><p class="sum">R8.6の一般質問で、日本語指導が必要な児童生徒が令和7年度33人から令和8年度61人に倍増したことを示したうえで、受け入れを「単なる受入れの課題」ではなく教育の価値として生かすよう求めました。</p>
+<h4>前向きな発言</h4>
+<div class="rec"><div class="when">R8.6.15 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/6/6/8/6/_/%E4%BB%A4%E5%92%8C8%E5%B9%B46%E6%9C%8815%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>今回、調査を行ったところ、日本語指導が必要な児童生徒は令和７年度の33人から令和８年度には61人と約倍増しております。</blockquote></div>
+<div class="rec"><div class="when">R8.6.15 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/6/6/8/6/_/%E4%BB%A4%E5%92%8C8%E5%B9%B46%E6%9C%8815%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>その上でこの状況を単なる受入れの課題としてだけではなく、南魚沼市の教育環境が新たな段階に入ったものと捉え、外国籍児童生徒と日本人児童生徒が共に学ぶことで子供たちにどのような変化が生まれているのか、ここをしっかりと考えていく必要があるのではないかと考えています。</blockquote></div></article>
+<article class="card" id="m-野口勉悠"><div class="card-head"><span class="nm">野口勉悠</span><span class="meta">現職・令和7年初当選</span><span class="tags"><span class="tag t-go">多文化共生推進</span></span></div><p class="sum">R8.3に外国籍の子どもの受け入れ（日本語を話せない家族）を質問し、R8.6には海外へのアピールのため「外国籍の協力隊員」（地域おこし協力隊）を検討するよう提案しました（市長は「ちょっと難しい」と答弁）。</p>
+<h4>前向きな発言</h4>
+<div class="rec"><div class="when">R8.3.3 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/5/4/0/8/_/%E4%BB%A4%E5%92%8C8%E5%B9%B43%E6%9C%883%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E8%AD%B0%E6%A1%88%E5%AF%A9%E8%AD%B0).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>主に国際大学の辺りを見ますと結構家族の方が多くいらっしゃるのですけれども、日本語を話せない、読めないという方も結構いらっしゃると思います。</blockquote></div>
+<div class="rec"><div class="when">R8.6.15 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/6/6/8/6/_/%E4%BB%A4%E5%92%8C8%E5%B9%B46%E6%9C%8815%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>これからは、今お話をしていますように海外販路がとても重要でございますけれども、インバウンド等も含めて海外へアピールできるように、外国籍の協力隊員を検討したらどうかと思いますが、いかがでしょうか。</blockquote></div></article>
+<article class="card" id="m-阿部一郎"><div class="card-head"><span class="nm">阿部一郎</span><span class="meta">現職・令和7年初当選</span><span class="tags"><span class="tag t-none">発言が少ない（国際大学との連携には前向き）</span></span></div><p class="sum">国際大学に勤めていた経験に触れ、R8.1の委員会では国際大学の学生の子どもの受け入れの大変さ（ラマダンの間の給食など）を述べました。R8.6には外国人のカタカナの印鑑登録の意味を質問し、国際大学と北里大学の間の道路整備を提案しています。</p>
+<h4>発言</h4>
+<div class="rec"><div class="when">R8.1.16 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/6/8/6/9/_/R8.01.16%20%E7%B7%8F%E5%8B%99%E6%96%87%E6%95%99%E5%A7%94%E5%93%A1%E4%BC%9A%E3%80%80%E8%AD%B0%E4%BA%8B%E9%8C%B2.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>（委員会・副委員長）「例えばイスラム教の子供たちは、ラマダンのときには給食が食べられないので、違う教室で先生と他の活動をしているといったことも大変なことである。」</blockquote></div>
+<div class="rec"><div class="when">R8.6.8 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/6/6/8/5/_/%E4%BB%A4%E5%92%8C8%E5%B9%B46%E6%9C%888%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E5%B8%82%E9%95%B7%E6%89%80%E4%BF%A1%E8%A1%A8%E6%98%8E%E3%83%BB%E8%AD%B0%E6%A1%88%E5%AF%A9%E8%AD%B0).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>それからもう一つ、カタカナ表記の登録について、基本的な質問ですけれども、日本人はカタカナの印鑑登録もできると思うのですが、わざわざ外国人がということを言っていることの意味を教えていただければありがたいと思います。</blockquote></div>
+<div class="rec"><div class="when">R8.6.17 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/6/6/8/8/_/%E4%BB%A4%E5%92%8C8%E5%B9%B46%E6%9C%8817%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>南魚沼市には、世界に開かれた国際大学と医療の未来を担う人材を育てる北里大学健康科学部という宝のような２つの高等教育機関があり、またその間は僅か１キロメートルという位置に存在しております。</blockquote></div></article>
+<article class="card" id="m-小澤実"><div class="card-head"><span class="nm">小澤実</span><span class="meta">現職</span><span class="tags"><span class="tag t-none">発言が少ない</span></span></div><p class="sum">H27.12にCCRC構想の拠点として国際大学の周辺整備を求めました。R8.1の委員会では、浦佐小の外国籍の子どもの入学時期を確認しています。</p>
+<h4>発言</h4>
+<div class="rec"><div class="when">H27.12.17 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/3/1/4/_/H271217.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>学生の85％が外国人留学生で、本年の在校生は38の国と地域から351名が学んでいます。</blockquote></div>
+<div class="rec"><div class="when">R8.1.16 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/6/8/6/9/_/R8.01.16%20%E7%B7%8F%E5%8B%99%E6%96%87%E6%95%99%E5%A7%94%E5%93%A1%E4%BC%9A%E3%80%80%E8%AD%B0%E4%BA%8B%E9%8C%B2.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>（委員会）「外国籍の子供たちは、日本に来る時期がまるで違うわけだが、途中編入で秋からの入学になるのか、子供たちにしてみれば皆が４月の同じ時期に入学することがよいと思うがどのような状況か。」</blockquote></div></article>
+<article class="card" id="m-今井久美"><div class="card-head"><span class="nm">今井久美</span><span class="meta">現職</span><span class="tags"><span class="tag t-none">発言が少ない（以前は外資・外国人労働に慎重）</span></span></div><p class="sum">H23.3に水源地に「外資の企業がいつの間にか入っていた」例を挙げ、H26.3には職人不足は「外国人を連れてきて何とかなるというものではありません」と述べました。最近はR8.3に介護の外国人人材の採用の取組を質問しただけです。</p>
+<h4>慎重・懸念の発言（以前）</h4>
+<div class="rec"><div class="when">H23.3.9 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/1/6/3/_/11344_16483_misc.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>そういうことで今、農地の場合は農業委員会ががっちり守っていってもらえると思いますけれども、ただ、水源地の問題で外資の企業がいつの間にか入っていたというようなことがあります。</blockquote></div>
+<div class="rec"><div class="when">H26.3.14 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/2/5/2/_/22759_45293_misc.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>これは外国人を連れてきて何とかなるというものではありませんので、応急に職人に仕立て上げるには２年か３年、４年、５年かかるのです。</blockquote></div>
+<h4>最近の発言</h4>
+<div class="rec"><div class="when">R8.3.3 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/5/4/0/8/_/%E4%BB%A4%E5%92%8C8%E5%B9%B43%E6%9C%883%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E8%AD%B0%E6%A1%88%E5%AF%A9%E8%AD%B0).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>２点目、人材確保が容易でない中で、外国人人材への採用取組はどうなっているのかお伺いします。</blockquote></div></article>
+<article class="card" id="m-中沢道夫"><div class="card-head"><span class="nm">中沢道夫</span><span class="meta">現職</span><span class="tags"><span class="tag t-none">発言が少ない</span></span></div><p class="sum">会議録の検索では、外国人・外資・土地についての本人の発言はほとんど見つかりませんでした。外国についての発言は、最低賃金・軍事費などを諸外国と比べる文脈だけでした。</p></article>
+<article class="card" id="m-川辺きのい"><div class="card-head"><span class="nm">川辺きのい</span><span class="meta">現職</span><span class="tags"><span class="tag t-none">発言が少ない</span></span></div><p class="sum">会議録の検索では、外国人・外資・土地についての本人の発言はほとんど見つかりませんでした。R7.3に国際大学の留学生による国際理解教育の予算に触れた程度です。</p></article>
+<article class="card" id="m-山田勝"><div class="card-head"><span class="nm">山田勝</span><span class="meta">現職</span><span class="tags"><span class="tag t-none">発言が少ない</span></span></div><p class="sum">会議録の検索では、外国人・外資・土地についての本人の発言はほとんど見つかりませんでした。</p></article>
+<article class="card" id="m-笠原大輔"><div class="card-head"><span class="nm">笠原大輔</span><span class="meta">現職</span><span class="tags"><span class="tag t-none">発言が少ない</span></span></div><p class="sum">会議録の検索では、外国人・外資・土地についての本人の発言はほとんど見つかりませんでした。令和7年初当選。</p></article>
+<article class="card" id="m-上村寿美子"><div class="card-head"><span class="nm">上村寿美子</span><span class="meta">現職</span><span class="tags"><span class="tag t-none">発言が少ない</span></span></div><p class="sum">会議録の検索では、外国人・外資・土地についての本人の発言はほとんど見つかりませんでした。令和7年初当選。</p></article>
+<article class="card" id="m-塩川裕紀"><div class="card-head"><span class="nm">塩川裕紀</span><span class="meta">現職・議長</span><span class="tags"><span class="tag t-none">発言が少ない</span></span></div><p class="sum">会議録の検索では、外国人・外資・土地についての本人の発言はほとんど見つかりませんでした。議長。R4.3に工場で働く外国人への防災教育に触れています。</p></article>
+  </div>
+</section>
+
+<section id="old">
+  <h2>元議員（平成23年以降）</h2>
+  <div class="group">
+<article class="card" id="m-永井拓三"><div class="card-head"><span class="nm">永井拓三</span><span class="meta">元議員・令和7年10月まで</span><span class="tags"><span class="tag t-care">慎重（以前は推進）</span></span></div><p class="sum">H29.6にムスリムの観光客の受け入れ（ハラル）を「喫緊の課題」とし、インバウンド観光を進めてきました。一方、R7.6の一般質問で「外国人の不動産の取得」を取り上げ、外国人に土地を買わせないということではないと断ったうえで、外国資本による乱開発、水源近くの土地取得への規制を求めました。</p>
+<h4>前向きな発言</h4>
+<div class="rec"><div class="when">H29.6.14 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/7/3/9/_/H29.6.14.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>イスラムの人たちを受け入れられる環境を整えていく必要はもう喫緊の課題だと思っています。</blockquote></div>
+<div class="rec"><div class="when">R7.3.11 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/7/4/8/9/3/_/%E4%BB%A4%E5%92%8C7%E5%B9%B43%E6%9C%8811%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>市のインバウンド観光について今ではコロナ禍も終わって、最近は外国からも南魚沼市に多くの方が訪れていて、雪が降る日の八海山のロープウエーの中など、日本語よりも外国語が多く飛び交っているようなそんな様子であります。</blockquote></div>
+<h4>慎重・懸念の発言（外国資本の土地取得）</h4>
+<div class="rec"><div class="when">R2.3.10 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/0/7/9/_/R2.3.10.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>一方で、ニセコ、白馬などのリゾート化が進み、今ではまるで外国のような景色であることに驚きを覚えます。</blockquote></div>
+<div class="rec"><div class="when">R7.6.10 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/7/9/6/5/6/_/%E4%BB%A4%E5%92%8C7%E5%B9%B46%E6%9C%8810%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>この件に関しましては、外国人が南魚沼市の不動産を取得してはいけないということではなくて、外国資本による乱開発について、我々はきちんと考えていかなければならないといったことを提言するものであります。</blockquote></div>
+<div class="rec"><div class="when">R7.6.10 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/7/9/6/5/6/_/%E4%BB%A4%E5%92%8C7%E5%B9%B46%E6%9C%8810%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>２、市として水源地や森林などの資源を確保するため、外国人の不動産の取得に対して規制をかけるなどの対策はあるか。</blockquote></div>
+<div class="rec"><div class="when">R7.6.10 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/7/9/6/5/6/_/%E4%BB%A4%E5%92%8C7%E5%B9%B46%E6%9C%8810%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>その法人を見てみると全国至るところで水源に限りなく近いところをかなり取得している。</blockquote></div></article>
+<article class="card" id="m-吉田光利"><div class="card-head"><span class="nm">吉田光利</span><span class="meta">元議員・令和7年10月まで</span><span class="tags"><span class="tag t-go">多文化共生推進</span></span></div><p class="sum">H30.9、R3.3、R5.3、R7.3と、外国人労働者（技能実習・特定技能）の受け入れ支援を繰り返し求めました。外国人を低い賃金で使うことには反対し、受け入れる企業への支援を求める立場です。R7.3には建設業では外国人が「定着しづらい」という声も紹介しています。</p>
+<h4>前向きな発言</h4>
+<div class="rec"><div class="when">H30.9.10 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/6/2/8/_/H30.9.10.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>続きまして、外国人採用の件ですが、今、外国人労働者はなくてはならないです。</blockquote></div>
+<div class="rec"><div class="when">R3.3.8 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/3/8/5/1/_/R3.3.8.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>２、新型コロナウイルス感染症収束後に備え、外国人の技能実習及び特定技能の受入支援を積極的に行うべきではないか。</blockquote></div>
+<div class="rec"><div class="when">R5.3.6 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/4/5/1/7/6/_/R5.3.6.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>外国人だから最低賃金が低くていいとか、同一労働同一賃金でなくてもいいということではないのです。</blockquote></div>
+<h4>課題の紹介</h4>
+<div class="rec"><div class="when">R7.3.12 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/7/4/8/9/4/_/%E4%BB%A4%E5%92%8C7%E5%B9%B43%E6%9C%8812%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>屋根に上がったり、加工のほうも大変なのでしょうけれども、なかなか外国人というのは難しい、定着しづらいという話もあるというふうに聞いています。</blockquote></div></article>
+<article class="card" id="m-鈴木一"><div class="card-head"><span class="nm">鈴木一</span><span class="meta">元議員・令和7年10月まで</span><span class="tags"><span class="tag t-care">慎重</span></span></div><p class="sum">H23.6から令和5年まで、外国資本による水源地・森林の買収を繰り返し心配し、国土調査（地籍調査）を急ぐよう求めました。H23.6には中国を例に挙げた強い言葉もあります。R7.9には民泊の法規制を質問しました。若者の海外派遣には賛成しています。</p>
+<h4>慎重・懸念の発言</h4>
+<div class="rec"><div class="when">H23.6.13 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/1/7/3/_/11344_16495_misc.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>今、外国資本が日本国内の貴重な水資源を求めて躍起となっています。</blockquote></div>
+<div class="rec"><div class="when">H23.6.13 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/1/7/3/_/11344_16495_misc.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>東南アジア、アフリカでは土地購入で大きな中華街を作り、人民の大移動が行われる、最後には国を乗っ取られる、そういう危険性を含んでいます。</blockquote></div>
+<div class="rec"><div class="when">H25.9.19 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/2/4/1/_/20404_38735_misc.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>また、山間部においては、外資による水源地の買収が進んでいます。</blockquote></div>
+<div class="rec"><div class="when">R5.12.12 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/5/1/7/5/2/_/R5.12.12.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>北海道辺りは大切な水源地を外国企業が買っているという話ですけれども、この地でそんな事態があったら大変なことかと思うのです。</blockquote></div>
+<div class="rec"><div class="when">R7.9.9 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/8/7/2/9/8/_/%E4%BB%A4%E5%92%8C7%E5%B9%B49%E6%9C%889%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>（２）の民泊の法規制について、全国的にインバウンドによる旅行者、日本人も利用すると思われる民泊の件数把握、また消防等による法的な規制があるなら査察の具体的内容を伺うということです。</blockquote></div></article>
+<article class="card" id="m-黒滝松男"><div class="card-head"><span class="nm">黒滝松男</span><span class="meta">元議員・令和7年6月まで</span><span class="tags"><span class="tag t-care">慎重（外資の森林買収）・観光の受け入れは推進</span></span></div><p class="sum">H26.6の一般質問「外資による森林買収に歯止めを」で、外資の森林取得（中国・香港が多い）と新潟県水源地域保全条例の届出制を取り上げ、市内の実態を質問しました。H28.3にはインバウンドの受け入れ体制の整備を求めています。</p>
+<h4>慎重・懸念の発言</h4>
+<div class="rec"><div class="when">H26.6.16 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/2/5/8/_/23655_48588_misc.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>問題は外資による森林買収は、地下水の開発が主目的とされまして、林野庁の確認では外資が日本国内に所有する森林は、約800ヘクタールに及んでいるとのことです。</blockquote></div>
+<div class="rec"><div class="when">H26.6.16 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/2/5/8/_/23655_48588_misc.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>そのうち香港を含む中国が約280ヘクタールと、圧倒的に多く占めております。</blockquote></div>
+<div class="rec"><div class="when">H26.6.16 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/2/5/8/_/23655_48588_misc.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>１番目、当市の外資（日本人名義も含んでいる）わけですけれども、による水源地域の売買の実態は把握をしているのか。</blockquote></div>
+<h4>前向きな発言（観光）</h4>
+<div class="rec"><div class="when">H28.3.10 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/8/4/5/_/H28.3.10.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>これは避けて通れないといいますか、こういった地方都市のほうにも今後はどんどんと外国人が入ってくるということだと思いますので、取り組みをお願いをしたいというふうに思います。</blockquote></div></article>
+<article class="card" id="m-中沢俊一"><div class="card-head"><span class="nm">中沢俊一</span><span class="meta">元議員・平成29年まで</span><span class="tags"><span class="tag t-go">多文化共生推進（外資の導入にも前向き）</span></span></div><p class="sum">H27.3にリゾートマンションの再生で「外国資本でもいいではないですか」と述べました。国際大学の寄附（ふるさと納税）のあり方にはH27.12に疑問を出しています。H28.3のCCRC（移住者の受け入れ）では医療・介護の費用が増える「疑念」を述べました（外国人ではなく移住者についての発言）。</p>
+<h4>前向きな発言</h4>
+<div class="rec"><div class="when">H27.3.10 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/2/9/4/_/27219_59965_misc.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>外国資本でもいいではないですか。</blockquote></div>
+<h4>疑問・懸念の発言</h4>
+<div class="rec"><div class="when">H27.12.8 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/3/1/0/_/H271208gijiroku.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>明確に否定をされましたけれども、まさに国際大学の今の寄附のあり方、これがまさにそうであります。</blockquote></div>
+<div class="rec"><div class="when">H28.3.17 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/8/5/0/_/H28.3.17.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>まず、こういう移民、移住者の受け入れ、これが近い将来、あるいは遠い将来にわたりまして医療費、介護費、それから市民が今でも特養の待機を大勢して待っている中で、そういう市民の健康、あるいは介護に対する潜在的、顕在的なコストが増すのではないかという、この辺の疑念に対して、しっかりとした方針が、私はまだ納得のいく形で打ち出されていないと思っています。</blockquote></div></article>
+<article class="card" id="m-佐藤剛"><div class="card-head"><span class="nm">佐藤剛</span><span class="meta">元議員・令和7年10月まで</span><span class="tags"><span class="tag t-none">発言が少ない（外国人の医療費の未収を指摘）</span></span></div><p class="sum">H26.5に、市の病院が外国人と県外者の医療費約40万円を債権放棄したことを取り上げ、「特に外国人とか県外者であればなおさら」先々の回収を考えるべきだと述べました。</p>
+<h4>慎重・確認の発言</h4>
+<div class="rec"><div class="when">H26.5.27 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/2/6/2/_/23663_48629_misc.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>今説明ありましたよう外国人と県外者ということで、そこまで聞けばやむを得ないということにもなるのかもしれないけれども、こういう額が大きいときは、特に外国人とか県外者であればなおさら、どういうふうなことでと、先々のことというのはやはり考えておくべきだと思うのです。</blockquote></div></article>
+<article class="card" id="m-岡村雅夫"><div class="card-head"><span class="nm">岡村雅夫</span><span class="meta">元議員・令和3年まで</span><span class="tags"><span class="tag t-none">発言が少ない（国際大学用地のごみ処理施設に反対）</span></span></div><p class="sum">外国人についての本人の発言はほとんどありません。国際大学関係では、H29.2に補助金を市を経由せず「直接国際大学に」と述べ、H30〜R2に国際大学用地内のごみ焼却場建設に反対する請願・住民の側に立ちました。</p>
+<h4>発言</h4>
+<div class="rec"><div class="when">H29.2.27 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/7/1/5/_/H29.2.27.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>その辺が市の介する問題というのがちょっと明確でないので、もう少し直接国際大学にしてもらってもいいような感じがするのですがいかがでしょうか。</blockquote></div>
+<div class="rec"><div class="when">H30.6.12 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/6/2/3/_/H30.6.12.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>「請願事項は「国際大学用地内にごみ焼却場建設に反対します」、２つ目として「再度、周辺に影響の少ない用地を選定すること」この２点であります。」</blockquote></div></article>
+<article class="card" id="m-関常幸"><div class="card-head"><span class="nm">関常幸</span><span class="meta">元議員・令和7年10月まで</span><span class="tags"><span class="tag t-none">発言が少ない</span></span></div><p class="sum">R5.6に、国際大学の卒業生の提案としてグローバルスクール（英語で教える学校）の誘致を求めました。R6.9には治安の悪化に触れていますが、外国人に結びつけた発言ではありません。R3.6には中国の海警法など安全保障を取り上げています。</p>
+<h4>発言</h4>
+<div class="rec"><div class="when">R5.6.15 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/4/5/1/8/2/_/R5.6.15.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>それは、国際大学と民間人の外国人のせいでありますと。</blockquote></div>
+<div class="rec"><div class="when">R6.9.11 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/6/5/3/7/6/_/R6.9.11.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>昔、日本は犯罪が少なく、外国旅行者も治安のよさに驚いていましたが、最近は強盗、殺人、虐待と、新聞、テレビの毎日の報道に、欠くことなく載ってきております。</blockquote></div></article>
+<article class="card" id="m-腰越晃"><div class="card-head"><span class="nm">腰越晃</span><span class="meta">元議員・平成29年まで</span><span class="tags"><span class="tag t-none">発言が少ない</span></span></div><p class="sum">H28.6に自治基本条例の議論の中で「永住外国人参政権の問題」に触れています（反対の理由が保守系にあると紹介した文脈）。</p>
+<h4>発言</h4>
+<div class="rec"><div class="when">H28.6.16 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/9/0/0/_/H28.6.16.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>そういうある意味、永住外国人参政権の問題であるとか、さまざまな反対する理由、これは保守系のほうからですけれども、あるのですけれども、やはり基本は自治の向上というか、自治の実力向上というか、地方自治のですね、そういうことが目的にあると思うので、この条例というのは、本当に１からこれとこれだけはつくってやっていこうではないかと。</blockquote></div></article>
+<article class="card" id="m-若井達男（元議員・平成29年まで）ほか"><div class="card-head"><span class="nm">若井達男（元議員・平成29年まで）ほか</span><span class="meta"></span><span class="tags"><span class="tag t-none">発言が少ない</span></span></div><p class="sum">若井達男・勝又貞夫・樋口和人・田村眞一・岩野松・広田公夫・関昭夫・阿部久夫・井上智明・阿部俊夫・松原良道・笠原喜一郎・牛木芳雄・腰越晶・笛木晶の各元議員は、外国人・外資・土地についての本人の発言がほとんど見つかりませんでした（中国の米・国際情勢、ALT、水道の水源などに触れた程度）。</p></article>
+  </div>
+</section>
+
+<section id="exec">
+  <h2>市長・執行部の答弁</h2>
+  <p>市長や課長は議案や施策を出す側なので、議員の分類には入れていません。</p>
+  <div class="group">
+<article class="card"><div class="card-head"><span class="nm">井口一郎 市長（平成28年11月まで）</span></div><p class="sum">H23.12に、外国からの労働力を受け入れないという考えでは日本が生き残れないと述べました。H25には外国人による水資源の土地所有は「見当たりません」と答え、県の水資源の検討委員に任命されたことを報告しています。</p>
+<h4>答弁</h4>
+<div class="rec"><div class="when">H23.12.12 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/1/8/7/_/11344_16512_misc.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>これも今日本の産業、そして人口、これを考えた中で外国から一切労働力を受け入れないなんていう理論で、では日本が生き残っていけるのか。</blockquote></div>
+<div class="rec"><div class="when">H25.3.18 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/2/2/6/_/18377_33829_misc.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>今現在、水資源的な部分も含めて、外国人の方の所有があるか否かはちょっとこの後、担当から申し上げますけれども、特に危機的といいますかそういう部分については見当たりません。</blockquote></div>
+<div class="rec"><div class="when">H25.6.19 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/2/3/1/_/19578_36900_misc.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>これから、実は先般、水資源の検討委員会――外国資本に買収されてはならないというようなことも含めて、新潟県の水資源地域をどう保全していくのだという検討委員に私も任命されて行ってきました。</blockquote></div></article>
+<article class="card"><div class="card-head"><span class="nm">林茂男 市長（平成28年12月から。平成27年までは議員）</span></div><p class="sum">議員時代のH27.3に「急増する外国人観光客をいかに取り込むか」を質問しました。市長として、外国人の就労を「応援」する考えを示し（R4.12、R5.9）、R7.3には受け入れの課題（言語、住居、宗教、食事）を挙げています。R8.3.9にはハラル給食の質問に答えて、市がハラルに対応するとしただけで「様々なバッシングに遭った一時期があった」と述べ、「慎重に」質問・答弁するよう求めました。国際大学については「うちの子供たちを教えるためにある学校ではない」と繰り返しています（R6.6、R8.6）。</p>
+<h4>受け入れを進める答弁</h4>
+<div class="rec"><div class="when">H27.3.10 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/2/9/4/_/27219_59965_misc.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>１急増する外国人観光客をいかに取り込むか質問事項の１番目でございますが、外国人観光客の急増をいかに取り込むかをテーマにいたします。</blockquote></div>
+<div class="rec"><div class="when">R4.12.14 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/3/6/3/7/4/_/2022.12.14.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>我が市の人口問題を政策にどう反映させるか外国人の方の応援というか、就労としての応援については、６年前の市長就任以来、非常に自分としては思いを持っていましたし、関心を持ってきました。</blockquote></div>
+<div class="rec"><div class="when">R5.9.14 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/4/8/8/7/6/_/R5.9.14.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>あとは、外国人の話をすれば、そういうことに取り組んで外国人の方々が例えば就労も含め、また学業で修学という意味でやってきている皆さんも含めて、そういうことに取り組んでいる町に子供たちが誇りを感じていくようになり、それが投影にもなってここに帰ってこられて住み続けることを選択する、そういう場所になればという思いです。</blockquote></div>
+<div class="rec"><div class="when">R7.3.12 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/7/4/8/9/4/_/%E4%BB%A4%E5%92%8C7%E5%B9%B43%E6%9C%8812%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>しかし、外国人材の受入れは言語や文化の違いとか、住居や宗教、食事等の生活環境、こういった整備とか、教育プログラムの構築といいますかそういうことや、多岐にわたる課題がやはり存在している。</blockquote></div>
+<h4>課題・慎重さに触れた答弁</h4>
+<div class="rec"><div class="when">R7.9.10 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/8/4/3/9/0/_/%E4%BB%A4%E5%92%8C7%E5%B9%B49%E6%9C%8810%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>悪いと言っているわけではなくて、その中でルールがきちんと徹底されているかとか、地域で暮らしていく人たちでありますので、よく理解をいただくような努力も含めて、やはりみんなでいろいろやっていかなければならないと考えています。</blockquote></div>
+<div class="rec"><div class="when">R8.3.3 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/5/4/0/8/_/%E4%BB%A4%E5%92%8C8%E5%B9%B43%E6%9C%883%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E8%AD%B0%E6%A1%88%E5%AF%A9%E8%AD%B0).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>市内の介護事業所においても、以前から外国籍の介護人材を採用していますけれども、この雪国での生活に慣れるということがなかなか難しい。</blockquote></div>
+<div class="rec"><div class="when">R8.3.9 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/5/4/0/9/_/%E4%BB%A4%E5%92%8C8%E5%B9%B43%E6%9C%889%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>あまり言えませんが、本当のことなので皆さんにお伝えする。そういう宗教観とか、やはり一番は外国人とか、非常に排他主義的な考えが今蔓延しているような恐れがあるのですけれども、そういうことで、南魚沼市の中でそういうことに対応ができるとしただけで、様々なバッシングに遭った一時期があったということでありますので、慎重に実は答弁とか質問をしてもらいたいと思います。</blockquote></div>
+<div class="rec"><div class="when">R8.6.15 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/6/6/8/6/_/%E4%BB%A4%E5%92%8C8%E5%B9%B46%E6%9C%8815%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>なかなか協力隊でいきなり外国籍の方というのはちょっと難しいかと思います。</blockquote></div>
+<h4>国際大学について</h4>
+<div class="rec"><div class="when">R6.6.18 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/6/2/8/5/9/_/%E4%BB%A4%E5%92%8C6%E5%B9%B46%E6%9C%8818%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>加えまして、黒岩議員は子供たちのことを言っていますが、国際大学というのはうちの子供たちを教えるためにある学校ではないですよね。</blockquote></div></article>
+<article class="card"><div class="card-head"><span class="nm">総務部長・市民課長・福祉課長など</span></div><p class="sum">外国人の事件・事故は「聞いた覚えがございません」（R7.9）、増えている外国人はベトナム・インドネシアの技能実習が多い（R7.9）、給付金は外国籍でも住民なら同じ扱いで「国籍は確認できません」（R7.1）などと答えています。</p>
+<h4>答弁</h4>
+<div class="rec"><div class="when">R7.9.11 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/8/4/3/9/1/_/%E4%BB%A4%E5%92%8C7%E5%B9%B49%E6%9C%8811%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E6%B1%BA%E7%AE%97%E5%AF%A9%E8%AD%B0).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>そのような中で大きな事件、事故というものは聞いた覚えがございません。</blockquote></div>
+<div class="rec"><div class="when">R7.9.11 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/8/4/3/9/1/_/%E4%BB%A4%E5%92%8C7%E5%B9%B49%E6%9C%8811%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E6%B1%BA%E7%AE%97%E5%AF%A9%E8%AD%B0).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>インドネシアの方は技能実習が大半となっております。</blockquote></div>
+<div class="rec"><div class="when">R7.1.15 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/6/9/9/5/9/_/R7%E5%B9%B4%E7%AC%AC%EF%BC%91%E5%9B%9E%E8%87%A8%E6%99%82%E4%BC%9AR7.1.15.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>あくまで収入で判断していますので、外国籍の方であっても住民であれば同様の対応となります。（中略）ただ、国籍は確認できません。</blockquote></div></article>
+<article class="card"><div class="card-head"><span class="nm">教育長・教育部長・学校教育課長</span></div><p class="sum">外国籍の子どもの受け入れは「グローバルな視野を持った人材育成」と一致すると答える一方（R8.6）、R8.1の委員会では外国籍の子どもの割合が増え過ぎた場合の「弊害」を理由に浦佐小以外へ分散したと説明しました。宗教上の理由で弁当にしている子は2人、外国籍児童の増加を見込み7人程度を予算に入れています（R8.3）。</p>
+<h4>答弁</h4>
+<div class="rec"><div class="when">R8.6.15 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/6/6/8/6/_/%E4%BB%A4%E5%92%8C8%E5%B9%B46%E6%9C%8815%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>外国籍の児童生徒が身近にいてコミュニケーションを取りながら様々な活動を一緒に行うことが、南魚沼市が取り組んでおりますグローバルな視野を持った人材育成という目標と一致するものであると考えております。</blockquote></div>
+<div class="rec"><div class="when">R8.1.16 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/6/8/6/9/_/R8.01.16%20%E7%B7%8F%E5%8B%99%E6%96%87%E6%95%99%E5%A7%94%E5%93%A1%E4%BC%9A%E3%80%80%E8%AD%B0%E4%BA%8B%E9%8C%B2.pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>（委員会・教育部長）「しかし、外国籍の子供があまりに増え過ぎてしまうと、日本語を覚えなくても外国籍の子供たちだけでグループができてしまい、その中で学校生活などが完結してしまうので、日本人の子供や日本語に関わらなくても何とか学校生活ができてしまうといったことが出てきてしまう。」</blockquote></div>
+<div class="rec"><div class="when">R8.3.17 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/5/4/1/5/_/%E4%BB%A4%E5%92%8C8%E5%B9%B43%E6%9C%8817%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E4%BA%88%E7%AE%97%E5%AF%A9%E8%AD%B0).pdf" target="_blank" rel="noopener">会議録</a></div><blockquote>あともう１つが宗教上の理由でお弁当対応にせざるを得ないという方が、現状は２人ほどおるのですが、一応これも外国籍児童が増えるという想定の下、７人程度を想定して予算計上しております。</blockquote></div></article>
+  </div>
+</section>
+
+<section id="how">
+  <h2>調べ方</h2>
+<p class="memo">範囲：本会議 670件（平成16年11月〜令和8年6月。分類は平成23年以降の発言で判断）、委員会 38件（令和7年4月〜令和8年6月。それより前の委員会の議事録は手元にありません）、一般質問通告書 3件、観光戦略策定委員会等 13件、審議会など 385件。</p>
+<p class="memo">1回目の検索語：外国・外資・海外・インバウンド・多文化共生・国際交流・国際大学・技能実習・特定技能・育成就労・在留・留学生・移民・難民・日本語教室・日本語指導・ALT・ハラル・ハラール・モスク・礼拝・土葬・イスラム・ムスリム、国名・地域（中国〜英領バージン諸島）、水源・森林・山林・土地取得・土地売買・国土利用計画法・リゾートマンション・別荘。「インド」「タイ」「難民」（買い物難民・夕食難民など）などの関係ない語は外しました。森林・山林・水源・海外は、外国・取得・規制などの語が同じ文にないもの（林業・水道の話）を外しました。</p>
+<p class="memo">2回目の検索語：国際・異文化・外国語・英語・通訳・多言語・国籍・実習生・姉妹都市・友好都市・訪日・帰化・浦佐小・大和地区・ふるさと納税と国際大学・宗教・マンション・地下水・水資源・開発行為・保安林・重要土地・安全保障・ニセコ・白馬・民泊・ゲストハウス・外資系・治安・犯罪・不法・就労・労働力、のほか、ごみの分別・騒音・苦情・トラブル・マナー・事故・未払・滞納・生活保護・国保・保育・給食・日本語などと外国語・国名の組み合わせ。</p>
+<p class="memo">読めなかった分：本会議・委員会の会議録に文字化けや画像だけのPDFはありませんでした。審議会などのうち、総合計画審議会の諮問書・答申書など18件は画像PDFを文字読み取りしたもので、この中から引用はしていません。平成16〜22年の本会議は議員の分類には使っていません。委員会は令和7年4月以降の分しかないため、それより前の委員会での発言は見落としがありえます。</p>
+<p class="memo">同じ姓の議員が委員会にいる場合（例：中沢一博・中沢道夫）、委員会の議事録では「中沢委員」としか書かれていないため、引用は名前が確かめられた発言だけにしました。</p>
+</section>
+
+<footer>
+  <div>出典：南魚沼市議会の会議録・委員会の議事録、市の審議会などの記録（南魚沼市公式サイトのPDF）。</div>
+  <div>新潟県の移民政策反対情報</div>
+</footer>
+</div>
+<script data-goatcounter="https://niigata-imin-info.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>
