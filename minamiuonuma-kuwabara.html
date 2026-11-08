@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>桑原圭美議員 外国人の雇用と教育</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap">
+<style>
+/* 選挙公報のような一覧 → 候補者カード。紙の質感の中性色と、投票所の案内板の深緑 */
+:root{
+  --bg:#f6f6f2; --paper:#ffffff; --ink:#1d2421; --muted:#5d6762; --line:#d9ddd6;
+  --accent:#1f5e4b; --accent-soft:#e3eee9;
+  --go:#2b6a8f; --go-soft:#e2edf4; --care:#9a5a12; --care-soft:#f6ecdd; --mix:#6b5e86; --mix-soft:#ece8f3; --none:#7a807c; --none-soft:#ecedeb;
+  --serif:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  --sans:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.75;padding-inline:16px;padding-block:28px 56px}
+.wrap{max-width:860px;margin:0 auto;display:grid;gap:36px}
+h1,h2,h3{font-family:var(--serif);text-wrap:balance;line-height:1.35;margin:0}
+h1{font-size:clamp(24px,5vw,34px)}
+h2{font-size:21px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
+h3{font-size:18px}
+p{margin:0}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--accent);font-weight:700}
+header{display:grid;gap:12px}
+.city{font-family:var(--serif);font-weight:700;font-size:clamp(40px,11vw,64px);line-height:1.1;color:var(--accent);display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px}
+.city .pref{font-size:.3em;color:var(--muted);font-weight:700}
+.city .sub{font-size:.4em;color:var(--ink,inherit)}
+.lead{color:var(--muted);max-width:62ch}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted)}
+.facts b{color:var(--ink);font-variant-numeric:tabular-nums}
+section{display:grid;gap:16px}
+.note{background:var(--accent-soft);border-radius:6px;padding:14px 16px;display:grid;gap:6px;font-size:14px}
+.note ul{margin:0;padding-left:1.2em}
+.legend{display:flex;flex-wrap:wrap;gap:8px}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.t-go{background:var(--go-soft);color:var(--go)} .t-care{background:var(--care-soft);color:var(--care)}
+.t-mix{background:var(--mix-soft);color:var(--mix)} .t-none{background:var(--none-soft);color:var(--none)}
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.04em;background:var(--bg)}
+tr:last-child td{border-bottom:0}
+td.name{font-weight:700;white-space:nowrap}
+td.pt{font-size:13.5px;min-width:15em}
+td:nth-child(2){white-space:nowrap}
+td.d{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.group{display:grid;gap:12px}
+.group>h3{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:10px;min-width:0}
+.card-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.card-head .nm{font-family:var(--serif);font-size:19px;font-weight:700}
+.card-head .meta{font-size:13px;color:var(--muted)}
+.rec{display:grid;gap:6px;padding-top:10px;border-top:1px dashed var(--line)}
+.rec:first-of-type{border-top:0;padding-top:0}
+.when{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.sum{font-size:14px}
+blockquote{margin:0;padding:6px 0 6px 14px;border-left:3px solid var(--line);font-size:14.5px}
+blockquote::before{content:"原文　";font-size:11px;color:var(--muted);letter-spacing:.08em}
+.src{font-size:12.5px}
+.plain{display:grid;gap:8px}
+.plain li{margin-bottom:4px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.mini{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 14px;font-size:14px;min-width:0}
+.mini b{display:block}
+footer{font-size:13px;color:var(--muted);display:grid;gap:6px;border-top:1px solid var(--line);padding-top:16px}
+
+.card-head .tags{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.nori{font-size:13.5px;color:var(--muted)}
+.nori b{color:var(--ink)}
+.rec{gap:2px;padding-top:8px}
+.card h4{font-size:14px;margin:6px 0 0;color:var(--accent)}
+.memo{font-size:13px;color:var(--muted)}
+.toc{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px}
+.back{font-size:14px}
+.ocr{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-left:6px}
+
+table{min-width:0!important}
+th,td{padding:8px 8px!important}
+td.name{white-space:normal!important;word-break:keep-all}
+.pty{display:block;font-size:12px;font-weight:400;color:var(--muted)}
+.pd{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+td.dirc{min-width:6.6em;white-space:normal!important}
+td.dirc .tag{display:block;width:fit-content;max-width:100%;border-radius:6px;line-height:1.45;padding:3px 7px}
+td.dirc .tag{white-space:normal;font-size:11.5px;padding:2px 7px;margin-bottom:4px}
+td.pt{min-width:9em!important}
+</style><style>details.howto>summary{cursor:pointer;list-style:none}details.howto>summary::-webkit-details-marker{display:none}details.howto>summary::before{content:"＋ ";color:var(--accent);font-weight:700}details.howto[open]>summary::before{content:"－ "}details.howto[open]{gap:6px}td.name a.jump{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}</style><style>details.old{border-top:1px dashed var(--line);padding-top:8px}details.old>summary{cursor:pointer;font-size:13px;color:var(--muted);list-style:none}details.old>summary::-webkit-details-marker{display:none}details.old>summary::before{content:"＋ ";color:var(--accent)}details.old[open]>summary::before{content:"－ "}details.old[open]{display:grid;gap:6px}.latest{font-size:12px;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:0 6px}</style><style>.who{font-size:12px;font-weight:700;letter-spacing:.04em;margin-top:6px}.who.giin{color:var(--go)}.who.shi{color:var(--care)}.exp{font-size:14px;color:var(--muted)}.rec{border-top:1px dashed var(--line);padding-top:12px}</style></head><body>
+<div class="wrap">
+<header><p class="eyebrow"><a href="minamiuonuma.html">南魚沼市議会 議員の発言記録</a> ＞ 1人ずつのまとめ</p>
+<h1>桑原圭美議員 ― 「外国人に頼るしかない時代」と外国人の雇用を求め、市長は「絵空事のように聞こえてならない」と答えた</h1>
+<p class="lead">南魚沼市議会の現職です。平成31年からは、人口減少と人手不足を外国人の力で補うこと、特に介護での外国人の採用を繰り返し取り上げています。令和4年12月に「外国人に頼るしかない時代がきているのかな」と質問したのに対し、林市長は「外国人のほうに頼れば何とかなると言っている議論を聞いていると、絵空事のように聞こえてならないです」と答えました。一方、平成22年には永住外国人の地方参政権に慎重な立場で討論し、外国人の子ども手当の受け取りについても質問していました。</p>
+<p class="facts"><span>分類（読み）：<b>多文化共生推進（以前は慎重）</b></span><span>人手不足：<b>外国人で補う</b>（R4.12.14）</span></p></header>
+<section><h2>基本情報</h2><div class="note"><ul>
+<li>会議録の発言は平成22年からあります。教育（国際科・英語教育・国際大学の活用）の質問も多い議員です。</li>
+<li>平成22年〜25年は、永住外国人の地方参政権に慎重な意見書に賛成討論、外国にいる子どもへの子ども手当の質問、外国人の土地取得への対策の質問と、慎重な発言がありました。平成31年以降は外国人の雇用を進める発言が中心です。令和元年以降を重く見る方針のため「推進（以前は慎重）」としています。</li>
+<li>分類は会議録の記載に基づく目安で、本人の考え全体を表すものではありません。</li></ul></div></section>
+<section><h2>中心の発言1　「外国人に頼るしかない時代」と市長の答え（令和4年12月14日 一般質問）</h2>
+<div class="rec"><div class="when">R4.12.14　一般質問「我が市の人口問題を政策にどう反映させるか」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/3/6/3/7/4/_/2022.12.14.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">桑原議員</div><blockquote>少子高齢化社会で懸念されるのは、労働生産人口の減少により、社会保障の維持が困難になることや、経済活動の縮小に起因する税収減、外国人に頼らざるを得ない雇用情勢、人手不足、後継者不足による廃業、学区再編による地域の変化など枚挙にいとまがありません。</blockquote>
+<div class="who giin">桑原議員</div><blockquote>これは人口減の人材不足もあるのですけれども、やはりここは外国人に頼るしかない時代がきているのかなというふうに思います。これは介護現場だけに限りません。いろいろルールが変わってきていまして、施設の外国人は日本人より１人少なければいいというふうに今なっていますので、積極的に――難しい面もありますけれども、外国人を雇用するべきかというふうに思いますが、そこら辺の外国人雇用に関する考えをお聞きしたいと思います。</blockquote>
+<div class="who shi">市長</div><blockquote>ベトナムの方――今、南魚沼市で一番数が多い外国人はベトナムの方ですけれども、いろいろ製造業とかもありますので、それ以外に福祉のほうにも入った方がいるのです。ただ、やはりここから出ていかれました。大変な働き者で評価が高かったそうです。（略）円安で帰ったのです。今は円安が一番の問題。今後は見通しとしては、外国人に頼りたいといっても、もう少し長期で見れば、日本は先行して高齢化が進んでいますが、やがて、名前を言うと悪いので言わないけれども、近隣諸国で大変お金のある、そして我々以上に高齢化が進むと言われている――だって一人っ子政策までやったわけですから、そういったところが人材の奪い合いになるのはもう必定なのです。避けられない。私は外国人のほうに頼れば何とかなると言っている議論を聞いていると、絵空事のように聞こえてならないです。それも大事ですけれども、非常に将来をずっと見越した中では、かなり厳しい逃げ方だというふうに思います。</blockquote>
+<div class="who giin">桑原議員</div><blockquote>ただ、日本もそんなに人材がいるわけではないので、やはり外国人というのはどこかで考えていく。別な国々もありますし、そういったところで考えていかなければいけないのかというふうには思っています。</blockquote>
+</div>
+</section>
+<section><h2>中心の発言2　外国人労働者をどう活用するか、介護の外国人採用（平成31年〜令和3年）</h2>
+<div class="rec"><div class="when">H31.3.5　一般質問「我が市の人口減少対策と市政の方向性を問う」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/0/7/_/H31.3.5.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">桑原議員</div><blockquote>即効性のある政策はなく、収入源、労働力ともに外国人の力を無視できない状況になってきています。（略）４、増加傾向にある外国人労働者に関する政策と、今後彼らをどう活用していくのか。</blockquote>
+<div class="who shi">市長</div><blockquote>南魚沼市を含むハローワーク南魚沼管内で、78の事業所で842人の外国人が今働いておられます。労働者数で前の年との比較の中で、280人増えている。（略）市内企業への周知を我々からも図っていき、その雇用について支援をしていきたいというふうに考えています。県内でも、私どもの南魚沼市は、非常に外国人比率が高い市となっています。</blockquote>
+<div class="who giin">桑原議員</div><blockquote>今後絶対的に不足している部分、これは介護・医療だと思うのですが、この部分でどういった外国人労働者受け入れをしていくのか。</blockquote>
+<div class="who giin">桑原議員</div><blockquote>この増え続ける外国人との共生化というのは、具体的にどのように進めていくのか、今の時点でお考えがあればお聞きしたいと思います。</blockquote>
+<div class="who shi">市長</div><blockquote>例えば今ここのキューピット大和さんにはハラル食の弁当が売られているという、極めて異例な、全国でもそこぐらいではないかと言われて、感想を持って帰った専門家がいましたが、そういうことも含めて、共生社会といいますか、いろいろな意味で立ち向かっていける地域ではないかと思います。いろいろなこと、共生というのは保育園の問題も今度は出るかもしれません。</blockquote>
+<div class="who giin">桑原議員</div><blockquote>やはりこの福祉の部門で外国人を採用するというのが、安い労働力をこの部門に使うという考えではもう既になくなっているという視点を我々は持って、共生化を進めていくべきだというふうに思っていますので、そこら辺のその政策を煮詰めて、いいものにしていっていただければというふうに思っています。</blockquote>
+</div>
+<div class="rec"><div class="when">R3.3.15　予算の質疑 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/3/8/5/5/_/R3.3.15.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">桑原議員</div><blockquote>介護保険事業費で、この春からベトナムから外国人労働者が２名来られるということで、非常に期待しているところです。この外国人労働者に対する受入体制はどのようになっているか。また、今後の増員計画等があればお聞かせください。</blockquote>
+<div class="who shi">介護保険課長</div><blockquote>４月からは南魚沼福祉会のほうに正式に採用されまして、勤務ということで聞いております。私どもはそれに対しての外国人の人材に対しての支援とかというのは、今のところ特別考えておりません。</blockquote>
+</div>
+<div class="rec"><div class="when">R3.6.7　一般質問 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/3/8/6/3/_/R3.6.7.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who shi">産業振興部長</div><blockquote>市内のある程度の企業については、もうここには見切りをつけて、やはり新型コロナウイルスの収束にもよりますけれども、国外からの労働者を受け入れるというところにかなりかじを切っています。私どもとしましても、そういうところをやはり応援できる作業、支援策になるのか、そういうところを非常に検討していかなければいけないと考えております。</blockquote>
+<div class="who giin">桑原議員</div><blockquote>後継者と人手不足は非常に難しい問題ですけれども、今、外国人の労働者という観点が出てきましたので、そこはすごく期待が持てるのかと思っております。</blockquote>
+</div>
+</section>
+<section><h2>中心の発言3　学校の外国籍の子どもと国際理解教育（令和7年）</h2>
+<div class="rec"><div class="when">R7.9.9　一般質問「夢、未来、希望を育む教育の推進について」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/8/7/2/9/8/_/%E4%BB%A4%E5%92%8C7%E5%B9%B49%E6%9C%889%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">桑原議員</div><blockquote>多文化共生社会の理解促進という文言がございます。特に浦佐地区の小学校で外国人が増えているというような実態があるのですが、外国人に対する配慮が必要になってくると思われます。ここの部分でどういった指導、配慮をしているかお聞きしたいと思います。</blockquote>
+<div class="who shi">教育長</div><blockquote>浦佐小学校や大和中学校においては、外国籍の児童生徒も多く在籍しています。（略）特に配慮することは、外国籍の児童生徒につきましては、日本語支援が欠かせません。特に近年は英語を母国語としない、あるいは第二言語としてもあまり使わない子供たちが入学してきます。（略）特に今年度は、英語が通じないこともありますから、意思が疎通できるように翻訳アプリなども利用して（略）今２学期、進んでおりますので、これからまた多くの外国籍児童も入ってくると思います。</blockquote>
+</div>
+<div class="rec"><div class="when">R7.12.8　一般質問 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/8/7/3/0/0/_/%E4%BB%A4%E5%92%8C7%E5%B9%B412%E6%9C%888%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">桑原議員</div><blockquote>国際大学との連携が可能ということで、ほかの地域よりも外国に対する理解を深めるには非常に優位制があるという地域であると思います。参加者の数が少ないという理由は先ほどお聞きしたのですけれども、もうちょっと国際理解に対する意識を高めるために何か努力が必要なのではないかと私は思うのですけれども</blockquote>
+<div class="who shi">教育長</div><blockquote>児童生徒が直接国際大学を訪れて、国際大学のあのキャンパスの中で考える活動もやはりより広げていく必要があるというふうに考えております。</blockquote>
+</div>
+<div class="rec"><div class="when">R2.3.11　施政方針への質問 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/0/8/0/_/R2.3.11.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">桑原議員</div><blockquote>国際大学を生かす。この人脈というのは本当にすばらしいと思いますし、この地域の宝であるというふうに思いますので、ここはどんどんやっていただきたいと思います。</blockquote>
+<div class="who giin">桑原議員</div><blockquote>国際大学を生かした外国語教育の中心地として、小中学校の統廃合とかを検討するのであれば、本当によい教育環境を提示できますし、定住人口も増えていくような、まさに市長が思い描いた若者が帰ってこられる地域ということにつながるのではないのかというふうに思っています。</blockquote>
+</div>
+</section>
+<section><h2>ほかの発言</h2>
+<div class="rec"><div class="when">R7.9.3　社会厚生委員会（介護保険の報告） <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/8/8/7/8/1/_/R7.9.3%E7%A4%BE%E5%8E%9A.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">桑原議員</div><blockquote>不納欠損処分状況についてである。外国人の割合が分かれば教えてもらいたい。</blockquote>
+<div class="who shi">介護保険係長</div><blockquote>不納欠損の外国人の割合だが、ここでは把握していない。</blockquote>
+</div>
+</section>
+<section><h2>令和元年より前の慎重な発言（参考）</h2>
+<div class="rec"><div class="when">H22.3.19　永住外国人に地方参政権を付与することに関する意見書への賛成討論 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/2/9/8/3/_/9544_12801_misc.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">桑原議員</div><blockquote>我が国に永住資格を持つ外国人に地方参政権を与えようとする法案の提出には、まだまだ慎重な議論が必要との立場であります。</blockquote>
+<div class="who giin">桑原議員</div><blockquote>このため、外国籍住民の投票行動が、国の外交安全保障政策に支障をきたす可能性は極めて高いものと思われます。</blockquote>
+<div class="who giin">桑原議員</div><blockquote>例えばここに１,０００人の外国人が移住してきたとしたらこの自治体はどうなるでしょうか。</blockquote>
+<div class="who giin">桑原議員</div><blockquote>したがいまして、外国人参政権の付与は憲法第１５条第１項にかんがみ、憲法違反の疑い、教育の内政干渉が強まる恐れ、そして領土問題解決に大きな障害となり、国益そのものに影響があると考えます。</blockquote>
+<p class="exp">意見書は賛成多数で可決されました。同じ日、中沢一博議員は意見書に反対する討論をしています。</p>
+</div>
+<div class="rec"><div class="when">H22.3.16　予算の質疑（子ども手当） <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/2/9/8/1/_/9544_12799_misc.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">桑原議員</div><blockquote>当市において児童手当を支給している外国人の数がもしわかったら教えていただきたいと思います。最後に在日外国人の流入と言いますか、出稼ぎ労働者がもし大量に入ってきてこの制度を利用した場合の対応であります。</blockquote>
+<div class="who shi">福祉保健部長</div><blockquote>本人が外国人でその子どもが外国にいて支給をしていただいているというのが４４世帯ということだそうです。</blockquote>
+</div>
+<div class="rec"><div class="when">H25.3.18　予算の質疑 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/2/2/6/_/18377_33829_misc.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">桑原議員</div><blockquote>我が市では外国人による土地の取得に対してどういった対策をとっているのか、講じるのかというところで、ちょっとお聞きしたいなと思っておりますので、お願いいたします。</blockquote>
+<div class="who shi">市長</div><blockquote>現在、そういう危険性と言うと失礼ですけれどもそういう部分は見当たっておりませんので、特にこれといって対策を検討しているという、今段階ではございません。</blockquote>
+</div>
+</section>
+<section><h2>ほかの議員との比べ方（読み）</h2><div class="note"><ul>
+<li>人手不足を外国人で補う発言は、吉田光利議員と並んではっきりしています。吉田議員が建設業・製造業の会社目線なのに対し、桑原議員は介護と教育（国際大学・外国籍の子ども）が中心です。</li>
+<li>令和4年12月の市長の「絵空事のように聞こえてならない」は、外国人頼みに対して林市長がはっきり否定的に述べた答弁です。ただし同じ市長が、令和5年3月（吉田議員への答弁）には「有効な方法の一つ」と答えています。</li>
+<li>平成22年の参政権の意見書は、推進派に分けた議員のうち塩谷寿雄議員が提出し、桑原議員が賛成の討論、中沢一博議員が反対の討論をしました。</li>
+</ul></div></section>
+<section><h2>調べた範囲</h2><ul class="plain">
+<li>南魚沼市議会の本会議の会議録（手元の写し）から、桑原議員の発言のうち外国・外国人・国際大学・共生・各国名などを含む43か所と、すぐ後の答弁を全文で確認しました。令和元年以降を中心に載せています。</li>
+<li>委員会の記録は令和7年4月以降だけです（委員会での発言1か所を含みます）。</li>
+<li>引用は会議録の文言どおりです。「（略）」は同じ発言の途中を省いたところです。会議録は取得時点の写しです。</li>
+<li>2026年11月8日作成</li></ul></section>
+<footer>
+  <div>出典：南魚沼市議会の会議録・委員会の議事録、市の審議会などの記録（南魚沼市公式サイトのPDF）。</div>
+  <div>新潟県の移民政策反対情報</div>
+</footer>
+</div>
+<script data-goatcounter="https://niigata-imin-info.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body></html>
