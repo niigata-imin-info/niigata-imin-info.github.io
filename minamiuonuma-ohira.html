@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>大平剛議員 ごみ分別と外国籍住民</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap">
+<style>
+/* 選挙公報のような一覧 → 候補者カード。紙の質感の中性色と、投票所の案内板の深緑 */
+:root{
+  --bg:#f6f6f2; --paper:#ffffff; --ink:#1d2421; --muted:#5d6762; --line:#d9ddd6;
+  --accent:#1f5e4b; --accent-soft:#e3eee9;
+  --go:#2b6a8f; --go-soft:#e2edf4; --care:#9a5a12; --care-soft:#f6ecdd; --mix:#6b5e86; --mix-soft:#ece8f3; --none:#7a807c; --none-soft:#ecedeb;
+  --serif:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  --sans:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.75;padding-inline:16px;padding-block:28px 56px}
+.wrap{max-width:860px;margin:0 auto;display:grid;gap:36px}
+h1,h2,h3{font-family:var(--serif);text-wrap:balance;line-height:1.35;margin:0}
+h1{font-size:clamp(24px,5vw,34px)}
+h2{font-size:21px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
+h3{font-size:18px}
+p{margin:0}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--accent);font-weight:700}
+header{display:grid;gap:12px}
+.city{font-family:var(--serif);font-weight:700;font-size:clamp(40px,11vw,64px);line-height:1.1;color:var(--accent);display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px}
+.city .pref{font-size:.3em;color:var(--muted);font-weight:700}
+.city .sub{font-size:.4em;color:var(--ink,inherit)}
+.lead{color:var(--muted);max-width:62ch}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted)}
+.facts b{color:var(--ink);font-variant-numeric:tabular-nums}
+section{display:grid;gap:16px}
+.note{background:var(--accent-soft);border-radius:6px;padding:14px 16px;display:grid;gap:6px;font-size:14px}
+.note ul{margin:0;padding-left:1.2em}
+.legend{display:flex;flex-wrap:wrap;gap:8px}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.t-go{background:var(--go-soft);color:var(--go)} .t-care{background:var(--care-soft);color:var(--care)}
+.t-mix{background:var(--mix-soft);color:var(--mix)} .t-none{background:var(--none-soft);color:var(--none)}
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.04em;background:var(--bg)}
+tr:last-child td{border-bottom:0}
+td.name{font-weight:700;white-space:nowrap}
+td.pt{font-size:13.5px;min-width:15em}
+td:nth-child(2){white-space:nowrap}
+td.d{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.group{display:grid;gap:12px}
+.group>h3{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:10px;min-width:0}
+.card-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.card-head .nm{font-family:var(--serif);font-size:19px;font-weight:700}
+.card-head .meta{font-size:13px;color:var(--muted)}
+.rec{display:grid;gap:6px;padding-top:10px;border-top:1px dashed var(--line)}
+.rec:first-of-type{border-top:0;padding-top:0}
+.when{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.sum{font-size:14px}
+blockquote{margin:0;padding:6px 0 6px 14px;border-left:3px solid var(--line);font-size:14.5px}
+blockquote::before{content:"原文　";font-size:11px;color:var(--muted);letter-spacing:.08em}
+.src{font-size:12.5px}
+.plain{display:grid;gap:8px}
+.plain li{margin-bottom:4px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.mini{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 14px;font-size:14px;min-width:0}
+.mini b{display:block}
+footer{font-size:13px;color:var(--muted);display:grid;gap:6px;border-top:1px solid var(--line);padding-top:16px}
+
+.card-head .tags{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.nori{font-size:13.5px;color:var(--muted)}
+.nori b{color:var(--ink)}
+.rec{gap:2px;padding-top:8px}
+.card h4{font-size:14px;margin:6px 0 0;color:var(--accent)}
+.memo{font-size:13px;color:var(--muted)}
+.toc{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px}
+.back{font-size:14px}
+.ocr{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-left:6px}
+
+table{min-width:0!important}
+th,td{padding:8px 8px!important}
+td.name{white-space:normal!important;word-break:keep-all}
+.pty{display:block;font-size:12px;font-weight:400;color:var(--muted)}
+.pd{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+td.dirc{min-width:6.6em;white-space:normal!important}
+td.dirc .tag{display:block;width:fit-content;max-width:100%;border-radius:6px;line-height:1.45;padding:3px 7px}
+td.dirc .tag{white-space:normal;font-size:11.5px;padding:2px 7px;margin-bottom:4px}
+td.pt{min-width:9em!important}
+</style><style>details.howto>summary{cursor:pointer;list-style:none}details.howto>summary::-webkit-details-marker{display:none}details.howto>summary::before{content:"＋ ";color:var(--accent);font-weight:700}details.howto[open]>summary::before{content:"－ "}details.howto[open]{gap:6px}td.name a.jump{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}</style><style>details.old{border-top:1px dashed var(--line);padding-top:8px}details.old>summary{cursor:pointer;font-size:13px;color:var(--muted);list-style:none}details.old>summary::-webkit-details-marker{display:none}details.old>summary::before{content:"＋ ";color:var(--accent)}details.old[open]>summary::before{content:"－ "}details.old[open]{display:grid;gap:6px}.latest{font-size:12px;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:0 6px}</style><style>.who{font-size:12px;font-weight:700;letter-spacing:.04em;margin-top:6px}.who.giin{color:var(--go)}.who.shi{color:var(--care)}.exp{font-size:14px;color:var(--muted)}.rec{border-top:1px dashed var(--line);padding-top:12px}</style></head><body>
+<div class="wrap">
+<header><p class="eyebrow"><a href="minamiuonuma.html">南魚沼市議会 議員の発言記録</a> ＞ 1人ずつのまとめ</p>
+<h1>大平剛議員 ― 外国籍の住民が多い地区の分別違反ごみを取り上げ、責めるのではなく多言語の広報で解決をと求めた</h1>
+<p class="lead">南魚沼市議会の現職です。令和7年9月の一般質問で、ごみの分別違反（令和6年度4,200件、大部分を区長・班長などの地域が処理）を取り上げ、相談を受けた地区には外国籍の住民が多いところがあると述べました。そのうえで「外国籍の住民が悪いと言っているわけではなくて」、ルールが伝わっていないのではないかとして、ごみ分別辞典の多言語化や、外国人を雇う企業との連携を求めています。ほかに、災害時の外国人観光客・外国人労働者への対応、国際大学と地域の交流の提案があります。</p>
+<p class="facts"><span>分類（読み）：<b>多文化共生推進</b></span><span>人手不足：<b>発言なし</b></span></p></header>
+<section><h2>基本情報</h2><div class="note"><ul>
+<li>会議録の発言は平成30年からあります。地元は国際大学のある大和地域で、国際大学と地域の交流を何度も取り上げています。</li>
+<li>外国人の受け入れや雇用そのものの是非についての発言は見つかりません。外国人が増えていることを前提に、暮らしのルールや災害時の対応を整える立場の発言です。</li>
+<li>分類は会議録の記載に基づく目安で、本人の考え全体を表すものではありません。</li></ul></div></section>
+<section><h2>中心の発言　ごみの分別違反と外国籍の住民（令和7年9月10日 一般質問）</h2>
+<div class="rec"><div class="when">R7.9.10　一般質問「ごみ収集について」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/8/4/3/9/0/_/%E4%BB%A4%E5%92%8C7%E5%B9%B49%E6%9C%8810%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who shi">市長</div><blockquote>外国人の皆さんがやはり多くなっている。悪いと言っているわけではなくて、その中でルールがきちんと徹底されているかとか、地域で暮らしていく人たちでありますので、よく理解をいただくような努力も含めて、やはりみんなでいろいろやっていかなければならないと考えています。</blockquote>
+<div class="who giin">大平議員</div><blockquote>分別不足で未回収になったごみを班長さん、区長さんたちが自分たちでやっていると。（略）若い人でもサラリーマンだった場合、そんな余裕はないですよね。</blockquote>
+<div class="who shi">廃棄物対策課長</div><blockquote>令和６年度の件数になりますけれども、違反ごみの件数が３地域合わせて4,200件です。（略）一部廃棄物対策課のほうで対応させていただいていますが、その大部分を地域のほうで対応してもらっているという状況です。</blockquote>
+<div class="who giin">大平議員</div><blockquote>六日町地域が1,589件で塩沢地域が大体1,300件近く、大和地域が1,761件と、大和地域が一番多いのです。人口比でいえばちょっとおかしいくらい。その中の原因の半分は、要するに指定袋の問題なのです。（略）もう一つ問題があって、先ほど市長が外国籍の方の問題を言われましたけれども、それもあるのです。私も相談受けたところの数から見ると、ちょっと外国籍の住民の方が多いところ。私は外国籍の住民が悪いと言っているわけではなくて、市長が言っているようにルールが周知されていないのか、分かりづらいのかと思うところもあるので、そこら辺の外国籍の住民の方に対する広報の仕方というものを、今どうなっているかという現状をお知らせ願いたいと思います。</blockquote>
+<div class="who shi">廃棄物対策課長</div><blockquote>外国籍住民の方に対する今の広報ですけれども、ごみ出しカレンダー、ガイドブックの英語版、最近はベトナム語とインドネシア語も追加させていただいております。</blockquote>
+<div class="who giin">大平議員</div><blockquote>南魚沼市にいらっしゃる方、例えば国際大学の留学生が多いのですけれども、やはり技能実習とか働きに来ている方が一番多いと思います。特に企業の中では結構外国人の方を雇っている企業も多いと思うのですけれども、例えばそういった外国人の社員の方を雇っている企業との連携はどのようになっているかも、お知らせ願いたいと思います。</blockquote>
+<div class="who shi">廃棄物対策課長</div><blockquote>地域から相談とか苦情とかあった場合、その就労先の企業のほうへ連絡を取りまして、そちらのほうに出向いて地域からの情報ですとか、あと是正要請、そういうのをそれぞれ個別のケースに応じてやっております。（略）全体ではケースによっては把握しきれていないところもありますので、そこらは今後、そういった企業と連携していこうというところで確認しております。</blockquote>
+<div class="who giin">大平議員</div><blockquote>私が確認したら外国語対応にはなっていないような感じがしたので、さっきも言いましたけれども英語と、うちの市に大勢ベトナム人の方がいらっしゃるのでベトナム語とか、インドネシア語とか、例えばうちの市でいえば国際大学があるわけです。そういうところと連携しまして、そういうのを多言語化にしていく。</blockquote>
+<div class="who shi">市長</div><blockquote>今その企業というか、事業者の方が外国人の方というのもいるわけで、そういったところからも理解を深めてもらわなければいけないし、様々です。４割が事業ごみということです。</blockquote>
+<div class="who shi">廃棄物対策課長</div><blockquote>議員のおっしゃるとおりで、先行自治体ですとか、あと近隣自治体で導入しているところもありますので、そういったところを参考にしながら検討していきたいと思います。</blockquote>
+<p class="exp">議員の言う「家庭ごみ分別辞典」は市のウェブサイトの分別検索で、この時点では外国語に対応していないと議員が指摘しました。</p>
+</div>
+</section>
+<section><h2>ほかの発言</h2>
+<div class="rec"><div class="when">H31.3.6　一般質問「積雪期における地震対策について」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/0/8/_/H31.3.6.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">大平議員</div><blockquote>これから外国人労働者の方が入ってこられますよね。やはりインバウンドの人と同じで言葉の問題、外国人労働者の方は、多少は大丈夫だと思うのですが、やはり出てくると思うのですね。また、避難した際に風習の違いとかが、やはりそういうときになるとちょっと衝突してしまうとか、そういうことだって当然あり得るわけなので</blockquote>
+<div class="who shi">市長</div><blockquote>避難所に例えばそういうイスラム教圏の皆さんが入ったとする。礼拝場までつくらなければ大ごとになりますし、例えばですね。</blockquote>
+<div class="who giin">大平議員</div><blockquote>観光、インバウンドそして外国人労働者の方、これもやはり言い方は悪いかもしれませんが、優秀な方に来ていただくためには、やはりそういった安心を提供できるというのを今後市の政策において重要だと私は考えています。</blockquote>
+</div>
+<div class="rec"><div class="when">R2.12.23　一般質問「学園都市構想について」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/2/5/5/_/R2.12.23.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">大平議員</div><blockquote>国際大学の立地から考えて、周辺地域の人々、国際町というのがあるのですけれども、その周辺地域の人々と国際大学との交流の場というのは、何かもっとほかに――例えば市役所が介在して、こういう交流をやりましょうとか、そういうのはありますか。</blockquote>
+<div class="who giin">大平議員</div><blockquote>市長は国際大学の理事でもいらっしゃるわけで、そういうところにメッセージを送るとか、そういうやはり我々のほうからも、我々は卒業生の皆さんを忘れていませんよ、ぜひ皆さんも我々のことを忘れないでいただきたい。</blockquote>
+<div class="who shi">市長</div><blockquote>いいことはどんどんやってみたいと思うので、それは今、いい提言を頂いたと思って、やりたいと思います。</blockquote>
+<p class="exp">議員は市長を「理事」と述べていますが、市長自身は同じ令和2年12月23日に「理事ではなくて、評議員です」と答えています（黒岩議員のまとめ参照）。</p>
+</div>
+</section>
+<section><h2>ほかの議員との比べ方（読み）</h2><div class="note"><ul>
+<li>外国籍の住民のごみ分別は、地域の負担になっている問題です。大平議員はそれを取り上げつつ、原因は外国人でなく「周知」にあるとして、多言語化と企業との連携という受け入れを進める側の解決策を求めました。この点で「推進」に分けています。</li>
+<li>市長も同じ一般質問の中で「外国人の皆さんがやはり多くなっている。悪いと言っているわけではなくて」と述べ、議員と同じ言い方をしています。</li>
+</ul></div></section>
+<section><h2>調べた範囲</h2><ul class="plain">
+<li>南魚沼市議会の本会議・委員会の会議録（手元の写し）から、大平議員の発言のうち外国・外国人・国際大学・インバウンド・各国名などを含む30か所と、すぐ後の答弁を全文で確認しました。</li>
+<li>委員会の記録は令和7年4月以降だけです。</li>
+<li>引用は会議録の文言どおりです。「（略）」は同じ発言の途中を省いたところです。会議録は取得時点の写しです。</li>
+<li>2026年11月8日作成</li></ul></section>
+<footer>
+  <div>出典：南魚沼市議会の会議録・委員会の議事録、市の審議会などの記録（南魚沼市公式サイトのPDF）。</div>
+  <div>新潟県の移民政策反対情報</div>
+</footer>
+</div>
+<script data-goatcounter="https://niigata-imin-info.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body></html>
