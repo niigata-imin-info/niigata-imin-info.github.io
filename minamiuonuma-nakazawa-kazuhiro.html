@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>中沢一博議員 参政権と共生</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap">
+<style>
+/* 選挙公報のような一覧 → 候補者カード。紙の質感の中性色と、投票所の案内板の深緑 */
+:root{
+  --bg:#f6f6f2; --paper:#ffffff; --ink:#1d2421; --muted:#5d6762; --line:#d9ddd6;
+  --accent:#1f5e4b; --accent-soft:#e3eee9;
+  --go:#2b6a8f; --go-soft:#e2edf4; --care:#9a5a12; --care-soft:#f6ecdd; --mix:#6b5e86; --mix-soft:#ece8f3; --none:#7a807c; --none-soft:#ecedeb;
+  --serif:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  --sans:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.75;padding-inline:16px;padding-block:28px 56px}
+.wrap{max-width:860px;margin:0 auto;display:grid;gap:36px}
+h1,h2,h3{font-family:var(--serif);text-wrap:balance;line-height:1.35;margin:0}
+h1{font-size:clamp(24px,5vw,34px)}
+h2{font-size:21px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
+h3{font-size:18px}
+p{margin:0}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--accent);font-weight:700}
+header{display:grid;gap:12px}
+.city{font-family:var(--serif);font-weight:700;font-size:clamp(40px,11vw,64px);line-height:1.1;color:var(--accent);display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px}
+.city .pref{font-size:.3em;color:var(--muted);font-weight:700}
+.city .sub{font-size:.4em;color:var(--ink,inherit)}
+.lead{color:var(--muted);max-width:62ch}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted)}
+.facts b{color:var(--ink);font-variant-numeric:tabular-nums}
+section{display:grid;gap:16px}
+.note{background:var(--accent-soft);border-radius:6px;padding:14px 16px;display:grid;gap:6px;font-size:14px}
+.note ul{margin:0;padding-left:1.2em}
+.legend{display:flex;flex-wrap:wrap;gap:8px}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.t-go{background:var(--go-soft);color:var(--go)} .t-care{background:var(--care-soft);color:var(--care)}
+.t-mix{background:var(--mix-soft);color:var(--mix)} .t-none{background:var(--none-soft);color:var(--none)}
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.04em;background:var(--bg)}
+tr:last-child td{border-bottom:0}
+td.name{font-weight:700;white-space:nowrap}
+td.pt{font-size:13.5px;min-width:15em}
+td:nth-child(2){white-space:nowrap}
+td.d{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.group{display:grid;gap:12px}
+.group>h3{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:10px;min-width:0}
+.card-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.card-head .nm{font-family:var(--serif);font-size:19px;font-weight:700}
+.card-head .meta{font-size:13px;color:var(--muted)}
+.rec{display:grid;gap:6px;padding-top:10px;border-top:1px dashed var(--line)}
+.rec:first-of-type{border-top:0;padding-top:0}
+.when{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.sum{font-size:14px}
+blockquote{margin:0;padding:6px 0 6px 14px;border-left:3px solid var(--line);font-size:14.5px}
+blockquote::before{content:"原文　";font-size:11px;color:var(--muted);letter-spacing:.08em}
+.src{font-size:12.5px}
+.plain{display:grid;gap:8px}
+.plain li{margin-bottom:4px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.mini{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 14px;font-size:14px;min-width:0}
+.mini b{display:block}
+footer{font-size:13px;color:var(--muted);display:grid;gap:6px;border-top:1px solid var(--line);padding-top:16px}
+
+.card-head .tags{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.nori{font-size:13.5px;color:var(--muted)}
+.nori b{color:var(--ink)}
+.rec{gap:2px;padding-top:8px}
+.card h4{font-size:14px;margin:6px 0 0;color:var(--accent)}
+.memo{font-size:13px;color:var(--muted)}
+.toc{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px}
+.back{font-size:14px}
+.ocr{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-left:6px}
+
+table{min-width:0!important}
+th,td{padding:8px 8px!important}
+td.name{white-space:normal!important;word-break:keep-all}
+.pty{display:block;font-size:12px;font-weight:400;color:var(--muted)}
+.pd{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+td.dirc{min-width:6.6em;white-space:normal!important}
+td.dirc .tag{display:block;width:fit-content;max-width:100%;border-radius:6px;line-height:1.45;padding:3px 7px}
+td.dirc .tag{white-space:normal;font-size:11.5px;padding:2px 7px;margin-bottom:4px}
+td.pt{min-width:9em!important}
+</style><style>details.howto>summary{cursor:pointer;list-style:none}details.howto>summary::-webkit-details-marker{display:none}details.howto>summary::before{content:"＋ ";color:var(--accent);font-weight:700}details.howto[open]>summary::before{content:"－ "}details.howto[open]{gap:6px}td.name a.jump{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}</style><style>details.old{border-top:1px dashed var(--line);padding-top:8px}details.old>summary{cursor:pointer;font-size:13px;color:var(--muted);list-style:none}details.old>summary::-webkit-details-marker{display:none}details.old>summary::before{content:"＋ ";color:var(--accent)}details.old[open]>summary::before{content:"－ "}details.old[open]{display:grid;gap:6px}.latest{font-size:12px;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:0 6px}</style><style>.who{font-size:12px;font-weight:700;letter-spacing:.04em;margin-top:6px}.who.giin{color:var(--go)}.who.shi{color:var(--care)}.exp{font-size:14px;color:var(--muted)}.rec{border-top:1px dashed var(--line);padding-top:12px}</style></head><body>
+<div class="wrap">
+<header><p class="eyebrow"><a href="minamiuonuma.html">南魚沼市議会 議員の発言記録</a> ＞ 1人ずつのまとめ</p>
+<h1>中沢一博議員 ― 永住外国人の地方参政権に条件つきで賛成の立場をとり、「多文化共生の人道大国の道を歩む以外にその活路はない」と述べた</h1>
+<p class="lead">南魚沼市議会の現職で、平成19年から会議録に発言がある議員です。外国人についてもっともはっきりした発言は、平成22年3月19日、永住外国人に地方参政権を与えることに慎重な意見書への反対討論です。相互主義・申請制などの条件をつけたうえで「ただ単に付与しないというのはいかがなものか」と述べ、「日本は憲法の理念に基づく人権、地方分権、多文化共生の人道大国の道を歩む以外にその活路はない」と締めくくりました。令和元年以降の外国関係の発言は、インバウンド（外国人観光客）の受け入れ、外国籍の子どもの学習支援、災害時の外国人への対応などです。</p>
+<p class="facts"><span>分類（読み）：<b>多文化共生推進</b></span><span>人手不足：<b>発言なし</b></span></p></header>
+<section><h2>基本情報</h2><div class="note"><ul>
+<li>会議録の発言は平成19年からあります。平成22年の参政権の討論は、重く見る区切り（令和元年以降）より前ですが、外国人についての考えがいちばんはっきり出ている発言なので中心に載せています。</li>
+<li>令和元年以降は、外国人の受け入れそのものよりも、外国人観光客や外国籍の住民・子どもへの対応を整える質問が中心です。</li>
+<li>分類は会議録の記載に基づく目安で、本人の考え全体を表すものではありません。</li></ul></div></section>
+<section><h2>中心の発言1　永住外国人の地方参政権（平成22年3月19日 意見書への反対討論）</h2>
+<div class="rec"><div class="when">H22.3.19　永住外国人に地方参政権を付与することに関する意見書への反対討論 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/2/9/8/3/_/9544_12801_misc.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">中沢一博議員</div><blockquote>ちょっと正直言って私も迷ったのは事実でございます。ですけれども、最後の言葉を聞いて、反対する立場で論議に参加させていただきたいと思っております。</blockquote>
+<div class="who giin">中沢一博議員</div><blockquote>税金を納めて、地方住民として地域でさまざまな役割を担っている永住外国人の方には、その地位向上のために地方参政権を認めて、地域発展のために貢献してもらいたいことを私は感じております。そして日本と同様に住民の義務を果たして、地域の共同体に参加しようとするならば、住民として権利は保障されるのは当然かと思います。</blockquote>
+<div class="who giin">中沢一博議員</div><blockquote>第１点には、外国人の国籍が同様の権利を与えていることを条件とする。いわゆる相互主義を採用することを意味しております。（略）２点目が申請主義を採用するということであります。（略）３点目に選挙権を要件とする各種資格、すなわち人権擁護委員や民生委員などへの就任資格や条例の制定、また改廃、それから地方議会の解散とか及び議員、首長の解職を求める直接請求権は、いずれもこれは付与しないということを私は思っている次第であります。</blockquote>
+<div class="who giin">中沢一博議員</div><blockquote>国会、政府において永住外国人への地方参政権の付与について慎重論議を重ねることは、私は賛成でありますけれども、ただ単に付与しないというのはいかがなものかというふうに判断する次第であります。急激に進む少子高齢化の中で人口減の社会を迎えた日本。グローバルリズムの荒波の中で資源を持たない国、日本が、持続的に平和と繁栄を維持し世界に貢献していくには、内向きなナショナルリズムに陥った考えではもはやなくして、世界に理解されることはできないわけでありますので、日本は憲法の理念に基づく人権、地方分権、多文化共生の人道大国の道を歩む以外にその活路はないと申し上げたいと思っております。</blockquote>
+<p class="exp">意見書は塩谷寿雄議員が提出し、桑原圭美議員らが賛成討論、中沢一博議員らが反対討論をして、賛成多数で可決されました。討論なので市の答弁はありません。</p>
+</div>
+</section>
+<section><h2>中心の発言2　外国人観光客の受け入れ（令和元年9月11日 一般質問）</h2>
+<div class="rec"><div class="when">R1.9.11　一般質問「東京オリンピック・パラリンピックに向けた当市の観光立市への具体策を伺う」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/3/2/5/_/2019.9.11.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">中沢一博議員</div><blockquote>今、本当に我が市においても外国人が増えてきているなというのは、ここに感じるわけであります。（略）そうした中で、今この地域の多くは、外国人を誘客したいという人が多いのですね。施設自体も多いのです。</blockquote>
+<div class="who giin">中沢一博議員</div><blockquote>２点目は、外国語の対応可能な案内と窓口の設置という、これは案内、先ほど言ったように、今、国際交流員の方が来たから、本当にこれは期待したいと思っておりますけれども、お一人でありますので、なかなか大変ですよね。そうした部分をやはりこれから行政として考えていくべきではないのかなと。</blockquote>
+<div class="who shi">市長</div><blockquote>市内スキー場における昨シーズンの利用者数は124万人のうち外国人利用者が３万4,000人を占めておりまして、今後も外国人客の割合は増加するものと思われるところでございます。</blockquote>
+</div>
+<div class="rec"><div class="when">R7.6.11　一般質問 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/7/9/6/5/7/_/%E4%BB%A4%E5%92%8C7%E5%B9%B46%E6%9C%8811%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">中沢一博議員</div><blockquote>当市の基幹産業の１つである観光産業は、周りを見ても休業や廃業が増えております。世間ではインバウンドで押せや、押せやと言われておりますけれども、当市の実態はどうでしょうか。私は危機感を感じているわけであります。</blockquote>
+</div>
+</section>
+<section><h2>ほかの発言</h2>
+<div class="rec"><div class="when">R7.3.18　予算の質疑 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/7/4/8/9/8/_/%E4%BB%A4%E5%92%8C7%E5%B9%B43%E6%9C%8818%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E5%BD%93%E5%88%9D%E4%BA%88%E7%AE%97%E5%AF%A9%E8%AD%B0).pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">中沢一博議員</div><blockquote>当市においては外国人の方の児童生徒が多いかと思います。その実態等をお伺いさせていただきたいと思っております。</blockquote>
+<div class="who shi">学校教育課長</div><blockquote>外国籍の児童生徒は南魚沼市においては主に浦佐小学校、あと大和中学校において就学をしているような実態がございます。そこにつきましては、日本語支援員を配置して様々な支援を行っているところではございますが、近年やはり外国籍の子供たちの数が若干増加傾向にあるというような状況がございます。</blockquote>
+<div class="who giin">中沢一博議員</div><blockquote>外国人が当市は多いわけでございますので、今、３人の支援員の方を付けているわけで、それで大丈夫であればそれで結構ですけれども、国自体もそういう音声教材という捉え方</blockquote>
+</div>
+<div class="rec"><div class="when">R5.9.13　一般質問「地域防災組織の強化や整備推進について」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/4/8/8/7/5/_/R5.9.13.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">中沢一博議員</div><blockquote>ましてや、うちの地域が外国人の方も多くおいでになられます。そういう部分もどのように進めていかなければいけないか。</blockquote>
+<div class="who shi">市長</div><blockquote>外国人という話もありました。うちのほうでも課題だというふうに今認識もしております。</blockquote>
+</div>
+</section>
+<section><h2>ほかの議員との比べ方（読み）</h2><div class="note"><ul>
+<li>平成22年の参政権の意見書では、推進派に分けた議員のうち塩谷寿雄議員が提出者、桑原圭美議員が賛成討論、中沢一博議員が反対討論と、立場が分かれました。条件つきとはいえ、外国人の地方参政権に前向きな発言をしたのは、推進派の中で中沢一博議員だけです（今回まとめた範囲）。</li>
+<li>令和元年以降は、外国人を増やすこと自体の発言は見当たらず、観光客や住民・子どもへの対応を整える質問が中心です。令和7年6月には「インバウンドで押せや、押せやと言われておりますけれども」と、インバウンド頼みへの危機感も述べています。</li>
+</ul></div></section>
+<section><h2>調べた範囲</h2><ul class="plain">
+<li>南魚沼市議会の本会議・委員会の会議録（手元の写し）から、中沢一博議員の発言のうち外国・外国人・国際大学・インバウンド・共生・各国名などを含む55か所と、すぐ後の答弁を全文で確認しました。インバウンドの観光の質問は代表的なものだけを載せています。</li>
+<li>同じ議会には中沢俊一議員もいます。別の議員です。</li>
+<li>引用は会議録の文言どおりです。「（略）」は同じ発言の途中を省いたところです。会議録は取得時点の写しです。</li>
+<li>2026年11月8日作成</li></ul></section>
+<footer>
+  <div>出典：南魚沼市議会の会議録・委員会の議事録、市の審議会などの記録（南魚沼市公式サイトのPDF）。</div>
+  <div>新潟県の移民政策反対情報</div>
+</footer>
+</div>
+<script data-goatcounter="https://niigata-imin-info.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body></html>
