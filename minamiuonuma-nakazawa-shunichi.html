@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>中沢俊一元議員 外資と国際大学の人脈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap">
+<style>
+/* 選挙公報のような一覧 → 候補者カード。紙の質感の中性色と、投票所の案内板の深緑 */
+:root{
+  --bg:#f6f6f2; --paper:#ffffff; --ink:#1d2421; --muted:#5d6762; --line:#d9ddd6;
+  --accent:#1f5e4b; --accent-soft:#e3eee9;
+  --go:#2b6a8f; --go-soft:#e2edf4; --care:#9a5a12; --care-soft:#f6ecdd; --mix:#6b5e86; --mix-soft:#ece8f3; --none:#7a807c; --none-soft:#ecedeb;
+  --serif:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  --sans:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.75;padding-inline:16px;padding-block:28px 56px}
+.wrap{max-width:860px;margin:0 auto;display:grid;gap:36px}
+h1,h2,h3{font-family:var(--serif);text-wrap:balance;line-height:1.35;margin:0}
+h1{font-size:clamp(24px,5vw,34px)}
+h2{font-size:21px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
+h3{font-size:18px}
+p{margin:0}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--accent);font-weight:700}
+header{display:grid;gap:12px}
+.city{font-family:var(--serif);font-weight:700;font-size:clamp(40px,11vw,64px);line-height:1.1;color:var(--accent);display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px}
+.city .pref{font-size:.3em;color:var(--muted);font-weight:700}
+.city .sub{font-size:.4em;color:var(--ink,inherit)}
+.lead{color:var(--muted);max-width:62ch}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted)}
+.facts b{color:var(--ink);font-variant-numeric:tabular-nums}
+section{display:grid;gap:16px}
+.note{background:var(--accent-soft);border-radius:6px;padding:14px 16px;display:grid;gap:6px;font-size:14px}
+.note ul{margin:0;padding-left:1.2em}
+.legend{display:flex;flex-wrap:wrap;gap:8px}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.t-go{background:var(--go-soft);color:var(--go)} .t-care{background:var(--care-soft);color:var(--care)}
+.t-mix{background:var(--mix-soft);color:var(--mix)} .t-none{background:var(--none-soft);color:var(--none)}
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.04em;background:var(--bg)}
+tr:last-child td{border-bottom:0}
+td.name{font-weight:700;white-space:nowrap}
+td.pt{font-size:13.5px;min-width:15em}
+td:nth-child(2){white-space:nowrap}
+td.d{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.group{display:grid;gap:12px}
+.group>h3{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:10px;min-width:0}
+.card-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.card-head .nm{font-family:var(--serif);font-size:19px;font-weight:700}
+.card-head .meta{font-size:13px;color:var(--muted)}
+.rec{display:grid;gap:6px;padding-top:10px;border-top:1px dashed var(--line)}
+.rec:first-of-type{border-top:0;padding-top:0}
+.when{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.sum{font-size:14px}
+blockquote{margin:0;padding:6px 0 6px 14px;border-left:3px solid var(--line);font-size:14.5px}
+blockquote::before{content:"原文　";font-size:11px;color:var(--muted);letter-spacing:.08em}
+.src{font-size:12.5px}
+.plain{display:grid;gap:8px}
+.plain li{margin-bottom:4px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.mini{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 14px;font-size:14px;min-width:0}
+.mini b{display:block}
+footer{font-size:13px;color:var(--muted);display:grid;gap:6px;border-top:1px solid var(--line);padding-top:16px}
+
+.card-head .tags{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.nori{font-size:13.5px;color:var(--muted)}
+.nori b{color:var(--ink)}
+.rec{gap:2px;padding-top:8px}
+.card h4{font-size:14px;margin:6px 0 0;color:var(--accent)}
+.memo{font-size:13px;color:var(--muted)}
+.toc{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px}
+.back{font-size:14px}
+.ocr{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-left:6px}
+
+table{min-width:0!important}
+th,td{padding:8px 8px!important}
+td.name{white-space:normal!important;word-break:keep-all}
+.pty{display:block;font-size:12px;font-weight:400;color:var(--muted)}
+.pd{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+td.dirc{min-width:6.6em;white-space:normal!important}
+td.dirc .tag{display:block;width:fit-content;max-width:100%;border-radius:6px;line-height:1.45;padding:3px 7px}
+td.dirc .tag{white-space:normal;font-size:11.5px;padding:2px 7px;margin-bottom:4px}
+td.pt{min-width:9em!important}
+</style><style>details.howto>summary{cursor:pointer;list-style:none}details.howto>summary::-webkit-details-marker{display:none}details.howto>summary::before{content:"＋ ";color:var(--accent);font-weight:700}details.howto[open]>summary::before{content:"－ "}details.howto[open]{gap:6px}td.name a.jump{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}</style><style>details.old{border-top:1px dashed var(--line);padding-top:8px}details.old>summary{cursor:pointer;font-size:13px;color:var(--muted);list-style:none}details.old>summary::-webkit-details-marker{display:none}details.old>summary::before{content:"＋ ";color:var(--accent)}details.old[open]>summary::before{content:"－ "}details.old[open]{display:grid;gap:6px}.latest{font-size:12px;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:0 6px}</style><style>.who{font-size:12px;font-weight:700;letter-spacing:.04em;margin-top:6px}.who.giin{color:var(--go)}.who.shi{color:var(--care)}.exp{font-size:14px;color:var(--muted)}.rec{border-top:1px dashed var(--line);padding-top:12px}</style></head><body>
+<div class="wrap">
+<header><p class="eyebrow"><a href="minamiuonuma.html">南魚沼市議会 議員の発言記録</a> ＞ 1人ずつのまとめ</p>
+<h1>中沢俊一議員（元議員）― 高齢者の移住事業（CCRC）の事業主体に「外国資本でもいいではないですか」と述べ、国際大学のアジア・アフリカの修了生の人脈を生かすよう繰り返し求めた</h1>
+<p class="lead">平成16年から平成29年まで会議録に発言がある元議員です。令和元年以降の発言はありません。平成27年3月、市が進めていた高齢者の移住事業「プラチナタウン（CCRC）」について、事業主体に「外資、アメリカの企業」を挙げて「外国資本でもいいではないですか」と述べ、当時の井口市長は「外資であろうが何であろうが結構です」と答えました。また、国際大学の主にアジア・アフリカの修了生の人脈を「日本でナンバーワンであり、またオンリーワンの資源」として、JICAの拠点の誘致や、市長が南アジアへ出向くことを求めました。</p>
+<p class="facts"><span>分類（読み）：<b>多文化共生推進（外資の導入にも前向き）</b></span><span>人手不足：<b>外国人で補う発言なし</b>（平成29年まで在任）</span></p></header>
+<section><h2>基本情報</h2><div class="note"><ul>
+<li>会議録の発言は平成16年から平成29年までです。重く見る区切り（令和元年以降）にあたる発言はないため、ここに載せたのはすべて参考です。</li>
+<li>外国関係の発言は、外国人の受け入れそのものよりも、国際大学の人脈や外国の資本・企業を地域の産業づくりに生かす提案が中心です。</li>
+<li>このページの市長の答弁は、当時の井口一郎市長（平成28年11月まで）のものです。今の林市長ではありません。</li>
+<li>同じ議会には中沢一博議員もいます。別の議員です。</li>
+<li>分類は会議録の記載に基づく目安で、本人の考え全体を表すものではありません。</li></ul></div></section>
+<section><h2>中心の発言1　高齢者の移住事業の事業主体に外国資本（平成27年3月10日 一般質問）</h2>
+<div class="rec"><div class="when">H27.3.10　一般質問「「プラチナタウン」事業推進は長期戦略を持って」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/2/9/4/_/27219_59965_misc.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">中沢俊一議員</div><blockquote>もっと例えばですよ、何度も申し上げますが、一番下へ書いておきました事業主体。大手の総合商社あるいは「ＲＥＩＴ」の関連企業や外資、アメリカの企業はもう40年からのこの事業に対してのノウハウを持っています。外国資本でもいいではないですか。しかもノウハウを持っているのだから。</blockquote>
+<div class="who shi">市長</div><blockquote>それから、資本につきまして、おっしゃるように外資であろうが何であろうが結構です。それは別に拒むものではありません。</blockquote>
+<p class="exp">プラチナタウン（CCRC）は、首都圏などの高齢者に移り住んでもらう市の事業です。議員は同じ質問で、6,000人、7,000人規模の中層マンションを例に挙げ、市の想定（400人規模）より大きな事業を求めています。</p>
+</div>
+</section>
+<section><h2>中心の発言2　国際大学の修了生の人脈を生かす（平成27年〜平成28年）</h2>
+<div class="rec"><div class="when">H27.12.15　一般質問「合併後、次の10年で「第２の開国」拠点創りに本腰を」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/3/1/2/_/H271215.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">中沢俊一議員</div><blockquote>国際大学はことしで35年になるわけであります。アジア、アフリカへのこの修了生の人脈は、どこの町だってよだれが出るほど欲しいのですよ、この経営資源は。</blockquote>
+<div class="who giin">中沢俊一議員</div><blockquote>南アジア、ミャンマーのお話がきょうの新聞にもございましたけれども、去年東京でミャンマーのまつりといいますか、さまざまな産業も含めたイベントがあったようでありますが、国際大学から大型バスが１台ここに向けて行ったそうであります。これだけミャンマーはこの国際大学に人材を送っております。</blockquote>
+<div class="who giin">中沢俊一議員</div><blockquote>そのまず突破口として市長から向こうに行っていただくことは、この地域のみならず、大きな日本の可能性に向けて道を開く、そういうチャンスだと思っております。</blockquote>
+<div class="who shi">市長</div><blockquote>どこの地方議会でも、首長に何しろいいから外国へ行ってこいなどと言ってくれる議会は初めてくらいであったと思っておりますので、そういう面ではありがたくお受けをしておきますが</blockquote>
+</div>
+<div class="rec"><div class="when">H28.6.14　一般質問「南魚沼市にＪＩＣＡの拠点誘致を」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/8/9/8/_/H28.6.14.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">中沢俊一議員</div><blockquote>それこそことしでようやく35年たってきて、地元南魚沼市が今まで送り出してきた、主にアジア、アフリカの非常に有能な大学院の修了生、この人脈に目を向けてきた。私はここが今、分水嶺ではないかと思っています。</blockquote>
+<div class="who giin">中沢俊一議員</div><blockquote>私はここにオンリーワンと書きましたけれども、国際大学の人脈は、日本でナンバーワンであり、またオンリーワンの資源だと思っています。この辺を我々はもっと、議会も市のほうも認識をしながら、積極的な策に打って出る。</blockquote>
+<div class="who shi">市長</div><blockquote>今、唐突にＪＩＣＡの事務所等に行っても、全く相手にされる状況ではないというふうに理解しております。</blockquote>
+</div>
+<div class="rec"><div class="when">H27.12.8　補正予算の質疑 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/3/1/0/_/H271208gijiroku.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">中沢俊一議員</div><blockquote>まさに国際大学の今の寄附のあり方、これがまさにそうであります。ルートを公表していただく必要はありませんが、どういうきっかけでこういうふるさと納税のこの多額の見込みができてきているのか。</blockquote>
+<div class="who giin">中沢俊一議員</div><blockquote>私は市長あるいはそれに次ぐ幹部クラスにやっぱり行ってほしいんです。</blockquote>
+<div class="who shi">市長</div><blockquote>国際大学関係の方が一生懸命、寄附をしてくれる方を説得ではないですが、宣伝に努めながらやっております。</blockquote>
+<p class="exp">国際大学を支えるふるさと納税と、グローバルITパークに関わるインドへの出張についての質問です。議員は寄附の集め方を「支援する立場で聞かせてください」と述べています。</p>
+</div>
+</section>
+<section><h2>ほかの発言</h2>
+<div class="rec"><div class="when">H28.3.17　平成28年度予算の修正案の提出 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/8/5/0/_/H28.3.17.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">中沢俊一議員</div><blockquote>まず、こういう移民、移住者の受け入れ、これが近い将来、あるいは遠い将来にわたりまして医療費、介護費、それから市民が今でも特養の待機を大勢して待っている中で、そういう市民の健康、あるいは介護に対する潜在的、顕在的なコストが増すのではないかという、この辺の疑念に対して、しっかりとした方針が、私はまだ納得のいく形で打ち出されていないと思っています。</blockquote>
+<p class="exp">CCRC（首都圏などの高齢者の移住）の委託料を削る修正案の説明です。「移民、移住者」は国内からの移住者のことで、外国人の話ではありません。</p>
+</div>
+<div class="rec"><div class="when">H25.9.18　決算の質疑 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/3/2/4/0/_/20404_38734_misc.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">中沢俊一議員</div><blockquote>それから日韓友好の交流の話でありますが、私はかなり右寄りな人間なものですから、最近の日韓のことについてはかなり心を痛めております。</blockquote>
+<div class="who giin">中沢俊一議員</div><blockquote>こういう中学生の皆さんの友好を本当に温めていただきながら、少なくてもそういう友好の窓として、これからも温かく育ってほしい。</blockquote>
+</div>
+<div class="rec"><div class="when">H16.12.20　一般質問「学力低下が露呈。新市教育に「学園都市」機能をどう活かすか」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/1/7/2/8/2/7/_/2381_12886_misc.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">中沢俊一議員</div><blockquote>中国人の子供さんが、ある小学校に転校して来られたということでありましたけれども、日本の子供というのは馬鹿なんだろうかというふうな、これは表現そのものを引用させてもらえばそういう形です。</blockquote>
+<p class="exp">新聞の投稿を例に、日本の学校の学力を上げるよう求めた発言です。外国籍の子どもの受け入れの話ではありません。</p>
+</div>
+</section>
+<section><h2>ほかの議員との比べ方（読み）</h2><div class="note"><ul>
+<li>推進派に分けた14人の中で、外国の資本を入れることにはっきり前向きな発言をしたのは中沢俊一議員です（今回まとめた範囲）。同じころ、黒滝松男元議員は「外資による森林買収に歯止めを」と質問しています。</li>
+<li>国際大学の人脈を地域づくりに生かすという考えは、今の黒岩議員・寺口議員の発言と同じ方向です。ただし中沢俊一議員の発言は平成29年までで、特定技能（令和元年〜）の始まる前のものです。</li>
+</ul></div></section>
+<section><h2>調べた範囲</h2><ul class="plain">
+<li>南魚沼市議会の本会議の会議録（手元の写し）から、中沢俊一議員の発言のうち外国・外国人・国際大学・インバウンド・共生・各国名などを含む76か所と、すぐ後の答弁を全文で確認しました。外国の制度や景気を例に出しただけの発言は載せていません。</li>
+<li>引用は会議録の文言どおりです。「（略）」は同じ発言の途中を省いたところです。会議録は取得時点の写しです。</li>
+<li>2026年11月8日作成</li></ul></section>
+<footer>
+  <div>出典：南魚沼市議会の会議録・委員会の議事録、市の審議会などの記録（南魚沼市公式サイトのPDF）。</div>
+  <div>新潟県の移民政策反対情報</div>
+</footer>
+</div>
+<script data-goatcounter="https://niigata-imin-info.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body></html>
