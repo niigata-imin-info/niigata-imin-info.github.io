@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>寺口友彦議員 外国人材と国際大学</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap">
+<style>
+/* 選挙公報のような一覧 → 候補者カード。紙の質感の中性色と、投票所の案内板の深緑 */
+:root{
+  --bg:#f6f6f2; --paper:#ffffff; --ink:#1d2421; --muted:#5d6762; --line:#d9ddd6;
+  --accent:#1f5e4b; --accent-soft:#e3eee9;
+  --go:#2b6a8f; --go-soft:#e2edf4; --care:#9a5a12; --care-soft:#f6ecdd; --mix:#6b5e86; --mix-soft:#ece8f3; --none:#7a807c; --none-soft:#ecedeb;
+  --serif:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  --sans:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.75;padding-inline:16px;padding-block:28px 56px}
+.wrap{max-width:860px;margin:0 auto;display:grid;gap:36px}
+h1,h2,h3{font-family:var(--serif);text-wrap:balance;line-height:1.35;margin:0}
+h1{font-size:clamp(24px,5vw,34px)}
+h2{font-size:21px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
+h3{font-size:18px}
+p{margin:0}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--accent);font-weight:700}
+header{display:grid;gap:12px}
+.city{font-family:var(--serif);font-weight:700;font-size:clamp(40px,11vw,64px);line-height:1.1;color:var(--accent);display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px}
+.city .pref{font-size:.3em;color:var(--muted);font-weight:700}
+.city .sub{font-size:.4em;color:var(--ink,inherit)}
+.lead{color:var(--muted);max-width:62ch}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted)}
+.facts b{color:var(--ink);font-variant-numeric:tabular-nums}
+section{display:grid;gap:16px}
+.note{background:var(--accent-soft);border-radius:6px;padding:14px 16px;display:grid;gap:6px;font-size:14px}
+.note ul{margin:0;padding-left:1.2em}
+.legend{display:flex;flex-wrap:wrap;gap:8px}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.t-go{background:var(--go-soft);color:var(--go)} .t-care{background:var(--care-soft);color:var(--care)}
+.t-mix{background:var(--mix-soft);color:var(--mix)} .t-none{background:var(--none-soft);color:var(--none)}
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.04em;background:var(--bg)}
+tr:last-child td{border-bottom:0}
+td.name{font-weight:700;white-space:nowrap}
+td.pt{font-size:13.5px;min-width:15em}
+td:nth-child(2){white-space:nowrap}
+td.d{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.group{display:grid;gap:12px}
+.group>h3{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:10px;min-width:0}
+.card-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.card-head .nm{font-family:var(--serif);font-size:19px;font-weight:700}
+.card-head .meta{font-size:13px;color:var(--muted)}
+.rec{display:grid;gap:6px;padding-top:10px;border-top:1px dashed var(--line)}
+.rec:first-of-type{border-top:0;padding-top:0}
+.when{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.sum{font-size:14px}
+blockquote{margin:0;padding:6px 0 6px 14px;border-left:3px solid var(--line);font-size:14.5px}
+blockquote::before{content:"原文　";font-size:11px;color:var(--muted);letter-spacing:.08em}
+.src{font-size:12.5px}
+.plain{display:grid;gap:8px}
+.plain li{margin-bottom:4px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.mini{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 14px;font-size:14px;min-width:0}
+.mini b{display:block}
+footer{font-size:13px;color:var(--muted);display:grid;gap:6px;border-top:1px solid var(--line);padding-top:16px}
+
+.card-head .tags{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.nori{font-size:13.5px;color:var(--muted)}
+.nori b{color:var(--ink)}
+.rec{gap:2px;padding-top:8px}
+.card h4{font-size:14px;margin:6px 0 0;color:var(--accent)}
+.memo{font-size:13px;color:var(--muted)}
+.toc{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px}
+.back{font-size:14px}
+.ocr{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-left:6px}
+
+table{min-width:0!important}
+th,td{padding:8px 8px!important}
+td.name{white-space:normal!important;word-break:keep-all}
+.pty{display:block;font-size:12px;font-weight:400;color:var(--muted)}
+.pd{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+td.dirc{min-width:6.6em;white-space:normal!important}
+td.dirc .tag{display:block;width:fit-content;max-width:100%;border-radius:6px;line-height:1.45;padding:3px 7px}
+td.dirc .tag{white-space:normal;font-size:11.5px;padding:2px 7px;margin-bottom:4px}
+td.pt{min-width:9em!important}
+</style><style>details.howto>summary{cursor:pointer;list-style:none}details.howto>summary::-webkit-details-marker{display:none}details.howto>summary::before{content:"＋ ";color:var(--accent);font-weight:700}details.howto[open]>summary::before{content:"－ "}details.howto[open]{gap:6px}td.name a.jump{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}</style><style>details.old{border-top:1px dashed var(--line);padding-top:8px}details.old>summary{cursor:pointer;font-size:13px;color:var(--muted);list-style:none}details.old>summary::-webkit-details-marker{display:none}details.old>summary::before{content:"＋ ";color:var(--accent)}details.old[open]>summary::before{content:"－ "}details.old[open]{display:grid;gap:6px}.latest{font-size:12px;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:0 6px}</style><style>.who{font-size:12px;font-weight:700;letter-spacing:.04em;margin-top:6px}.who.giin{color:var(--go)}.who.shi{color:var(--care)}.exp{font-size:14px;color:var(--muted)}.rec{border-top:1px dashed var(--line);padding-top:12px}</style></head><body>
+<div class="wrap">
+<header><p class="eyebrow"><a href="minamiuonuma.html">南魚沼市議会 議員の発言記録</a> ＞ 1人ずつのまとめ</p>
+<h1>寺口友彦議員 ― 国際大学の人脈で外国の人材・企業・観光業者を呼び込む提案を続け、農業法人への外国人材に市が関わるよう求めた</h1>
+<p class="lead">南魚沼市議会の現職で、平成18年から会議録に発言がある議員です。外国関係の発言は、国際大学の人脈を生かしてインド・スリランカのIT人材や外国企業を呼ぶ（グローバルITパーク）、観光の計画づくりに外国の旅行業者を入れる、大規模農業法人への外国人材の受け入れに市が積極的に関わる、という提案が中心です。市長は農業の外国人材について「慎重に検討する必要もある」と答えました。一方、令和6年12月には、働き手が減る分は外国からの人材ではなく「人工知能、生成ＡＩとロボット」で補うべきだとも述べています。</p>
+<p class="facts"><span>分類（読み）：<b>多文化共生推進</b></span><span>人手不足：<b>分類しない</b>（R7.3.12は外国人材、R6.12.17はＡＩとロボット）</span></p></header>
+<section><h2>基本情報</h2><div class="note"><ul>
+<li>会議録の発言は平成18年から令和8年まであります。令和7年3月12日の会議では副議長として議事を進めています。</li>
+<li>人手不足について、令和7年3月は「外国人材を使う、あるいは外国で起業をする」施策を、令和6年12月は「外国から人材を連れてくればいいという、そう言う方もいらっしゃいますけれども、私は（略）生成ＡＩとロボット」と述べています。どちらか一方とは言い切れないため、分類していません。</li>
+<li>分類は会議録の記載に基づく目安で、本人の考え全体を表すものではありません。</li></ul></div></section>
+<section><h2>中心の発言1　大規模農業法人への外国人材の受け入れ（令和7年3月12日 一般質問）</h2>
+<div class="rec"><div class="when">R7.3.12　一般質問「農業法人への外国人材の受入れについて」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/7/4/8/9/4/_/%E4%BB%A4%E5%92%8C7%E5%B9%B43%E6%9C%8812%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">寺口議員</div><blockquote>農業の人材不足は随分前から不安視されていましたが、大規模農家も人材不足で経営面積拡大が止まっている。新潟県は人材交流の一戦略として、ベトナムとのつながりを強めようとしています。先日、国際大学の教授とスリランカの農業について意見交換してまいりました。外国人が日本で働くことだけではなく、日本人が外国で起業することなど、いろいろな可能性についてのお考えを聞いてまいりました。そこで、大規模農業法人への外国人材の受入れに市が積極的に関わる考えはないかを伺うものであります。</blockquote>
+<div class="who shi">市長</div><blockquote>大規模農業法人における外国人材の活用については、市が積極的に関与するか否かという点については、農業分野における人材不足が長年にわたり深刻な問題として認識をされている背景を考慮しながらも、なかなかやはり慎重に検討する必要もあるというふうに考えています。（略）今後の持続可能な経営のためには、外国人材の受入れがますます必要になる。（略）しかし、外国人材の受入れは言語や文化の違いとか、住居や宗教、食事等の生活環境、こういった整備とか、教育プログラムの構築といいますかそういうことや、多岐にわたる課題がやはり存在している。そのため南魚沼市としてはやはり県などから十分な意見をお聞きし、またご指導もいただく中で、農業分野への外国人材の活用について、やはりそういう意味での慎重さを取りながらやってまいりたいと考えているところであります</blockquote>
+<p class="exp">同じ答弁で市長は、キノコのパックセンターでは「国際大学に就学されている方のご家族とかも非常に大きな支え手になっている」と紹介しています。</p>
+<div class="who giin">寺口議員</div><blockquote>今まで外国人材といいますと技能研修生という感じでありました。申し訳ないけれども賃金もかなり抑えてとか、あるいは国や県からの支援を受けながらということで（略）ただ単に技能研修生というだけではなく、本当に今度は農業法人の自分の会社の社員としてやっていくということで考えていくことが（略）日本で法人をつくるのか、あるいはベトナム等に法人をつくるのかというところまで踏み込んで（略）若い者たちが何を望んでいるかということを、やはりもう一回きちんと聞いて、それに合わせて外国人材を使う、あるいは外国で起業をするというところまで踏み込んだ施策を私は打っていく必要があると思っています</blockquote>
+<div class="who shi">産業振興部長</div><blockquote>外国人人材の登用というのは非常によい方法だとは思うのですけれども、１点問題があることがあって、技能実習については稲作には関われません。例えば種を用いて耕すそういう農業には関われないので、どうしても特定技能でないと稲作には採用できないという側面があります。</blockquote>
+</div>
+</section>
+<section><h2>中心の発言2　国際大学の人脈とグローバルITパーク（令和2年〜令和3年）</h2>
+<p class="exp">グローバルITパーク：平成28年度に大和庁舎に開いた、外国のIT企業などを呼ぶ施設（市長答弁 R2.6.9）。寺口議員は令和4年6月に「海外企業８社、国内企業４社が入居」と述べています。</p>
+<div class="rec"><div class="when">R2.3.11　施政方針への代表質問 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/0/8/0/_/R2.3.11.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">寺口議員</div><blockquote>グローバルＩＴパークのオープン式典においでいただいた、インド、スリランカ大使との約束、つまり農業の機械化、近代化、高品質化、多集化に、南魚沼市は協力しますという約束を果たす絶好の時期がきたのではないか。国際大学の卒業生ネットワークというつながりを使う時期でもある。</blockquote>
+<div class="who giin">寺口議員</div><blockquote>確かにインドやスリランカからすれば、ＩＴのすばらしい人材を日本の南魚沼市に送るのだと。（略）今、技術研修とかいろいろなことで、農業は人手不足で外国人の人材はどうかという部分が出ていますけれども、そういうことも含めながら、やはりうちの若い者が、東南アジア、インドも含めると南アジアですけれども、そのところに出て行って、大変な大農園を経営して、そのお国の役に立つということが、私は夢として若者に持ってもらえるような道づけをするということが、南魚沼市には課されているのではないか</blockquote>
+<div class="who shi">市長</div><blockquote>お話があった国際大学には、現在350人の学生が在籍をし、卒業生が優に4,000人を超えていると思います。</blockquote>
+</div>
+<div class="rec"><div class="when">R2.6.9　一般質問「デジタルシティーに向けての取り組み」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/0/9/0/_/R2.6.9.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">寺口議員</div><blockquote>うちの市の場合は、長岡技術科学大学との連携もありますし、長岡技術科学大学には外国からの留学生も非常に多いと。うちの市には国際大学のネットワークもある。グローバルＩＴパークについては、インド、スリランカを中心にしたＩＴ人材ということを送り込んでいただけるという非常に有利な状況があるわけです。（略）グローバルＩＴパークにそういった方々を誘致するということは、とても大事なことです。</blockquote>
+<div class="who shi">市長</div><blockquote>なかなか外国との関係の中では、商取引の問題とか、さまざまなことがこの間もありました。</blockquote>
+</div>
+<div class="rec"><div class="when">R3.6.8　一般質問「国際大学敷地と空き校舎の利用について」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/3/8/6/4/_/R3.6.8.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">寺口議員</div><blockquote>国際大学の人脈を生かした国際連携研究機関を、国際大学敷地内や市内空き校舎に設置する計画を始めるべきではないかであります。</blockquote>
+<div class="who shi">市長</div><blockquote>総合的な雪資源利活用をスタートさせて、その中に国際大学の人脈を生かせとかいろいろお話がありましたが、まさにそういう視点で進みたいというふうに考えております。</blockquote>
+<div class="who shi">市長</div><blockquote>私が国際大学のほうに関係している中で一番強い思いを持っているのは、学生さんたちの交流とかということをよく口にする人が多いのですけれども、それもあるのですが、それ以上に卒業生の皆さん、そしてあそこを運営している組織、理事の皆さんのやはり顔ぶれです。</blockquote>
+</div>
+<div class="rec"><div class="when">R3.9.7　一般質問「若者の所得を増やすことについて」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/3/8/8/3/_/R3.9.7.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">寺口議員</div><blockquote>世界中通用するようなアプリということの発想というのは、恐らくそういう海外から来た人材、人たちのほうが面白い発想をしてくれると思います。（略）大和庁舎のグローバルＩＴパークが生き返ってくると私は思っています。（略）そういうような国際大学の知恵あるいはネットワーク、それから中学生、高校生で面白い考え方を持っている子は多分たくさんいると思います。そういった子を一緒にさせて（略）ぜひともそういう場を市が設けていただきたいのです。</blockquote>
+</div>
+<div class="rec"><div class="when">R3.12.13　一般質問 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/3/9/0/0/_/R3.12.13.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">寺口議員</div><blockquote>市内にあるネットワークのうち、国際大学のネットワークはあまり活用されていない。そこで４、松井利夫様の基金を活用したイノベーション推進事業、つまり起業推進事業で大学院大学国際大学に農業、観光業の経営学講座を開設してもらい、全国から頭脳を集めて、市の後継者との交わりを持たせることを考えているのかであります。</blockquote>
+<div class="who shi">市長</div><blockquote>国際大学の教授、またその卒業生とチャレンジ支援事業補助金の採択者――５人（略）この連携が既に始まっているとお伝えしたいと思います。</blockquote>
+</div>
+</section>
+<section><h2>中心の発言3　観光に外国の目と外国の事業者を（令和6年〜令和8年）</h2>
+<div class="rec"><div class="when">R6.9.9　一般質問「新たな観光戦略について」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/6/5/3/7/4/_/R6.9.9.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">寺口議員</div><blockquote>やはり外国からのそういう業者も入れた中で、ここでどういうような戦略を練るのかということが私は非常に重要になってくると思っているのです。（略）やはりよそから見た、特に外国の人の目から見たこの南魚沼市の魅力ということを、これを売り出していく必要があると思うので、そういう協議会の中にもやはり外国からの旅行代理店ということの――支店でもいいのです。</blockquote>
+<div class="who shi">市長</div><blockquote>日本人から見てもすばらしいと思えないところにインバウンドって来るのか。（略）こういったことが日本人から認められないようなところに、逆に外国の人だけが来ていただいて我々がよしとするような、そんなざまでは駄目だと私は思いますけれども、いかがですかという思い。</blockquote>
+</div>
+<div class="rec"><div class="when">R7.3.12　一般質問「観光地域づくり計画策定と官民の協働について」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/7/4/8/9/4/_/%E4%BB%A4%E5%92%8C7%E5%B9%B43%E6%9C%8812%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">寺口議員</div><blockquote>最近のインバウンド報道を見ると、お客としてだけではなく経営者として外国人が日本に入る事例が増えている。妙高地域ではシンガポールの政府系投資会社がいよいよ大規模開発に乗り出す。日本人と外国人という区分ではなく、市外から外貨を落としていく顧客に対する戦略が必要となります。</blockquote>
+<div class="who giin">寺口議員</div><blockquote>私はやはり世界戦略ということまで考えるとなると、やはり外国の事業所もアドバイザーでもいいけれども、入れていく必要があるのだというふうに思っています。</blockquote>
+<div class="who shi">市長</div><blockquote>おおむね同じ考えだと思います。（略）おおむね私は寺口議員が言っていることが盛り込まれるべきだというふうに思っています。（略）外部の力を借りなければ駄目です。</blockquote>
+</div>
+<div class="rec"><div class="when">R8.3.11　一般質問 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/5/4/1/1/_/%E4%BB%A4%E5%92%8C8%E5%B9%B43%E6%9C%8811%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">寺口議員</div><blockquote>日本国内にいる外国人や国際大学卒業生のネットワークを活用したメディカルツアーでゆきぐに健友館ＡＩの利益創出を考えるべきではないか伺うものであります。</blockquote>
+<div class="who shi">病院事業管理者</div><blockquote>こういった供給部門の整備を見据えた上で、将来的な外国人や国際大学の卒業生のネットワークを活用したメディカルツアーでの健診施設の利益創出を研究していくべきだというふうに考えております。</blockquote>
+</div>
+</section>
+<section><h2>中心の発言4　外国籍の住民の増え方を聞く（令和6年・令和7年 決算の質疑）</h2>
+<div class="rec"><div class="when">R6.9.13　決算の質疑 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/6/5/3/7/8/_/R6.9.13.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">寺口議員</div><blockquote>資料の中でいくと外国籍の住民人口が令和５年度は367人増ということでありました。コロナ禍が落ち着いたということもありまして、労働力としての住民ということで増えているのかと思っていますけれども、特に増えた国、それから労働力としてどのくらい入ってきたかというところを教えていただきたい。</blockquote>
+<div class="who shi">市民課長</div><blockquote>今回多くなった理由としては、コロナ禍明けということで、国際大学の学生が戻りつつあるということ、あと市内の事業所のほうに技能実習生として入ってくる方がとても増えているということです。東南アジアの関係の国が多いということで、インドネシアとベトナム、ミャンマーといったところの外国籍の方が入ってくるというふうになっています。</blockquote>
+</div>
+<div class="rec"><div class="when">R7.9.11　決算の質疑 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/8/4/3/9/1/_/%E4%BB%A4%E5%92%8C7%E5%B9%B49%E6%9C%8811%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E6%B1%BA%E7%AE%97%E5%AF%A9%E8%AD%B0).pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">寺口議員</div><blockquote>人口減とすると922人の減でありますけれども、外国人が55人増えているということでありました。（略）こういう方たちは労働で来ているということなのかどうなのかということの内容がもし分かればお聞かせ願いたい。</blockquote>
+<div class="who shi">市民課長</div><blockquote>最も多いところがベトナム、フィリピン、インドネシアというところで、台湾、ミャンマーというところも増加傾向にあります。それぞれの国の方の在留資格で見てみますと、ベトナムの方は技能実習が一番多い形になっています。フィリピンの方は技能実習もいますけれども、留学や永住者の方もいらっしゃいます。インドネシアの方は技能実習が大半となっております。</blockquote>
+<div class="who giin">寺口議員</div><blockquote>外国からの人材を獲得するということで民間もかなり頑張っている部分もありますけれども、新聞報道にあるような事件、事故等があったとは聞いてはおりません。市のほうでそういった関連の事件や事故等について、こういうことがあったというのがあれば教えていただきたい。</blockquote>
+<div class="who shi">総務部長</div><blockquote>国籍を問わず多様な方々というのはいるわけです。そのような中で南魚沼市にいらっしゃる外国人の方の行動を見ていただくと、皆さん真面目ですよね。勤勉な方が多いと思います。そのような中で大きな事件、事故というものは聞いた覚えがございません。</blockquote>
+</div>
+</section>
+<section><h2>ほかの発言</h2>
+<div class="rec"><div class="when">R6.12.17　一般質問「働く環境としての魅力づくりについて」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/6/8/1/5/2/_/%E4%BB%A4%E5%92%8C6%E5%B9%B412%E6%9C%8817%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2%EF%BC%88%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F%EF%BC%89.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">寺口議員</div><blockquote>働く人間が減っていくと。そうしたときに、では誰がその労働力を補うのだというときに、外国から人材を連れてくればいいという、そう言う方もいらっしゃいますけれども、私は市が取り組み始めているやはり人工知能、生成ＡＩとロボット、この導入だと思うのです。</blockquote>
+<div class="who shi">市長</div><blockquote>これは目に見えて人のマンパワーが不足するわけですから、そういったことに後押しをしていくということも政策の中に取り組んでいくということは、非常にすばらしいご提言だと思います</blockquote>
+</div>
+<div class="rec"><div class="when">R4.2.28　補正予算（国際大学支援補助金を含む）への賛成討論 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/3/8/3/5/_/R4.2.28.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">寺口議員</div><blockquote>南魚沼市を経由しているお金であるから、もっと南魚沼市のためになるように国際大学に使っていただきたいという、多分そういう思いであろうと思います。（略）お互いに国際大学は国際大学としての価値、存在意義を高めていく。南魚沼市は南魚沼市で国際大学を利用して、南魚沼市の価値そういうのを高めていく。お互いにウィン・ウィンの関係になる。</blockquote>
+<p class="exp">同じ日に黒岩揺光議員らが反対討論をしています（黒岩議員のまとめを参照）。</p>
+</div>
+<p class="exp">令和元年より前（参考）：平成30年3月6日には、ムスリム観光客の受け入れを進める市の方針を受けて「外国からの観光客誘致のためには、日本国内に実績のある外国のランドオペレーターの力を借りるべき」と質問しました。平成18年3月9日には「外国籍の子女に対する特別支援体制に外国籍の親も対象に含め」る仕組みづくりを求めています。</p>
+</section>
+<section><h2>ほかの議員との比べ方（読み）</h2><div class="note"><ul>
+<li>黒岩議員が国際大学との「交流」を広げる提案が中心なのに対し、寺口議員は国際大学の人脈を「産業」（IT・農業・観光・医療）に使う提案が中心です。国際大学への補助金には賛成の立場で、黒岩議員とは逆です。</li>
+<li>外国人材については、農業法人への受け入れに「市が積極的に関わる」よう求めた一方、市長は「慎重に検討する必要もある」と答えました。この点では議員のほうが市より前に出ています。観光に外部（外国を含む）の事業者を入れる提案には、市長は「おおむね同じ考え」と答えています。</li>
+<li>令和6年12月の「外国から人材を連れてくればいいという（略）私は（略）生成ＡＩとロボット」は、推進派の中では珍しい発言です。</li>
+</ul></div></section>
+<section><h2>調べた範囲</h2><ul class="plain">
+<li>南魚沼市議会の本会議の会議録（手元の写し）から、寺口議員の発言のうち外国・外国人・国際大学・インバウンド・各国名などを含むものと、すぐ後の答弁を全文で確認しました。令和元年以降を中心に載せています。</li>
+<li>平成22年3月19日の永住外国人の地方参政権についての意見書では、提出者に趣旨を確かめる質問をしただけで、賛否の発言はありません。</li>
+<li>委員会の記録は令和7年4月以降だけです。</li>
+<li>引用は会議録の文言どおりです。「（略）」は同じ発言の途中を省いたところです。会議録は取得時点の写しです。</li>
+<li>2026年11月8日作成</li></ul></section>
+<footer>
+  <div>出典：南魚沼市議会の会議録・委員会の議事録、市の審議会などの記録（南魚沼市公式サイトのPDF）。</div>
+  <div>新潟県の移民政策反対情報</div>
+</footer>
+</div>
+<script data-goatcounter="https://niigata-imin-info.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body></html>
