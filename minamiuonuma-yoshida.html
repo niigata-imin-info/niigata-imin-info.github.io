@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>吉田光利議員 外国人の雇用</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap">
+<style>
+/* 選挙公報のような一覧 → 候補者カード。紙の質感の中性色と、投票所の案内板の深緑 */
+:root{
+  --bg:#f6f6f2; --paper:#ffffff; --ink:#1d2421; --muted:#5d6762; --line:#d9ddd6;
+  --accent:#1f5e4b; --accent-soft:#e3eee9;
+  --go:#2b6a8f; --go-soft:#e2edf4; --care:#9a5a12; --care-soft:#f6ecdd; --mix:#6b5e86; --mix-soft:#ece8f3; --none:#7a807c; --none-soft:#ecedeb;
+  --serif:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  --sans:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.75;padding-inline:16px;padding-block:28px 56px}
+.wrap{max-width:860px;margin:0 auto;display:grid;gap:36px}
+h1,h2,h3{font-family:var(--serif);text-wrap:balance;line-height:1.35;margin:0}
+h1{font-size:clamp(24px,5vw,34px)}
+h2{font-size:21px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
+h3{font-size:18px}
+p{margin:0}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--accent);font-weight:700}
+header{display:grid;gap:12px}
+.city{font-family:var(--serif);font-weight:700;font-size:clamp(40px,11vw,64px);line-height:1.1;color:var(--accent);display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px}
+.city .pref{font-size:.3em;color:var(--muted);font-weight:700}
+.city .sub{font-size:.4em;color:var(--ink,inherit)}
+.lead{color:var(--muted);max-width:62ch}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted)}
+.facts b{color:var(--ink);font-variant-numeric:tabular-nums}
+section{display:grid;gap:16px}
+.note{background:var(--accent-soft);border-radius:6px;padding:14px 16px;display:grid;gap:6px;font-size:14px}
+.note ul{margin:0;padding-left:1.2em}
+.legend{display:flex;flex-wrap:wrap;gap:8px}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.t-go{background:var(--go-soft);color:var(--go)} .t-care{background:var(--care-soft);color:var(--care)}
+.t-mix{background:var(--mix-soft);color:var(--mix)} .t-none{background:var(--none-soft);color:var(--none)}
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.04em;background:var(--bg)}
+tr:last-child td{border-bottom:0}
+td.name{font-weight:700;white-space:nowrap}
+td.pt{font-size:13.5px;min-width:15em}
+td:nth-child(2){white-space:nowrap}
+td.d{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.group{display:grid;gap:12px}
+.group>h3{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:10px;min-width:0}
+.card-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.card-head .nm{font-family:var(--serif);font-size:19px;font-weight:700}
+.card-head .meta{font-size:13px;color:var(--muted)}
+.rec{display:grid;gap:6px;padding-top:10px;border-top:1px dashed var(--line)}
+.rec:first-of-type{border-top:0;padding-top:0}
+.when{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.sum{font-size:14px}
+blockquote{margin:0;padding:6px 0 6px 14px;border-left:3px solid var(--line);font-size:14.5px}
+blockquote::before{content:"原文　";font-size:11px;color:var(--muted);letter-spacing:.08em}
+.src{font-size:12.5px}
+.plain{display:grid;gap:8px}
+.plain li{margin-bottom:4px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.mini{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 14px;font-size:14px;min-width:0}
+.mini b{display:block}
+footer{font-size:13px;color:var(--muted);display:grid;gap:6px;border-top:1px solid var(--line);padding-top:16px}
+
+.card-head .tags{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.nori{font-size:13.5px;color:var(--muted)}
+.nori b{color:var(--ink)}
+.rec{gap:2px;padding-top:8px}
+.card h4{font-size:14px;margin:6px 0 0;color:var(--accent)}
+.memo{font-size:13px;color:var(--muted)}
+.toc{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px}
+.back{font-size:14px}
+.ocr{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-left:6px}
+
+table{min-width:0!important}
+th,td{padding:8px 8px!important}
+td.name{white-space:normal!important;word-break:keep-all}
+.pty{display:block;font-size:12px;font-weight:400;color:var(--muted)}
+.pd{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+td.dirc{min-width:6.6em;white-space:normal!important}
+td.dirc .tag{display:block;width:fit-content;max-width:100%;border-radius:6px;line-height:1.45;padding:3px 7px}
+td.dirc .tag{white-space:normal;font-size:11.5px;padding:2px 7px;margin-bottom:4px}
+td.pt{min-width:9em!important}
+</style><style>details.howto>summary{cursor:pointer;list-style:none}details.howto>summary::-webkit-details-marker{display:none}details.howto>summary::before{content:"＋ ";color:var(--accent);font-weight:700}details.howto[open]>summary::before{content:"－ "}details.howto[open]{gap:6px}td.name a.jump{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}</style><style>details.old{border-top:1px dashed var(--line);padding-top:8px}details.old>summary{cursor:pointer;font-size:13px;color:var(--muted);list-style:none}details.old>summary::-webkit-details-marker{display:none}details.old>summary::before{content:"＋ ";color:var(--accent)}details.old[open]>summary::before{content:"－ "}details.old[open]{display:grid;gap:6px}.latest{font-size:12px;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:0 6px}</style><style>.who{font-size:12px;font-weight:700;letter-spacing:.04em;margin-top:6px}.who.giin{color:var(--go)}.who.shi{color:var(--care)}.exp{font-size:14px;color:var(--muted)}.rec{border-top:1px dashed var(--line);padding-top:12px}</style></head><body>
+<div class="wrap">
+<header><p class="eyebrow"><a href="minamiuonuma.html">南魚沼市議会 議員の発言記録</a> ＞ 1人ずつのまとめ</p>
+<h1>吉田光利議員 ― 人手不足は「外国人を頼りにしなければいけない時代」とし、外国人を雇う会社への市の支援を求め続けた</h1>
+<p class="lead">南魚沼市議会の現職です。外国関係の発言は、建設業・製造業・介護の人手不足を外国人の雇用で補うこと、そのために雇う側の会社を市が支えることが中心です。平成30年から令和7年まで、一般質問で繰り返し取り上げています。市長は「外国人を採用するということは、人手不足を解消するための有効な方法の一つ」と答える一方、「受け入れる体制を十分に整えなければならない」とも述べています。議員自身も、特定技能の人はよい条件があるとすぐ移ってしまう、雇うのに費用がかかる、という現場の苦労を話しています。</p>
+<p class="facts"><span>分類（読み）：<b>多文化共生推進</b></span><span>人手不足：<b>外国人で補う</b>（R3.3.8、R7.3.12）</span></p></header>
+<section><h2>基本情報</h2><div class="note"><ul>
+<li>会議録の発言は平成30年からあります。外国人の雇用は、平成30年9月、令和3年3月・6月、令和5年3月、令和7年3月の一般質問で取り上げました。</li>
+<li>令和5年3月6日には、特定技能の人がよい条件の職場へ移っていく話の中で「僕は体験していますけれども」と述べています。</li>
+<li>分類は会議録の記載に基づく目安で、本人の考え全体を表すものではありません。</li></ul></div></section>
+<section><h2>中心の発言1　「外国人を頼りにしなければいけない時代」（令和3年3月8日 一般質問）</h2>
+<div class="rec"><div class="when">R3.3.8　一般質問「建設業の技能者不足について」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/3/8/5/1/_/R3.3.8.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">吉田議員</div><blockquote>新型コロナウイルス感染症収束後に備え、外国人の技能実習及び特定技能の受入支援を積極的に行うべきではないか。</blockquote>
+<div class="who shi">市長</div><blockquote>受け入れるに当たりまして、これらの基準を満たす組織や体制の整備など、十分な受入れの準備が必要であると感じています。加えて市でいえば、それらの外国人の皆さんに対する行政サービスのきちんとした下支えを、我々は整備していかなければいけないということも含めて、準備が必要であると思います。今後も慢性的な労働者の不足、人材不足は避けられない課題であると認識をしておりまして、新型コロナウイルス感染症の収束後にも受入体制を積極的に行うべきと考えます。</blockquote>
+<div class="who giin">吉田議員</div><blockquote>人口減の世の中ですから、これは避けて通れません。いろいろな面で職人だけではないのですけれども、やはり外国人を頼りにしなければいけない時代がもう来ているというのは、市長も同じ考えだと私は思います。</blockquote>
+<div class="who giin">吉田議員</div><blockquote>総合計画でも人口ビジョンの見直しで、国籍に関わらず誰もが暮らしやすいまちづくりをうたっています、示されています。（略）就労する外国人に対して暮らしやすいというのが、何かこういうものだというのが市としてあるのかどうかちょっとお聞かせください。</blockquote>
+<div class="who shi">市長</div><blockquote>一番究極を言えば、日本人と変わらない権利というか、そういう暮らしができることだと私は思います。日本人も含めてそれを向上させていかなければいけないわけですが、一番は、行政としてやるべきは、行政インフラをきちんと公平に扱える、そういう形を取ること。</blockquote>
+<div class="who giin">吉田議員</div><blockquote>外国人労働者の、実際にどこにどうだというのを、常に実態把握の調査を継続してきちんとやっていくと。そこを見極めておくと、共存していくと。日本人と同じようにやることが大切だと私は思っています。ぜひ、外国人にこれからは活躍してもらわなければいけないわけですから、ひとつ重きを置いて取り組んでいただければと思います。</blockquote>
+</div>
+</section>
+<section><h2>中心の発言2　外国人を雇う会社への支援を（令和5年3月6日 一般質問）</h2>
+<div class="rec"><div class="when">R5.3.6　一般質問 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/4/5/1/7/6/_/R5.3.6.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">吉田議員</div><blockquote>４、外国人労働者の増加が見込まれるが、採用事業主への支援策も必要ではないか。</blockquote>
+<div class="who shi">市長</div><blockquote>当市を含むハローワーク南魚沼管内で、110の事業者で947人の外国人が働いているという発表です。労働者数で前年比と比べますと、167人増加している。（略）少子高齢化によって、将来の日本の労働人口自体の減少が明らかな中、外国人を採用するということは、人手不足を解消するための有効な方法の一つであるとこれは考えておりますが、採用に当たっては、事業所側が様々な面で受け入れる体制を十分に整えなければならない。宗教上の観点もありますし、様々あると思うのです。</blockquote>
+<div class="who shi">市長</div><blockquote>南魚沼市においても外国の意欲ある人材の受入れを促進するということは、市内事業者の人材を確保し、また地域経済の活力を高めるということからも大変意義あることだと考えていますので、これら国や県の支援状況も見ながら、外国人の方々の受入れに対してどのような支援ができるか検討してまいりたいと考えております。</blockquote>
+<div class="who giin">吉田議員</div><blockquote>特定技能となると、ちょっとグレードが高くて、日本語も結構話せて、技術もあって、その外国人労働者はどこへ行ってもいいのです。自由に選択できるのです。ちょっと気に入らなかったら、ほかに行くのです。</blockquote>
+<div class="who giin">吉田議員</div><blockquote>外国人だから最低賃金が低くていいとか、同一労働同一賃金でなくてもいいということではないのです。（略）そうすると、非常に外国人採用というのは結構費用がかかるのです。連れてくる形でやって、送り出し側、受け取り側の管理会社に管理費も払わなければいけない。（略）やはり外国人を守ったり保護したりするのは当然なのですけれども、やはり企業にもそれなりの支援策をやらなければいけないというのが、そして人工対策、人手不足の解消につなぐようなことをやはり取り組んでいかなければいけないというのは、私は実感として持っています。</blockquote>
+</div>
+</section>
+<section><h2>中心の発言3　建設業の外国人雇用（令和7年3月12日 一般質問）</h2>
+<div class="rec"><div class="when">R7.3.12　一般質問「基幹産業の事業継続と担い手不足について」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/7/4/8/9/4/_/%E4%BB%A4%E5%92%8C7%E5%B9%B43%E6%9C%8812%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">吉田議員</div><blockquote>女性の進出、あるいは外国人、いろいろあります。女性軍、あるいは外国人のメンバー、この辺の雇用促進について、何とかこういうところに活用というか、行政として間に入って促進策というのがあるのか、ないのか。</blockquote>
+<div class="who shi">市長</div><blockquote>128事業所で1,232人の外国人が働いているという南魚沼市の数字のつかみです。多く働いています。令和５年度と比較すると、働いている外国人の方たちが36人増加している。この傾向はこれからもさらに続いていくだろうと予想しております。建設業に従事する外国人の労働者の方は市内全体で48人。外国人の方を雇用することは、もちろん人手不足の解消の有効な手段の一つでありますが、地域経済の活性化にもつながってくるのではないかとか、やはりいろいろ人が増えていくということはよいことだと思っております</blockquote>
+<div class="who giin">吉田議員</div><blockquote>なかなか外国人というのは難しい、定着しづらいという話もあるというふうに聞いています。（略）先ほど48人雇用されているというふうに聞いたので、かなり進んでいるのだと私は受け止めました。ぜひ行政のほうもいろいろな面で支援――機械化もしたり、自動化もされたりして、労働環境がすごく良くなっているわけなので、そういうことを全部アピールしながら、外国人の雇用もしながら、やはり人手不足を解消することが大事だと思いますので、ぜひ行政のほうも力を入れていただきたいと思います。</blockquote>
+<p class="exp">この日の議事は寺口友彦議員が副議長として進めていました。</p>
+</div>
+</section>
+<section><h2>ほかの発言</h2>
+<div class="rec"><div class="when">R3.6.8　一般質問「女性の働きやすい職場環境について」（介護） <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/3/8/6/4/_/R3.6.8.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">吉田議員</div><blockquote>外国人ですね、技能実習とか、特定技能とか、外国人の受入れは緩和されています。平成29年に技能実習に介護が入りました。（略）外国人の採用もやはり視野に入れるべきかなと、今後ですね。</blockquote>
+<div class="who shi">市長</div><blockquote>市として外国人に限定した採用を積極的に進めていこうというのは、ちょっと今のところ取っていないということです。（略）南魚沼福祉会、我々にとって非常に身近でありますが、ここではベトナム人介護福祉士採用プログラムの有料職業紹介制度を利用して、人材確保の取組を行っております。令和３年度はベトナム人の職員を４名</blockquote>
+<div class="who giin">吉田議員</div><blockquote>今の外国人の話を聞いて、すごいなと思いました。やはり日本人も負けていられないなという感じがしました。</blockquote>
+</div>
+<div class="rec"><div class="when">R2.12.23　一般質問「創業・起業支援について」 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/2/5/5/_/R2.12.23.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">吉田議員</div><blockquote>私、今はグローバルＩＴパーク事業の構想よりも、サテライトオフィスの事業を活発化するほうに軸足を前面に出してやったほうが、より市のためにもなったり、あそこの設備、施設等が有効に活用されるのではないかと思います。なぜならば、私が思うに海外の新興国からの相手企業さんがこちらに来るには、来て地元の企業さん、あるいは国内企業さんに生産効率を高める指導をするとか、相手を浸透させるかというのは、かなり私は無理があるような気がしまして</blockquote>
+<div class="who shi">市長</div><blockquote>今の吉田議員からの提言については、非常に耳を傾けなければならないと思います。</blockquote>
+</div>
+<p class="exp">令和元年より前（参考）：平成30年9月10日には「予想される外国人労働者の受け入れ拡大に伴い、環境整備とリスクをどう考えるか」と質問し、「今、外国人労働者はなくてはならないです」「一番の問題は言葉だという話をされています」と現場の声を伝えました。市長は、リスクとして文化への適応と「社会コストが増加するという恐れ」を挙げています（<a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/4/6/2/8/_/H30.9.10.pdf" target="_blank" rel="noopener">会議録</a>）。</p>
+</section>
+<section><h2>ほかの議員との比べ方（読み）</h2><div class="note"><ul>
+<li>推進派の中で、人手不足を外国人で補うことをいちばん長く、はっきり言い続けている議員です。黒岩議員（国際大学との交流）や寺口議員（国際大学の人脈を産業に）と違い、国際大学ではなく、雇う側の会社の目線です。</li>
+<li>市の答えは、平成30年は「リスク」（文化への適応、社会コスト）、令和3年は「受入体制を積極的に行うべき」、令和5年は「有効な方法の一つ」「どのような支援ができるか検討」、令和7年は「人が増えていくということはよいこと」と、前向きな言い方に変わってきています。</li>
+<li>一方で議員は、特定技能の人がすぐ移ってしまう、雇う費用がかかる、建設業は「定着しづらい」といった現場の難しさも話しています。グローバルITパーク（外国企業を呼ぶ施設）には「かなり私は無理がある」と否定的でした。</li>
+</ul></div></section>
+<section><h2>調べた範囲</h2><ul class="plain">
+<li>南魚沼市議会の本会議の会議録（手元の写し）から、吉田議員の発言のうち外国・外国人・技能実習・特定技能・国際大学・各国名などを含む30か所と、すぐ後の答弁を全文で確認しました。令和元年以降を中心に載せています。</li>
+<li>委員会の記録は令和7年4月以降だけです。</li>
+<li>引用は会議録の文言どおりです。「（略）」は同じ発言の途中を省いたところです。会議録は取得時点の写しです。</li>
+<li>2026年11月8日作成</li></ul></section>
+<footer>
+  <div>出典：南魚沼市議会の会議録・委員会の議事録、市の審議会などの記録（南魚沼市公式サイトのPDF）。</div>
+  <div>新潟県の移民政策反対情報</div>
+</footer>
+</div>
+<script data-goatcounter="https://niigata-imin-info.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body></html>
