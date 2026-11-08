@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>黒岩揺光議員 国際大学</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap">
+<style>
+/* 選挙公報のような一覧 → 候補者カード。紙の質感の中性色と、投票所の案内板の深緑 */
+:root{
+  --bg:#f6f6f2; --paper:#ffffff; --ink:#1d2421; --muted:#5d6762; --line:#d9ddd6;
+  --accent:#1f5e4b; --accent-soft:#e3eee9;
+  --go:#2b6a8f; --go-soft:#e2edf4; --care:#9a5a12; --care-soft:#f6ecdd; --mix:#6b5e86; --mix-soft:#ece8f3; --none:#7a807c; --none-soft:#ecedeb;
+  --serif:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  --sans:"BIZ UDPGothic","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141917; --paper:#1c2320; --ink:#e6ebe8; --muted:#9ea8a3; --line:#33403a;
+  --accent:#7cc4a9; --accent-soft:#1f322b;
+  --go:#86bfe0; --go-soft:#1b2c37; --care:#e3b277; --care-soft:#33281a; --mix:#b7a9d6; --mix-soft:#2a2535; --none:#a3aaa6; --none-soft:#262b29;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.75;padding-inline:16px;padding-block:28px 56px}
+.wrap{max-width:860px;margin:0 auto;display:grid;gap:36px}
+h1,h2,h3{font-family:var(--serif);text-wrap:balance;line-height:1.35;margin:0}
+h1{font-size:clamp(24px,5vw,34px)}
+h2{font-size:21px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
+h3{font-size:18px}
+p{margin:0}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--accent);font-weight:700}
+header{display:grid;gap:12px}
+.city{font-family:var(--serif);font-weight:700;font-size:clamp(40px,11vw,64px);line-height:1.1;color:var(--accent);display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px}
+.city .pref{font-size:.3em;color:var(--muted);font-weight:700}
+.city .sub{font-size:.4em;color:var(--ink,inherit)}
+.lead{color:var(--muted);max-width:62ch}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted)}
+.facts b{color:var(--ink);font-variant-numeric:tabular-nums}
+section{display:grid;gap:16px}
+.note{background:var(--accent-soft);border-radius:6px;padding:14px 16px;display:grid;gap:6px;font-size:14px}
+.note ul{margin:0;padding-left:1.2em}
+.legend{display:flex;flex-wrap:wrap;gap:8px}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.t-go{background:var(--go-soft);color:var(--go)} .t-care{background:var(--care-soft);color:var(--care)}
+.t-mix{background:var(--mix-soft);color:var(--mix)} .t-none{background:var(--none-soft);color:var(--none)}
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.04em;background:var(--bg)}
+tr:last-child td{border-bottom:0}
+td.name{font-weight:700;white-space:nowrap}
+td.pt{font-size:13.5px;min-width:15em}
+td:nth-child(2){white-space:nowrap}
+td.d{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.group{display:grid;gap:12px}
+.group>h3{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:10px;min-width:0}
+.card-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.card-head .nm{font-family:var(--serif);font-size:19px;font-weight:700}
+.card-head .meta{font-size:13px;color:var(--muted)}
+.rec{display:grid;gap:6px;padding-top:10px;border-top:1px dashed var(--line)}
+.rec:first-of-type{border-top:0;padding-top:0}
+.when{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.sum{font-size:14px}
+blockquote{margin:0;padding:6px 0 6px 14px;border-left:3px solid var(--line);font-size:14.5px}
+blockquote::before{content:"原文　";font-size:11px;color:var(--muted);letter-spacing:.08em}
+.src{font-size:12.5px}
+.plain{display:grid;gap:8px}
+.plain li{margin-bottom:4px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.mini{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 14px;font-size:14px;min-width:0}
+.mini b{display:block}
+footer{font-size:13px;color:var(--muted);display:grid;gap:6px;border-top:1px solid var(--line);padding-top:16px}
+
+.card-head .tags{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.nori{font-size:13.5px;color:var(--muted)}
+.nori b{color:var(--ink)}
+.rec{gap:2px;padding-top:8px}
+.card h4{font-size:14px;margin:6px 0 0;color:var(--accent)}
+.memo{font-size:13px;color:var(--muted)}
+.toc{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px}
+.back{font-size:14px}
+.ocr{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-left:6px}
+
+table{min-width:0!important}
+th,td{padding:8px 8px!important}
+td.name{white-space:normal!important;word-break:keep-all}
+.pty{display:block;font-size:12px;font-weight:400;color:var(--muted)}
+.pd{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+td.dirc{min-width:6.6em;white-space:normal!important}
+td.dirc .tag{display:block;width:fit-content;max-width:100%;border-radius:6px;line-height:1.45;padding:3px 7px}
+td.dirc .tag{white-space:normal;font-size:11.5px;padding:2px 7px;margin-bottom:4px}
+td.pt{min-width:9em!important}
+</style><style>details.howto>summary{cursor:pointer;list-style:none}details.howto>summary::-webkit-details-marker{display:none}details.howto>summary::before{content:"＋ ";color:var(--accent);font-weight:700}details.howto[open]>summary::before{content:"－ "}details.howto[open]{gap:6px}td.name a.jump{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}</style><style>details.old{border-top:1px dashed var(--line);padding-top:8px}details.old>summary{cursor:pointer;font-size:13px;color:var(--muted);list-style:none}details.old>summary::-webkit-details-marker{display:none}details.old>summary::before{content:"＋ ";color:var(--accent)}details.old[open]>summary::before{content:"－ "}details.old[open]{display:grid;gap:6px}.latest{font-size:12px;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:0 6px}</style><style>.who{font-size:12px;font-weight:700;letter-spacing:.04em;margin-top:6px}.who.giin{color:var(--go)}.who.shi{color:var(--care)}.exp{font-size:14px;color:var(--muted)}.rec{border-top:1px dashed var(--line);padding-top:12px}</style></head><body>
+<div class="wrap">
+<header><p class="eyebrow"><a href="minamiuonuma.html">南魚沼市議会 議員の発言記録</a> ＞ 1人ずつのまとめ</p>
+<h1>黒岩揺光議員 ― 国際大学を生かした「国際地方都市」を掲げ、補助金の使い方は市が決めるべきと問い続けた</h1>
+<p class="lead">南魚沼市議会の現職。外国関係の発言は国際大学が中心です。国際大学との交流を広げる提案（留学生や技能実習生を市役所のインターンに、市職員を国際大学に留学、全小学生が国際大学を体験、多言語の出会いの場）を繰り返す一方、ふるさと納税から国際大学に出す補助金には「市民への還元が見えない」として、令和4年から反対討論を続けています。補助金そのものには「反対というわけではない」と述べています。</p>
+<p class="facts"><span>分類（読み）：<b>多文化共生推進</b></span><span>人手不足：<b>外国人で補う</b>（R5.9.20）</span></p></header>
+<section><h2>基本情報</h2><div class="note"><ul>
+<li>会議録に残る発言は、令和3年11月〜令和6年9月と、令和7年11月から。令和8年6月に本人が「私が１期目のときに」と述べており、今は2期目です。</li>
+<li>2024年11月の市長選に立候補し、林茂男市長（3選）と争いました。会議録には令和6年10月〜令和7年10月の発言がなく、令和7年10月の市議選で議員に戻ったと読めます（選挙管理委員会の資料での確認は未了）。</li>
+<li>分類は会議録の記載に基づく目安で、本人の考え全体を表すものではありません。</li></ul></div></section>
+<section><h2>中心の発言1　国際大学への補助金（令和4年〜令和8年）</h2>
+<p class="exp">しくみ（市の説明）：ふるさと納税の「国際大学コース」に集まった寄附の90％を国際大学に補助し、残り10％を市の国際交流の基金に積みます（R4.2.28 財政課長）。使い道は「国際大学さんが主体」（R5.2.27 企画政策課長）。令和5年度からは一般の返礼品も選べるようになり、補助金は倍増しました（R6.6.10。議員の発言では5,400万円）。令和7年度分は4,000万円です（R8.6.8）。</p>
+<div class="rec"><div class="when">R4.2.28　補正予算の質疑・反対討論 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/0/3/8/3/5/_/R4.2.28.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">黒岩議員</div><blockquote>これまで２億円以上、３億円近くの補助金が南魚沼市から出ております、同じので。これだけの補助金が１つの行政から、１つの私立大学に出ているわけですから、この補助金分の連携ができていると思うのです。</blockquote>
+<div class="who shi">財政課長</div><blockquote>国際大学の補助金につきましては、実績報告等をいただいております。つきましては学生の奨学金のほうの部分ですとか、あと、国際大学は学生寮が敷地内にありますが、そういったところが不足、学生が大勢で不足するといったようなものに対しまして、国際大学の敷地内の学生寮に入れない方の住宅の補助というようなことに活用しているというような内容であります。</blockquote>
+<div class="who shi">総務部長</div><blockquote>これは国際大学さんに補助金として交付申し上げて、国際大学さんの中で使っていただく。その中身をご報告いただくという内容でしかありませんので、我々のほうでそれをどうしてくださいとか、どういうふうにしているかとかという調査そのものではございません。国際大学さんに委ねているというものであります。</blockquote>
+<div class="who giin">黒岩議員（反対討論）</div><blockquote>国際大学の支援コースが始まってから、２億円以上、３億円近くが国際大学に入っておりますが、国際大学の事業報告書を見ても、このお金をどうやって南魚沼市に還元したかという部分は全く書かれていない。（略）私はこれ自体が反対ではないのです。（略）国際大学の存在をもっともっと活用して連携していけば、この地域はもっとよくなると思うので、そういう思いで反対討論に参加させていただきました。</blockquote>
+</div>
+<div class="rec"><div class="when">R5.2.27　補正予算の質疑・反対討論 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/4/5/1/6/9/_/R5.2.27.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">黒岩議員</div><blockquote>もう少し市と大学が協力して、この二千数百万円のお金をどうやって市の発展のために生かせるかというのを、もう少し話し合う機会にしてやっていったほうが、この補助金がより効果的に使われるかという意見もあってもいいと思うのです。</blockquote>
+<div class="who shi">企画政策課長</div><blockquote>何もビジョンがなくてやっているわけではありませんので、国際大学の継続的な存続ですとか、学生さんが今後こちらで、国内外で活躍できるようという辺りのために行っている事業でございます。</blockquote>
+<div class="who giin">黒岩議員（反対討論）</div><blockquote>子供たちを国際大学の卒業生の家にホームステイさせたりとか、ほかの国に行ってホームステイプログラムを組んでもいいですし、いろいろな可能性がある補助金だと思うのに、これを丸ごとお任せするという形であって、それがうまく市の発展に本当に結びついているのかどうか分からない状態で、私はこの補正予算に賛成することができない</blockquote>
+<p class="exp">同じ日、清塚武敏議員が賛成討論で「北里は、この南魚沼市の発展には本当に欠かせないものと私は感じております」と述べました。</p>
+</div>
+<div class="rec"><div class="when">R6.6.10　補正予算の質疑 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/7/8/8/7/3/_/R6.6.10.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">黒岩議員</div><blockquote>物価高騰で大変なのは学校法人国際大学だけではなくて、市内にある様々な社会福祉法人や様々な営利を目的としない団体がたくさんある中で、学校法人国際大学に支援する。（略）例えば卒業後に市内に二、三年残ることを確約してくれた学生というなら分かりますけれども、どんな学生でもいいのですか。</blockquote>
+<div class="who shi">総務部長</div><blockquote>国際大学との協議の中で、南魚沼市のグローバル化ですとか国際化への推進を目的とした国際大学の活用、並びにそこに通う留学生の支援というところに、物価高騰などによってこれまで以上に経費がかかってきているというような中で、こちらのほうまで選べるようになった</blockquote>
+<div class="who shi">Ｕ＆Ｉときめき課長</div><blockquote>市内に住んでいただける方を優遇せよとか、そういう部分は当然必要なのですけれども、その部分は当然押していきたいと思いますが、特にそれを条件としてやっているわけではなくて、学校の運営に任せております。</blockquote>
+</div>
+<div class="rec"><div class="when">R8.6.8　補正予算の質疑・討論（国際大学支援補助金4,000万円） <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/6/6/8/5/_/%E4%BB%A4%E5%92%8C8%E5%B9%B46%E6%9C%888%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E5%B8%82%E9%95%B7%E6%89%80%E4%BF%A1%E8%A1%A8%E6%98%8E%E3%83%BB%E8%AD%B0%E6%A1%88%E5%AF%A9%E8%AD%B0).pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">黒岩議員</div><blockquote>国際大学は今現在、学生数は過去最多を記録しておりまして、学生生徒等の納付金収入、つまり学費の収入は５年前、７億円だったのが今13億円まで膨らんでおります。そういった現状を踏まえ、この4,000万円の補助金がなければ国際大学があり続けられないという解釈をしているということでよろしいかどうか</blockquote>
+<div class="who shi">総務部長</div><blockquote>私が持続可能と申し上げたのは、学生が増えれば利益が上がるというそれだけではなくて、国際大学がここに在り続けるということになれば、地域との連携とか、国際大学がここにいて、その学生たちが人と結びつくとか、そういったものが大事だと思っております。</blockquote>
+<div class="who giin">黒岩議員</div><blockquote>その学生支援の中でも南魚沼市内出身者の学生とか、卒業後に南魚沼市内に残ってくれる卒業生を支援するというほうが、そういう条件をつけたほうが地域との連携が深まっていくのではないかという考えはなかったかどうか</blockquote>
+<div class="who shi">総務部長</div><blockquote>卒業後に南魚沼市に残るような人といった条件をつけたらよかったのではないかということでございますが、南魚沼市としてはそういう条件をつける気持ちはございませんし、条件を考えるのは国際大学の役割かと思っております。</blockquote>
+<div class="who giin">黒岩議員（討論）</div><blockquote>補助金すること自体に私は反対というわけではないのだけれども、もう少し市内の人たちの生活がよくなるような連携を取っていただいた上での補助金だと私は思っているので、今総務部長が、これについては国際大学が決める、国際大学の役割と言ったのですけれども、市の補助金だから市が決めるべきだと私は思います。</blockquote>
+<p class="exp">学費収入7億円→13億円は議員が大学の資料から引いた数字で、市は認否していません。</p>
+</div>
+</section>
+<section><h2>中心の発言2　国際大学と市役所・子どもたち・出会いの場（令和5年9月、令和6年6月）</h2>
+<div class="rec"><div class="when">R5.9.20　決算の討論（答弁のない場） <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/4/8/8/7/9/_/R5.9.20.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">黒岩議員</div><blockquote>ぜひ南魚沼市を国際地方都市として、バンとＰＲして、グローバルＩＴパーク、こんなのありますと広報して、労働者もこれから人材不足で増えてきます。そういった人たちの受入体制をしっかりつくっていきましょう。今だと、外国人技能実習生でミャンマーとかインドネシアとかフィリピン、そういった方たちがたくさん来ているのですけれども、国際大学にもそういう方がたくさんいますので、そういう方たちをインターンとして市役所に雇って、そういう人たちの受入体制をどんどん整えていきましょう。市の職員の方にも国際大学に留学させて、人事交流を図る。</blockquote>
+<div class="who giin">黒岩議員</div><blockquote>英語や他言語でアピールすれば、国際大学の人たちもたくさん来るだろうし、グルメライドに来た人たちが「隣で走っていた自転車の人はジンバブエ人だったよ」みたいなのが、それでもすごいアピールになるわけです。（略）ミーティングパーティー、男女の出会う機会もぜひ多言語でやれば、いろいろな価値観がある人たちがどんどん集まってきて、楽しい国際都市になっていくのではないでしょうか。</blockquote>
+</div>
+<div class="rec"><div class="when">R6.6.18　一般質問「過去10年で著しく低下した市内の子どもの学力について」の中で <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/6/2/8/5/9/_/%E4%BB%A4%E5%92%8C6%E5%B9%B46%E6%9C%8818%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div>
+<p class="exp">英語が好きと答える子が小学6年の62％から中学3年の48％に減るという調査の数字を挙げたうえでの質問です。</p>
+<div class="who giin">黒岩議員</div><blockquote>うちの子供は今小学２年生だけれども、学校のプログラムで一度も国際大学に行っていないのです。プライベートでは何度も行っていますけれども、一回も行っていないのです、あれだけすごいところがあるのに。何で行かせないのですか。せめて全ての小学生が国際大学の中、あのすばらしさを体験できるプログラムを年に一回くらいはつくってあげてください。</blockquote>
+<div class="who shi">市長</div><blockquote>国際大学につきましては、以前よりも南魚沼市により関わっていろいろなことをやりたいということが理事会でも、また評議委員会等でも話し合われ、そのとおりこの夏ですか、あまり詳しいところまでは分かりませんが、いろいろな形の提案があるとお聞きしています。（略）加えまして、黒岩議員は子供たちのことを言っていますが、国際大学というのはうちの子供たちを教えるためにある学校ではないですよね。そこはよく考えなければいけません。（略）国際大学は我々の持ち物ではないです。でもそこの中でできるだけの協力をしてくれる。もちろんそういうところをお願いしていくということだから、少しちょっと角度が違うのではないかと思っていますが、いかがですか。</blockquote>
+<div class="who giin">黒岩議員</div><blockquote>私が市長だったら、国際大学に行って、学長でも理事長でもいいです。（略）年に一回、国際大学のキャンパスツアーみたいなのを組んで、子供たちの国際的視野を広げるプログラムを組みたいのですけれども、いかがですかという提案を私が市長だったらすると思うのですけれども</blockquote>
+<div class="who shi">市長</div><blockquote>緩やかにそういうことができませんかという話をして、その後、そのまま立ち消えになっているというのが正直な話です。（略）今の学長さんにはまだしていないので、そういう意味で分かるところもあるので、そういうことはできることはやっていきたいなと思います。</blockquote>
+<p class="exp">令和8年6月17日、議員は「市長もすごく同調してくれて、実際行き始めました」と述べています。</p>
+</div>
+</section>
+<section><h2>中心の発言3　国際地方都市を南魚沼のブランドに（令和8年6月17日 一般質問）</h2>
+<div class="rec"><div class="when">R8.6.17　一般質問 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/6/6/8/8/_/%E4%BB%A4%E5%92%8C8%E5%B9%B46%E6%9C%8817%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E8%B3%AA%E5%95%8F).pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">黒岩議員</div><blockquote>南魚沼市はいろいろな国の方がいらっしゃる町なのです。山間部に位置して、人口５万人規模で、70か国とか、60か国という国の人が住んでいる自治体ってなかなかない。（略）令和９年、市内に国際フロンティア高校が開校予定でございます。60か国からの住民がいる国際地方都市・南魚沼をブランド化していく最大のチャンスだと思っております。小中一貫のインターナショナルスクール誘致や国際大学の学部創設など、様々な取組が考えられますけれども（略）せめて国際フロンティア高校ができるのを契機に、市と国際フロンティア高校と国際大学を含めた協議会をつくって</blockquote>
+<div class="who shi">市長</div><blockquote>国際大学という地域資源――これは地域資源と勝手に言って悪いのですけれども、そうだと思うので、そういうすばらしい資源を生かした多文化共生の推進、本当に先ほどから議員がお話のとおりだと思うのです。この推進について、全国への発信方法を検討していきたい。</blockquote>
+<div class="who shi">市長</div><blockquote>私は国際大学の評議員になっています。理事会と評議員は実は同じ席で一緒に行われるのです。</blockquote>
+<div class="who shi">市長</div><blockquote>今それだけではなくて、外国人の子供さんたちも――ご家族も連れてきているということで、地域課題も出てきているのです。学校もあふれていますし、保育園もそうです。あとは、例えばいろいろな問題があります。問題は問題なのですけれども、それを排他なんていう話ではなくて、我々としては共生していくというような観点から、そこがやはり我が市の姿勢だと思うのです。大変なことはあるけれども、それをやはり一緒に乗り越えていこうということで、そういう話向きも全部しているのです。（略）これは今回あまり対立するような話にはならないと思いますし、同じ気持ちだと思っていますので、よろしくお願いします。</blockquote>
+<div class="who giin">黒岩議員</div><blockquote>国際大学が主体ではなく、市が主体となって、こういったものを今後動かしていくような考えがあるかどうかだけ、最後お願いできますか。</blockquote>
+<div class="who shi">市長</div><blockquote>これは私もいろいろな風呂敷を広げたがる性格ですけれども、まだそこまではちょっと言えないのではないかと思います。（略）学校を存続させ続ける、ここにあると思うので、そういったところのまず支援から入っていく。（略）今一足飛びにそこの話をして、そうだとは言ってもらえる空気を感じておりません。</blockquote>
+</div>
+</section>
+<section><h2>ほかの発言</h2>
+<div class="rec"><div class="when">R6.3.18　予算の質疑 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/5/7/8/7/2/_/%E4%BB%A4%E5%92%8C6%E5%B9%B43%E6%9C%8818%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2%EF%BC%88%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E5%BD%93%E5%88%9D%E4%BA%88%E7%AE%97%E5%AF%A9%E8%AD%B0%EF%BC%89%EF%BC%88856KB%EF%BC%89.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">黒岩議員</div><blockquote>市内のいろいろなところから人材不足という声が聞かれている中、外国語対応を検討しない理由が何かあれば教えてください。</blockquote>
+<div class="who shi">商工観光課長</div><blockquote>今後この外国人の方々がどんどんいらっしゃるようになれば、当然ながら対応というものも考えておりますけれども、令和６年度については具体的にそういうことは今検討されていないということでございます。</blockquote>
+</div>
+<div class="rec"><div class="when">R5.9.14　決算の質疑 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/4/8/8/7/6/_/R5.9.14.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">黒岩議員</div><blockquote>2022年12月19日に中国総領事の離任レセプションに議長と議長経験者計４人が、新幹線で新潟市まで行って、その旅費がここから支出されております。この４名が中国総領事の離任レセプションに出席することがどういったふうに市民に還元されるのか</blockquote>
+<div class="who shi">議会事務局長</div><blockquote>平成27年と、あと平成30年の頃だったと思いますが、訪中団を市議会のほうで結成して、中国のほうに視察に行かれたという経緯があります。その頃、総領事館のほうに相談をして、視察の調整などをしていた。その頃から友好関係が深まったということであります。</blockquote>
+</div>
+<div class="rec"><div class="when">R8.3.16　予算の質疑 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/9/5/4/1/4/_/%E4%BB%A4%E5%92%8C8%E5%B9%B43%E6%9C%8816%E6%97%A5%E5%AE%9A%E4%BE%8B%E4%BC%9A%E8%AD%B0%E4%BA%8B%E9%8C%B2(%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E4%BA%88%E7%AE%97%E5%AF%A9%E8%AD%B0).pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">黒岩議員</div><blockquote>インバウンドが増えることによって、八海山麓の安全確保はどうなるのか教えてください。</blockquote>
+<div class="who shi">産業振興部長</div><blockquote>石打のほうのスキー場ではやはりバックカントリーでの――八海山スキー場もそうですけれども、外国人の方の事故というのも起きていますし、そこについては間違いなくインバウンドの方が増えれば、確率も増えるだろうとは思いますが（略）我々としてはあまり心配はしていないのではないかと考えます。</blockquote>
+</div>
+</section>
+<section><h2>ほかの議員との比べ方（読み）</h2><div class="note"><ul>
+<li>国際大学の補助金を擁護したのは寺口友彦・清塚武敏議員です。黒岩議員は補助金に反対しても、国際大学との交流を広げる提案は推進派の議員の中でいちばん多い議員です。</li>
+<li>市の答えは一貫して「使い道は国際大学に委ねる」「条件をつける気持ちはない」です。そのうえで市長は、外国人の家族が増えて「学校もあふれていますし、保育園もそうです」と課題を認めつつ、「排他なんていう話ではなくて（略）共生していく」と述べ、黒岩議員とは「同じ気持ちだと思っています」と答えました。進める方向は同じで、違うのは市がどこまで関わるか、と読めます。</li>
+</ul></div></section>
+<section><h2>参考：外国籍の住民の増え方</h2>
+<p class="exp">黒岩議員は令和6年9月12日（決算の大綱質疑）に、次の数字を挙げています（市の答弁でこの点に触れた部分はありません）。</p><div class="rec"><div class="when">R6.9.12　決算の大綱質疑 <a class="src" href="https://www.city.minamiuonuma.niigata.jp/fs/2/7/8/8/7/2/_/R6.9.12.pdf" target="_blank" rel="noopener">会議録</a></div>
+<div class="who giin">黒岩議員</div><blockquote>令和５年度末、市内の外国籍住民は1,337人と過去最高になり、インドネシア人だけで一年で80人も増えました、ほぼ倍増です。令和４年度は外国人が970人です。（略）これだけ外国人の方が増えているにもかかわらず、人口減少は全くとどまることを知らず、昨年度一年間で739人の人口減となりました。</blockquote>
+</div></section>
+<section><h2>調べた範囲</h2><ul class="plain">
+<li>南魚沼市議会の本会議の会議録（手元の写し）から、黒岩議員の発言で「国際大学」を含む44か所と、すぐ後の答弁を全文で確認しました。</li>
+<li>委員会の記録は令和7年4月以降だけです（令和8年1月16日の総務文教委員会で英語教育・国際大学についての提案がありますが、ここには載せていません）。</li>
+<li>引用は会議録の文言どおりです。「（略）」は同じ発言の途中を省いたところです。会議録は取得時点の写しです。</li>
+<li>2026年11月8日作成</li></ul></section>
+<footer>
+  <div>出典：南魚沼市議会の会議録・委員会の議事録、市の審議会などの記録（南魚沼市公式サイトのPDF）。</div>
+  <div>新潟県の移民政策反対情報</div>
+</footer>
+</div>
+<script data-goatcounter="https://niigata-imin-info.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body></html>
